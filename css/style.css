@@ -16,14 +16,19 @@ body {
     background-color: #808080 - rgb(128, 128, 128);
   }
   /*Colores Navbar y footer light*/
-  nav{
-    background-color: #932fa2 - rgb(147, 47, 162);
-    color: #ffffff - rgb(255, 255, 255);
+ nav.navbar{
+    background-color: #932fa2; 
   }
+.dropdown-item{
+    background-color: #ce8dd8; 
+}
+nav ul li a{
+    color: #ffffff;;
+}
   /*Colores Navbar y footer dark */
  footer{
-   background-color: #631291 - rgb(99, 18, 145);
-   color:  #ffffff - rgb(255, 255, 255);
+   background-color: #631291;
+   color:  #ffffff;
  }
 
  /* Media Query para disposiitovs pequeños y medianos*/

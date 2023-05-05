@@ -24,7 +24,49 @@
     <title>Playtopia</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <!-- Navbar-->
+        <nav class="navbar navbar-expand-lg text-light">
+            <div class="container">
+              <!--Boton hamburguesa-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+              <!--Logo-->  
+              <span>
+                <img src="/img/logo1.bmp" width="40px" class="me-1 mb-2" alt="Logo de playtopia">
+                <a class="navbar-brand mb-2 text-light" href="/index.html">Playtopia</a>
+              </span>
+              <!--Lista de navbar-->
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-light">
+                  <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="/index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="/pages/admin.html">Administrador</a>
+                  </li>
+                    <!--Desplegable para modo claro/modo oscuro-->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-circle-half text-light fs-5"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Modo claro</a></li>
+                      <li><a class="dropdown-item" href="#">Modo oscuro</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/pages/error404.html"><i class="bi bi-cart-fill text-light fs-5 me-1"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/pages/error404.html"><i class="bi bi-person-circle text-light fs-5"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
     <main></main>
     <footer></footer>
     <!-- Link Bootstrap-->
