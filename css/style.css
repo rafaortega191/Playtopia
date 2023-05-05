@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Orbitron:wght@400;500&display=swap');
+/* Fuente general */
+* {
+    font-family: 'Libre Franklin', sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex-grow: 1;
+  }
+  /*Background-color del main en modo oscuro*/
+  main{
+    background-color: #808080 - rgb(128, 128, 128);
+  }
+  /*Colores Navbar y footer light*/
+  nav{
+    background-color: #932fa2 - rgb(147, 47, 162);
+    color: #ffffff - rgb(255, 255, 255);
+  }
+  /*Colores Navbar y footer dark */
+ footer{
+   background-color: #631291 - rgb(99, 18, 145);
+   color:  #ffffff - rgb(255, 255, 255);
+ }
+
+ /* Media Query para disposiitovs pequeños y medianos*/
+/*Pequeños*/
+@media all and (max-width: 576px){
+
+}
+/*Medianos*/
+@media all and (min-width: 577px) and (max-width: 991px){
+
+}
