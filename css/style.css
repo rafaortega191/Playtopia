@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Orbitron:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Bruno+Ace+SC&family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Libre+Franklin:wght@200&family=Orbitron:wght@400;500&family=Ruda:wght@500&display=swap');
 /* Fuente general */
-* {
-    font-family: 'Libre Franklin', sans-serif;
-}
 body {
     min-height: 100vh;
     display: flex;
@@ -10,20 +8,33 @@ body {
   }
   main {
     flex-grow: 1;
+    font-family: 'Libre Franklin', sans-serif;
+  }
+  #fuenteLogo{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #631291;
+    text-shadow: 0 0 5px rgb(245, 241, 237),
+    0 0 10px rgb(240, 235, 231),
+    0 0 15px rgb(246, 244, 242),
+    0 0 20px rgb(242, 240, 237),
+    0 0 100px rgb(237, 232, 228);
   }
   /*Background-color del main en modo oscuro*/
   main{
-    background-color: #808080 - rgb(128, 128, 128);
+    background-color: #808080;
   }
   /*Colores Navbar y footer light*/
  nav.navbar{
     background-color: #932fa2; 
   }
 .dropdown-item{
-    background-color: #ce8dd8; 
+    background-color: #932fa2; 
 }
 nav ul li a{
-    color: #ffffff;;
+    color: #ffffff;
+    font-family: 'Urbanist', sans-serif;
 }
   /*Colores Navbar y footer dark */
  footer{
@@ -34,7 +45,14 @@ nav ul li a{
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
-
+  #fuenteLogo{
+    font-family: 'Ruda', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  #logo{
+    width: 30px;
+  }
 }
 /*Medianos*/
 @media all and (min-width: 577px) and (max-width: 991px){
