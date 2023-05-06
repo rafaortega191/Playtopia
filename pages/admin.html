@@ -86,22 +86,21 @@
       </nav>
     </header>
     <main class="container my-5">
-      <h1 class="display-4 text-center">Administrador de Juegos</h1>
-      <hr />
-      <section class="d-flex">
-        <p class="mb-0">Juegos disponibles en Playtopia</p>
+      <h1 class="display-5 tituloUrbanist text-center">Página del administrador</h1>
+      <section class="d-flex justify-content-center mt-1">
+        <h2 class="mb-0 fs-3 tituloUrbanist">Agregar</h2>
         <button
-          class="btn btn-outline-primary btn-sm ms-3"
+          class="btn btn-md ms-2"
           id="btnCrearJuego"
           data-bs-target="#modalJuegos"
           data-bs-toggle="modal"
         >
-          <i class="bi bi-clipboard2-plus-fill"></i>
+        <i class="bi bi-controller text-white fs-5"></i>
         </button>
       </section>
-      <section class="mt-5">
-        <h2 class="display-6">Lista de juegos</h2>
-        <hr />
+      <hr>
+      <section class="mt-4" id="seccionTabla">
+        <h4 class="fs-5 text-center pt-3 pb-1"><b>Lista de juegos disponibles</b></h4>
         <article class="table-responsive">
           <table class="table table-striped">
             <thead>
@@ -128,11 +127,11 @@
                 </td>
                 <td>Aventura</td>
                 <td class="text-center">
-                  <button class="btn btn-warning">
-                    <i class="bi bi-pencil-square"></i>
+                  <button class="btn btnEditar">
+                    <i class="bi bi-pencil fs-5"></i>
                   </button>
-                  <button class="btn btn-danger">
-                    <i class="bi bi-x-square"></i>
+                  <button class="btn btnEliminar">
+                    <i class="bi bi-trash fs-5"></i>
                   </button>
                 </td>
               </tr>
@@ -149,11 +148,11 @@
                 </td>
                 <td>Aventura</td>
                 <td class="text-center">
-                  <button class="btn btn-warning">
-                    <i class="bi bi-pencil-square"></i>
+                  <button class="btn btnEditar">
+                    <i class="bi bi-pencil fs-5"></i>
                   </button>
-                  <button class="btn btn-danger">
-                    <i class="bi bi-x-square"></i>
+                  <button class="btn btnEliminar">
+                    <i class="bi bi-trash fs-5"></i>
                   </button>
                 </td>
               </tr>
