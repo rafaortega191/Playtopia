@@ -14,12 +14,7 @@ body {
     font-family: 'Urbanist', sans-serif;
     font-size: 30px;
     font-weight: 600;
-    color: #631291;
-    text-shadow: 0 0 5px rgb(245, 241, 237),
-    0 0 10px rgb(240, 235, 231),
-    0 0 15px rgb(246, 244, 242),
-    0 0 20px rgb(242, 240, 237),
-    0 0 100px rgb(237, 232, 228);
+    color: white
   }
   /*Background-color del main en modo oscuro*/
   main{
@@ -29,12 +24,19 @@ body {
  nav.navbar{
     background-color: #932fa2; 
   }
-.dropdown-item{
+.dropdown-menu{
     background-color: #932fa2; 
 }
+.dropdown-item:hover{
+  background-color: #c967cb;
+}
+/*Estilos de navbar*/
 nav ul li a{
     color: #ffffff;
     font-family: 'Urbanist', sans-serif;
+}
+.navbar-toggler-icon{
+  color: #ffffff;
 }
   /*Colores Navbar y footer dark */
  footer{
@@ -46,12 +48,20 @@ nav ul li a{
 /*Pequeños*/
 @media all and (max-width: 576px){
   #fuenteLogo{
-    font-family: 'Ruda', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
   }
   #logo{
     width: 30px;
+  }
+  .navbar-nav{
+    font-size: 15px;
+  }
+  .navbar-nav .i{
+    font-size: 15px;
+  }
+  .dropdown-menu{
+    font-size: 13px;
   }
 }
 /*Medianos*/
