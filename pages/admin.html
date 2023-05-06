@@ -161,6 +161,128 @@
         </article>
       </section>
     </main>
+        <!-- Modal para administrar juegos -->
+        <div
+        class="modal fade"
+        id="modalJuegos"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-white text-center tituloUrbanist" id="exampleModalLabel">
+                <b>Administrar juegos</b>
+              </h5>
+              <button
+                type="button"
+                class="btn-close text-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="formJuego">
+                <div class="mb-3">
+                  <label class="text-white" for="codigo"><b>Código</b></label>
+                  <input
+                    id="codigo"
+                    type="text"
+                    class="form-control"
+                    placeholder="123"
+                    maxlength="5"
+                    minlength="1"
+                    disabled
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="text-white" for="nombre"><b>Nombre *</b></label>
+                  <input
+                    id="nombre"
+                    type="text"
+                    class="form-control"
+                    placeholder="Ej: Dark Souls"
+                  
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="text-white" for="precio"><b>Precio en pesos *</b></label>
+                  <input
+                    id="precio"
+                    type="number"
+                    class="form-control"
+                    placeholder="2.500"
+                  
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="text-white" for="categoria"><b>Categoría *</b></label>
+                  <select id="categoria" class="form-control">
+                    <option value="">Selecione una opcion</option>
+                    <option value="accion">Acción</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="cienciaFiccion">Ciencia ficción</option>
+                    <option value="deporte">Deportes y carreras</option>
+                    <option value="estrategia">Estrategia</option>
+                    <option value="militar">Militar</option>
+                    <option value="puzzle">Puzzle</option>
+                    <option value="rol">Rol</option>
+                    <option value="simulacion">Simulación</option>
+                    <option value="supervivencia">Supervivencia</option>
+                    <option value="terror">Terror</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="text-white" for="imagen"><b>Imagen *</b><small class="text-white">
+                    (URL con formato .png, .jpg o gif)</small></label>
+                  <input
+                    id="imagen"
+                    type="text"
+                    class="form-control"
+                    placeholder="Ej: http://127.0.0.1:5500/pages/macross.png"
+                    maxlength="120"
+                    minlength="2"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="text-white" for="descripcion"><b>Descripción *</b></label>
+                  <textarea
+                    id="descripcion"
+                    rows="4"
+                    class="form-control"
+                    placeholder="Ej: Sucesor espiritual de Demon's Souls, es el primer juego de la saga Dark Souls. El juego tiene lugar en el reino de Lordran, donde los jugadores asumen el papel de un personaje no muerto maldito que comienza una peregrinación para descubrir su destino. "
+                    maxlength="300"
+                    minlength="2"
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label class="text-white" for="desarrollador"><b>Desarrollador *</b></label>
+                  <input
+                    id="desarrollador"
+                    type="text"
+                    class="form-control"
+                    placeholder="Ej: FromSoftware"
+                    maxlength="4"
+                    minlength="20"
+                  />
+                </div>
+                <!--Alert visible cuando no se completa algun campo o es incorrecto-->
+                <div
+                  class="alert alert-danger mt-3 d-none"
+                  role="alert"
+                  id="alerta"
+                >
+              </div>
+              <!--Botón enviar-->
+                <button class="btn text-white" type="submit" id="btnFormulario">
+                  Agregar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     <footer></footer>
     <!-- Link Bootstrap-->
     <script

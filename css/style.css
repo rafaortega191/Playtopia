@@ -31,6 +31,12 @@ body {
  }
 
 /*Estilos para botones en pagina administrador*/
+#btnFormulario{
+  background-color: #631291;  
+}
+#btnFormulario:hover{
+  background-color:rgb(147, 47, 162);
+}
 #btnCrearJuego{
   background-color: #631291;
   border-radius: 30px;
@@ -52,6 +58,7 @@ body {
 .btnEliminar:hover{
   background-color: rgb(250, 87, 87);
 }
+
 /*Estilos para tabla administrador*/
 #seccionTabla{
   background-color: #e0c9ee;
@@ -72,7 +79,21 @@ table tbody tr:nth-child(even) {
 	background:#c967cb;
   font-family: 'Libre Franklin', sans-serif
 }
- /* Media Query para disposiitovs pequeños y medianos*/
+
+/*Estilos para formulario*/
+.modal-content{
+  background: hsla(292, 55%, 41%, 1);
+
+background: linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+
+background: -moz-linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+
+background: -webkit-linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#932FA2", endColorstr="#631291", GradientType=1 );
+}
+
+  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
 
