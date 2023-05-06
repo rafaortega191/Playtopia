@@ -206,18 +206,19 @@
                   
                   />
                 </div>
+
                 <div class="mb-3">
-                  <label class="text-white" for="precio"><b>Precio en pesos *</b></label>
+                  <label class="text-white" for="precio"><b>Precio (en pesos) *</b></label>
                   <input
                     id="precio"
                     type="number"
                     class="form-control"
-                    placeholder="2.500"
+                    placeholder="2500"
                   />
                 </div>
               
                 <div class="mb-3">
-                  <p class="fs-6 text-white"><b>¿El juego está en oferta?</b></p>
+                  <p class="fs-6 text-white mb-1"><b>¿El juego está en oferta?</b></p>
                   <div>
                     <input type="radio" id="si" name="drone" value="si"
                            checked>
@@ -227,6 +228,16 @@
                     <input type="radio" id="no" name="drone" value="no">
                     <label class="text-white fs-6" for="no">No</label>
                   </div>
+              </div>
+              <!--En caso de estar en oferta, se despliega esta pregunta-->
+              <div class="mb-3">
+                <label class="text-white" for="precioOferta"><b>Precio con descuento (en pesos) *</b></label>
+                <input
+                  id="precioOferta"
+                  type="number"
+                  class="form-control"
+                  placeholder="1200"
+                />
               </div>
 
               <div class="mb-3">
@@ -323,7 +334,7 @@
                       id="almacenamiento"
                       type="text"
                       class="form-control"
-                      placeholder="Ej: RAM DDR4"
+                      placeholder="Ej: 8GB"
                       maxlength="4"
                       minlength="10"
                     />
