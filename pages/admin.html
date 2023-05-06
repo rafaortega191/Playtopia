@@ -213,10 +213,23 @@
                     type="number"
                     class="form-control"
                     placeholder="2.500"
-                  
                   />
                 </div>
+              
                 <div class="mb-3">
+                  <p class="fs-6 text-white"><b>¿El juego está en oferta?</b></p>
+                  <div>
+                    <input type="radio" id="si" name="drone" value="si"
+                           checked>
+                    <label class="text-white fs-6" for="si">Si</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="no" name="drone" value="no">
+                    <label class="text-white fs-6" for="no">No</label>
+                  </div>
+              </div>
+
+              <div class="mb-3">
                   <label class="text-white" for="categoria"><b>Categoría *</b></label>
                   <select id="categoria" class="form-control">
                     <option value="">Selecione una opcion</option>
@@ -233,6 +246,7 @@
                     <option value="terror">Terror</option>
                   </select>
                 </div>
+
                 <div class="mb-3">
                   <label class="text-white" for="imagen"><b>Imagen *</b><small class="text-white">
                     (URL con formato .png, .jpg o gif)</small></label>
@@ -245,6 +259,7 @@
                     minlength="2"
                   />
                 </div>
+
                 <div class="mb-3">
                   <label class="text-white" for="descripcion"><b>Descripción *</b></label>
                   <textarea
@@ -266,6 +281,53 @@
                     maxlength="4"
                     minlength="20"
                   />
+                </div>
+                <p class="fs-6 text-light"><b>Requisitos del sistema</b></p>
+                <div class="ms-2 mb-3 p-1">
+                  <div>
+                    <label class="text-white" for="procesador"><b>Procesador</b></label>
+                    <input
+                      id="procesador"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ej: Intel® Core™ "
+                      maxlength="4"
+                      minlength="20"
+                    />
+                  </div>
+                  <div>
+                    <label class="text-white" for="placa"><b>Placa gráfica</b></label>
+                    <input
+                      id="placa"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ej: Nvidia RTX 4090."
+                      maxlength="4"
+                      minlength="20"
+                    />
+                  </div>
+                  <div>
+                    <label class="text-white" for="ram"><b>RAM</b></label>
+                    <input
+                      id="ram"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ej: RAM DDR4"
+                      maxlength="4"
+                      minlength="10"
+                    />
+                  </div>
+                  <div>
+                    <label class="text-white" for="almacenamiento"><b>Almacenamiento</b></label>
+                    <input
+                      id="almacenamiento"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ej: RAM DDR4"
+                      maxlength="4"
+                      minlength="10"
+                    />
+                  </div>
                 </div>
                 <!--Alert visible cuando no se completa algun campo o es incorrecto-->
                 <div
