@@ -12,8 +12,8 @@ body {
     flex-grow: 1;
   }
   /*Background-color del main en modo oscuro*/
-  main{
-    background-color: #808080 - rgb(128, 128, 128);
+  body{
+    background-color: #f2eded;
   }
   /*Colores Navbar y footer light*/
   nav{
@@ -25,6 +25,10 @@ body {
    background-color: #631291 - rgb(99, 18, 145);
    color:  #ffffff - rgb(255, 255, 255);
  }
+/*Estilos para tabla administrador*/
+.tamanioCelda {
+  max-width: 10rem;
+}
 
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
