@@ -13,7 +13,7 @@ body {
   }
   /*Background-color del main en modo oscuro*/
   main{
-    background-color: #808080 - rgb(128, 128, 128);
+    background-color: #808080;
   }
   /*Colores Navbar y footer light*/
   nav{
@@ -26,6 +26,12 @@ body {
    color:  #ffffff - rgb(255, 255, 255);
  }
 
+/*Estilos para pagina detalle*/
+#imgDetalleJuego{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
