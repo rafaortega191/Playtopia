@@ -38,6 +38,9 @@ nav ul li a{
 .navbar-toggler-icon{
   color: #ffffff;
 }
+.dropdown-toggle::after{
+  margin-left: 0;
+}
   /*Colores Navbar y footer dark */
  footer{
    background-color: #631291;
