@@ -28,62 +28,6 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-          <a class="navbar-brand" href="../index.html">Peliculas</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="administrador.html"
-                  >Administrador</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <span
-                  class="nav-link dropdown-toggle"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="bi bi-moon-stars-fill"></i>
-                </span>
-                <ul class="dropdown-menu">
-                  <li>
-                    <button class="dropdown-item" id="btnThemeLight">
-                      <i class="bi bi-sun-fill"></i> Light
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" id="btnThemeDark">
-                      <i class="bi bi-moon-stars-fill"></i> Dark
-                    </button>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link">Logout</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
     </header>
     <main class="container my-5">
       <h1 class="display-5 tituloUrbanist text-center">Página del administrador</h1>
@@ -184,6 +128,7 @@
             </div>
             <div class="modal-body">
               <form id="formJuego">
+                <!--CODIGO-->
                 <div class="mb-3">
                   <label class="text-white" for="codigo"><b>Código</b></label>
                   <input
@@ -196,6 +141,7 @@
                     disabled
                   />
                 </div>
+                <!--NOMBRE-->
                 <div class="mb-3">
                   <label class="text-white" for="nombre"><b>Nombre *</b></label>
                   <input
@@ -206,7 +152,7 @@
                   
                   />
                 </div>
-
+                <!--PRECIO-->
                 <div class="mb-3">
                   <label class="text-white" for="precio"><b>Precio (en pesos) *</b></label>
                   <input
@@ -216,22 +162,22 @@
                     placeholder="2500"
                   />
                 </div>
-              
+                <!--ESTA EN OFERTA-->              
                 <div class="mb-3">
                   <p class="fs-6 text-white mb-1"><b>¿El juego está en oferta?</b></p>
                   <div>
-                    <input type="radio" id="si" name="drone" value="si"
-                    checked>
-                    <label class="text-white fs-6" for="si">Si</label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="si"
+                   value="si">
+                    <label class="form-check-label text-white fs-6"  for="si">Si</label>
                   </div>
                   <div>
-                    <input type="radio" id="no" name="drone" value="no">
-                    <label class="text-white fs-6" for="no">No</label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="no" value="no" checked>
+                    <label class="form-check-label text-white fs-6" for="no">No</label>
                   </div>
               </div>
               <!--En caso de estar en oferta, se despliega esta pregunta-->
               <div class="mb-3">
-                <label class="text-white" for="precioOferta"><b>Precio con descuento (en pesos) *</b></label>
+                <label class="text-white" for="precioOferta"><b>Precio con descuento aplicado (en pesos) *</b></label>
                 <input
                   id="precioOferta"
                   type="number"
@@ -239,7 +185,7 @@
                   placeholder="1200"
                 />
               </div>
-
+              <!--CATEGORIA-->
               <div class="mb-3">
                   <label class="text-white" for="categoria"><b>Categoría *</b></label>
                   <select id="categoria" class="form-control">
@@ -257,9 +203,9 @@
                     <option value="terror">Terror</option>
                   </select>
                 </div>
-
+                <!--IMAGEN-->
                 <div class="mb-3">
-                  <label class="text-white" for="imagen"><b>Imagen *</b><small class="text-white">
+                  <label class="text-white" for="imagen"><b>Imagen de portada *</b><small class="text-white">
                     (URL con formato .png, .jpg o gif)</small></label>
                   <input
                     id="imagen"
@@ -270,11 +216,25 @@
                     minlength="2"
                   />
                 </div>
-
+                <!--VIDEO-->
+                <div class="mb-3">
+                  <label class="text-white" for="trailer"><b>Trailer *</b><small class="text-white">
+                    Link obtenido de youtube</small></label>
+                  <input
+                    id="trailer"
+                    type="text"
+                    class="form-control"
+                    placeholder='Ej: https://www.youtube.com/embed/c-4wFMGFuCg'
+                    maxlength="500"
+                    minlength="100"
+                  />
+                </div>
+                <!--DESCRIPCION-->
                 <div class="mb-3">
                   <label class="text-white" for="descripcion"><b>Descripción *</b></label>
                   <textarea
                     id="descripcion"
+                    type="text"
                     rows="4"
                     class="form-control"
                     placeholder="Ej: Sucesor espiritual de Demon's Souls, es el primer juego de la saga Dark Souls. El juego tiene lugar en el reino de Lordran, donde los jugadores asumen el papel de un personaje no muerto maldito que comienza una peregrinación para descubrir su destino. "
@@ -282,6 +242,7 @@
                     minlength="2"
                   ></textarea>
                 </div>
+                <!--DESARROLLADOR-->
                 <div class="mb-3">
                   <label class="text-white" for="desarrollador"><b>Desarrollador *</b></label>
                   <input
@@ -293,9 +254,10 @@
                     minlength="20"
                   />
                 </div>
-                <p class="fs-6 text-light"><b>Requisitos del sistema</b></p>
-                <div class="ms-2 mb-3 p-1">
-                  <div>
+                <!--REQUISITOS DEL SISTEMA-->
+                <p class="fs-6 text-light mb-1"><b>Requisitos del sistema</b></p>
+                <div class="ms-2 mb-3 p-1 row">
+                  <div class="col-md-6">
                     <label class="text-white" for="procesador"><b>Procesador</b></label>
                     <input
                       id="procesador"
@@ -306,7 +268,7 @@
                       minlength="20"
                     />
                   </div>
-                  <div>
+                  <div class="col-md-6">
                     <label class="text-white" for="placa"><b>Placa gráfica</b></label>
                     <input
                       id="placa"
@@ -317,7 +279,7 @@
                       minlength="20"
                     />
                   </div>
-                  <div>
+                  <div class="col-md-6">
                     <label class="text-white" for="ram"><b>RAM</b></label>
                     <input
                       id="ram"
@@ -328,7 +290,7 @@
                       minlength="10"
                     />
                   </div>
-                  <div>
+                  <div class="col-md-6">
                     <label class="text-white" for="almacenamiento"><b>Almacenamiento</b></label>
                     <input
                       id="almacenamiento"
