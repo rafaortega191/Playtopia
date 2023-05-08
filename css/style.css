@@ -15,6 +15,18 @@ body {
   main{
     background-color: #808080 - rgb(128, 128, 128);
   }
+
+  #carouselIndex img {
+    height: 400px;
+    min-height: 400px;
+    object-fit: cover;
+  }
+  #bannerTheLastOfUs{
+    object-position: 70% 10%;
+  }
+  #bannerSpiderMan{
+    object-position: 80% 0%;
+  }
   /*Colores Navbar y footer light*/
   nav{
     background-color: #932fa2 - rgb(147, 47, 162);
@@ -34,4 +46,11 @@ body {
 /*Medianos*/
 @media all and (min-width: 577px) and (max-width: 991px){
 
+}
+/*Grandes*/
+@media all and (min-width: 991px){
+  #bannerHogwartsLegacy{
+    object-position: 0 66%;
+  }
+  
 }
