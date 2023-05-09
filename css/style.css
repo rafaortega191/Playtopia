@@ -1,44 +1,196 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Orbitron:wght@400;500&display=swap');
+
 /* Fuente general */
-* {
-    font-family: 'Libre Franklin', sans-serif;
+html {
+  font-size: 60%;
 }
+
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  main {
-    flex-grow: 1;
-  }
-  /*Background-color del main en modo oscuro*/
-  main{
-    background-color: #808080 - rgb(128, 128, 128);
-  }
-  /*Colores Navbar y footer light*/
-  nav{
-    background-color: #932fa2 - rgb(147, 47, 162);
-    color: #ffffff - rgb(255, 255, 255);
-  }
-  /*Colores Navbar y footer dark */
- footer{
-   background-color: #631291 - rgb(99, 18, 145);
-   color:  #ffffff - rgb(255, 255, 255);
- }
+  font-family: 'Libre Franklin', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #000;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/*Background-color del main en modo oscuro*/
+main {
+  background-color: #808080 - rgb(128, 128, 128);
+}
+
+/*Colores Navbar y footer light*/
+nav {
+  background-color: #932fa2 - rgb(147, 47, 162);
+  color: #ffffff - rgb(255, 255, 255);
+}
+
+/*Colores Navbar y footer dark */
+footer {
+  background-color: #631291 - rgb(99, 18, 145);
+  color: #ffffff - rgb(255, 255, 255);
+}
 
 
 /*Fondo Login*/
-#fondoLogin{
-  background-image:url(/img/fondoLogin.jpg.jpg);
+#fondoLogin {
+  background-image: url(/img/fondoLogin.jpg.jpg);
+  background-position: center;
   background-size: cover;
 }
 
- /* Media Query para disposiitovs pequeños y medianos*/
-/*Pequeños*/
-@media all and (max-width: 576px){
+
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+.contenedor {
+
+  position: relative;
+  isolation: isolate;
+  width: 40rem;
+  padding-top: 75px;
+  background: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border-radius: 1rem;
+  box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
+}
+
+.contenedor::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1)
+}
+
+.titulo {
+  position: absolute;
+  top: 30px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+}
+
+.formulario {
+  padding: 2.5rem;
+  background-color: transparent;
+}
+
+.formulario_grupo {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  margin-inline: auto;
+}
+
+.formulario_icono {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #631291;
+}
+
+.formulario_ingresar {
+  position: relative;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-block: 1rem;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+}
+
+.formulario_renglon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color:
+  rgb(255, 255, 255);
+  width: 100%;
+  height: 1px;
+}
+
+.formulario_renglon::before {
+  content: '';
+  position: absolute;
+  background-color: #631291;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+
+.formulario_boton {
+  display: block;
+  margin: 2.5rem auto 3rem;
+  padding: 1rem 5rem;
+  background-color: #631291;
+  color: #fff;
+  border-radius: 3rem;
+  cursor: pointer;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+  transition: .5s, color .10s;
+  -webkit-transition: .5s, color .10s;
+  -moz-transition: .5s, color .10s;
+}
+
+.formulario_boton:hover {
+  background-color: #932fa2;
+  cursor: pointer;
+  transform: scale3d(1.5, 1.5, 0.3);
+  -webkit-transform: scale3d(1.2, 1.2, 0.3);
+}
+
+.formulario_switch {
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.formulario_switch a {
+  cursor: pointer;
+  text-decoration: line;
+  color: #ffffff;
+}
+
+.formulario_swicth a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 
 }
+
+/* Media Query para disposiitovs pequeños y medianos*/
+/*Pequeños*/
+@media all and (max-width: 576px) {
+  #fondoLogin {
+    background-image: url(/img/fondoLogin.jpg.jpg);
+    background-position: center;
+  }
+}
 /*Medianos*/
-@media all and (min-width: 577px) and (max-width: 991px){
+@media all and (min-width: 577px) and (max-width: 991px) {
 
 }
