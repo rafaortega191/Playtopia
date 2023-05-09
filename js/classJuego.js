@@ -129,19 +129,22 @@ export default class Juego {
       set procesador(procesador) {
         this.#procesador = procesador;
       }
-    // solo para JSON.stringify 
+    // pasar a formato JSON.stringify 
     toJSON(){
         return {
-            codigo: this.codigo, // AQUI VA EL NOMBRE DEL GETTER (this.codigo se refiere al getter)
-            titulo: this.titulo,
+            codigo: this.codigo,
+            nombre: this.nombre,
+            precio: this.precio,
+            precioOferta: this.precioOferta,
             descripcion: this.descripcion,
             imagen: this.imagen,
-            anio: this.anio,
-            genero: this.genero,
-            pais: this.pais,
-            director: this.director,
-            reparto: this.reparto,
-
+            trailer: this.trailer,
+            categoria: this.categoria,
+            desarrollador: this.desarrollador,
+            almacenamiento: this.almacenamiento,
+            placaGrafica: this.placaGrafica,
+            ram: this.ram,
+            procesador: this.procesador
         }
 
     }
