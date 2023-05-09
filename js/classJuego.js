@@ -8,20 +8,27 @@ export default class Juego {
     #trailer;
     #categoria;
     #desarrollador;
+    #almacenamiento;
+    #placaGrafica;
+    #ram;
+    #procesador;
   
-    constructor(codigo = uuidv4()) {
+    constructor(codigo = uuidv4(), nombre, precio, precioOferta, descrpcion, imagen, trailer, categoria, desarrollador, almacenamiento, placaGrafica, ram, procesador) {
       this.#codigo = codigo;
-      this.#titulo = titulo;
+      this.#nombre = nombre;
+      this.#precio = precio;
+      this.#precioOferta = precioOferta;
       this.#descripcion = descripcion;
       this.#imagen = imagen;
-      this.#genero = genero;
-      this.#anio = anio;
-      this.#duracion = duracion;
-      this.#pais = pais;
-      this.#director = director;
-      this.#reparto = reparto;
+      this.#trailer = trailer;
+      this.#categoria = categoria;
+      this.#desarrollador = desarrollador;
+      this.#almacenamiento = almacenamiento;
+      this.#placaGrafica = placaGrafica;
+      this.#ram = ram;
+      this.#procesador = procesador;
     }
-  
+    // geters y seters  
     get codigo() {
       return this.#codigo;
     }
@@ -30,12 +37,28 @@ export default class Juego {
       this.#codigo = codigo;
     }
   
-    get titulo() {
-      return this.#titulo;
+    get nombre() {
+      return this.#nombre;
     }
   
-    set titulo(titulo) {
-      this.#titulo = titulo;
+    set nombre(nombre) {
+      this.#nombre = nombre;
+    }
+  
+    get precio() {
+      return this.#precio;
+    }
+  
+    set precio(precio) {
+      this.#precio = precio;
+    }
+  
+    get precioOferta() {
+      return this.#precioOferta;
+    }
+  
+    set precioOferta(precioOferta) {
+      this.#precioOferta = precioOferta;
     }
   
     get descripcion() {
@@ -43,7 +66,7 @@ export default class Juego {
     }
   
     set descripcion(descripcion) {
-      this.#descripcion = descripcion;
+      this.#descripcio = descripcion;
     }
   
     get imagen() {
@@ -54,53 +77,58 @@ export default class Juego {
       this.#imagen = imagen;
     }
   
-    get genero() {
-      return this.#genero;
+    get trailer() {
+      return this.#trailer;
     }
   
-    set genero(genero) {
-      this.#genero = genero;
+    set trailer(trailer) {
+      this.#trailer = trailer;
     }
   
-    get anio() {
-      return this.#anio;
+    get categoria() {
+      return this.#categoria;
     }
   
-    set anio(anio) {
-      this.#anio = anio;
+    set categoria(categoria) {
+      this.#categoria = categoria;
     }
   
-    get duracion() {
-      return this.#duracion;
+    get desarrollador() {
+      return this.#desarrollador;
     }
   
-    set duracion(duracion) {
-      this.#duracion = duracion;
+    set desarrollador(desarrollador) {
+      this.#desarrollador = desarrollador;
     }
   
-    get pais() {
-      return this.#pais;
+    get almacenamiento() {
+      return this.#almacenamiento;
     }
   
-    set pais(pais) {
-      this.#pais = pais;
+    set almacenamiento(almacenamiento) {
+      this.#almacenamiento = almacenamiento;
     }
-  
-    get director() {
-      return this.#director;
-    }
-  
-    set director(director) {
-      this.#director = director;
-    }
-  
-    get reparto() {
-      return this.#reparto;
-    }
-  
-    set reparto(reparto) {
-      this.#reparto = reparto;
-    }
+    get placaGrafica() {
+        return this.#placaGrafica;
+      }
+    
+      set placaGrafica(placaGrafica) {
+        this.#placaGrafica = placaGrafica;
+      }
+      get ram() {
+        return this.#ram;
+      }
+    
+      set ram(ram) {
+        this.#ram = ram;
+      }
+      get procesador() {
+        return this.#procesador;
+      }
+    
+      set procesador(procesador) {
+        this.#procesador = procesador;
+      }
     // solo para JSON.stringify 
     toJSON(){
         return {
