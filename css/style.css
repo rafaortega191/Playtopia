@@ -56,7 +56,6 @@ input {
 }
 
 .contenedor {
-
   position: relative;
   isolation: isolate;
   width: 40rem;
@@ -113,32 +112,36 @@ input {
   margin-top: 0.5rem;
   padding-block: 1rem;
   background: transparent;
-  color: #fff;
+  color: #ffffff;
   width: 100%;
   height: 50px;
 }
 
 .formulario_renglon {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color:
-  rgb(255, 255, 255);
-  width: 100%;
-  height: 1px;
+	left: 0;
+	bottom: 0;
+	background-color: 
+		rgb(255, 255, 255);
+	width: 100%;
+	height: 1px;
 }
 
 .formulario_renglon::before {
   content: '';
-  position: absolute;
-  background-color: #631291;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s;
+	position: absolute;
+	background-color: #631291;
+	width: 100%;
+	height: 2px;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.5s;
 }
 
+.formulario_ingresar:focus + .formulario_renglon::before,
+.formulario_ingresar:valid + .formulario_renglon::before {
+	transform: scaleX(1);
+}
 
 .formulario_boton {
   display: block;
@@ -181,6 +184,24 @@ input {
   text-decoration: underline;
 
 }
+.terminos{
+
+  margin: 10px 0 15px;
+  font-size: 15px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.terminos label a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.terminos label a:hover{
+  text-decoration: underline;
+}
+
 
 /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
@@ -194,3 +215,5 @@ input {
 @media all and (min-width: 577px) and (max-width: 991px) {
 
 }
+
+
