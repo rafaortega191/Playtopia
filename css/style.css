@@ -42,7 +42,7 @@ footer {
 
 /*Fondo Login*/
 #fondoLogin {
-  background-image: url(/img/fondoLogin.jpg.jpg);
+  background-image: url(/Playtopia/img/fondoLogin.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -81,7 +81,7 @@ input {
 
 .titulo {
   position: absolute;
-  top: 30px;
+  top: 10px;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
