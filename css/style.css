@@ -31,6 +31,10 @@ body {
   width: 100px;
  }
 
+ #imagenRecomendados {
+  object-fit: cover;
+ }
+
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
