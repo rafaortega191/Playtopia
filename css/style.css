@@ -45,7 +45,9 @@ body {
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
-
+#imagenRecomendados {
+  display: none;
+}
 }
 /*Medianos*/
 @media all and (min-width: 577px) and (max-width: 991px){
