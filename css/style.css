@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Orbitron:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Bruno+Ace+SC&family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Libre+Franklin:wght@200&family=Orbitron:wght@400;500&family=Ruda:wght@500&display=swap');
 /* Fuente general */
-* {
-    font-family: 'Libre Franklin', sans-serif;
-}
 body {
     min-height: 100vh;
     display: flex;
@@ -10,16 +8,43 @@ body {
   }
   main {
     flex-grow: 1;
+    font-family: 'Libre Franklin', sans-serif;
+  }
+  #fuenteLogo{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: white
+  }
+  /*Background-color del main en modo oscuro*/
+  main{
+    background-color: #808080;
   }
   /*Colores Navbar y footer light*/
-  nav{
-    background-color: #932fa2 - rgb(147, 47, 162);
-    color: #ffffff - rgb(255, 255, 255);
+ nav.navbar{
+    background-color: #932fa2; 
   }
+.dropdown-menu{
+    background-color: #932fa2; 
+}
+.dropdown-item:hover{
+  background-color: #c967cb;
+}
+/*Estilos de navbar*/
+nav ul li a{
+    color: #ffffff;
+    font-family: 'Urbanist', sans-serif;
+}
+.navbar-toggler-icon{
+  color: #ffffff;
+}
+.dropdown-toggle::after{
+  margin-left: 0;
+}
   /*Colores Navbar y footer dark */
  footer{
-   background-color: #631291 - rgb(99, 18, 145);
-   color:  #ffffff - rgb(255, 255, 255);
+   background-color: #631291;
+   color:  #ffffff;
  }
 /*Estilos para pagina detalle*/
 #tituloDetalle{
@@ -110,6 +135,21 @@ iframe{
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
+  #fuenteLogo{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  #logo{
+    width: 30px;
+  }
+  .navbar-nav{
+    font-size: 15px;
+  }
+  .navbar-nav .i{
+    font-size: 15px;
+  }
+  .dropdown-menu{
+    font-size: 13px;
   .btnComprar{
     height: 50px;
     background-color: #631291;
