@@ -26,10 +26,10 @@
     <link rel="stylesheet" href="/css/style.css" />
     <title>Playtopia</title>
   </head>
-  <body>
+  <body data-bs-theme="light">
     <header></header>
     <main>
-      <div id="carouselIndex" class="carousel slide">
+      <section id="carouselIndex" class="carousel slide">
         <div class="carousel-indicators">
           <button
             type="button"
@@ -53,7 +53,7 @@
           ></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <article class="carousel-item active">
             <a href="./pages/error404.html"
               ><img
                 src="https://cdn1.epicgames.com/offer/e97659b501af4e3981d5430dad170911/EGS_HogwartsLegacyDigitalDeluxeEdition_AvalancheSoftware_Editions_S1_2560x1440-65f2cce001ab1893cca57f48aeb25196"
@@ -61,8 +61,8 @@
                 alt="Hogwarts Legacy Banner"
                 id="bannerHogwartsLegacy"
             /></a>
-          </div>
-          <div class="carousel-item">
+          </article>
+          <article class="carousel-item">
             <a href="./pages/error404.html"
               ><img
                 src="https://images5.alphacoders.com/394/394511.jpg"
@@ -70,8 +70,8 @@
                 alt="The Last Of Us Banner"
                 id="bannerTheLastOfUs"
             /></a>
-          </div>
-          <div class="carousel-item">
+          </article>
+          <article class="carousel-item">
             <a href="./pages/error404.html"
               ><img
                 src="https://wallpapercave.com/wp/wp11872233.jpg"
@@ -79,7 +79,7 @@
                 alt="Spider-Man Banner"
                 id="bannerSpiderMan"
             /></a>
-          </div>
+          </article>
         </div>
         <button
           class="carousel-control-prev"
@@ -99,7 +99,187 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
+      </section>
+      <section class="container mt-4">
+        <h2 class="fw-bold">Juegos en oferta</h2>
+        <div>
+          <div class="row">
+            <div class="col-12 col-md-4 px-4 mb-3">
+              <div class="card containerJuegosOferta">
+                <img
+                  src="https://image.api.playstation.com/vulcan/ap/rnd/202211/2222/mBqBHTdjAZ2ri7KTJytFGqJt.png"
+                  class="card-img-top"
+                  alt="Star Wars: Jedi Survivor"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Star Wars: Jedi Survivor</h5>
+                  <div class="row">
+                    <div class="col-8">
+                      <span class="badge text-bg-secondary">Acción</span>
+                      <span class="badge text-bg-secondary">Aventura</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column align-items-end">
+                      <span class="text-decoration-line-through"> $2000 </span>
+                      <span class="fs-6 badge text-bg-success"> $1000 </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 px-4 mb-3">
+              <div class="card containerJuegosOferta">
+                <img
+                  src="https://image.api.playstation.com/vulcan/ap/rnd/202211/2222/mBqBHTdjAZ2ri7KTJytFGqJt.png"
+                  class="card-img-top"
+                  alt="Star Wars: Jedi Survivor"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Star Wars: Jedi Survivor</h5>
+                  <div class="row">
+                    <div class="col-8">
+                      <span class="badge text-bg-secondary">Acción</span>
+                      <span class="badge text-bg-secondary">Aventura</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column align-items-end">
+                      <span class="text-decoration-line-through"> $2000 </span>
+                      <span class="fs-6 badge text-bg-success"> $1000 </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 px-4 mb-3">
+              <div class="card containerJuegosOferta">
+                <img
+                  src="https://image.api.playstation.com/vulcan/ap/rnd/202211/2222/mBqBHTdjAZ2ri7KTJytFGqJt.png"
+                  class="card-img-top"
+                  alt="Star Wars: Jedi Survivor"
+                />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Star Wars: Jedi Survivor</h5>
+                  <div class="row">
+                    <div class="col-8">
+                      <span class="badge text-bg-secondary">Acción</span>
+                      <span class="badge text-bg-secondary">Aventura</span>
+                    </div>
+                    <div class="col-4 d-flex flex-column align-items-end">
+                      <span class="text-decoration-line-through"> $2000 </span>
+                      <span class="fs-6 badge text-bg-success"> $1000 </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container mt-4">
+        <h2 class="fw-bold">Todos nuestros juegos</h2>
+        <div class="form-floating mb-4 w-md-50 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder=" "
+            maxlength="100"
+          />
+          <label for="floatingInput"><i class="bi bi-search"></i> Buscar</label>
+        </div>
+        <div>
+          <div class="row px-2">
+            <div
+              class="col-6 col-md-3 col-lg-2 rounded mb-4 position-relative containerImagenJuegos overflow-hidden"
+            >
+              <img
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202211/2222/mBqBHTdjAZ2ri7KTJytFGqJt.png"
+                alt="Star Wars: Jedi Survivor"
+                class="imagenJuegos rounded"
+              />
+              <div class="infoCardJuego text-light p-2">
+                <h5 class="fw-bold pe-1">Star Wars: Jedi Survivor</h5>
+                <div class="d-flex flex-row-reverse">
+                  <p class="me-3 mb-0 badge text-bg-success fs-6">$1000</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3 col-lg-2 rounded mb-4 position-relative containerImagenJuegos overflow-hidden"
+            >
+              <img
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202211/2222/mBqBHTdjAZ2ri7KTJytFGqJt.png"
+                alt="Star Wars: Jedi Survivor"
+                class="imagenJuegos rounded"
+              />
+              <div class="infoCardJuego text-light p-2">
+                <h5 class="fw-bold pe-1">Star Wars: Jedi Survivor</h5>
+                <div class="d-flex flex-row-reverse">
+                  <p class="me-3 mb-0 badge text-bg-success fs-6">$1000</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3 col-lg-2 rounded mb-4 position-relative containerImagenJuegos overflow-hidden"
+            >
+              <img
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202211/2222/mBqBHTdjAZ2ri7KTJytFGqJt.png"
+                alt="Star Wars: Jedi Survivor"
+                class="imagenJuegos rounded"
+              />
+              <div class="infoCardJuego text-light p-2">
+                <h5 class="fw-bold pe-1">Star Wars: Jedi Survivor</h5>
+                <div class="d-flex flex-row-reverse">
+                  <p class="me-3 mb-0 badge text-bg-success fs-6">$1000</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3 col-lg-2 rounded mb-4 position-relative containerImagenJuegos overflow-hidden"
+            >
+              <img
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202211/2222/mBqBHTdjAZ2ri7KTJytFGqJt.png"
+                alt="Star Wars: Jedi Survivor"
+                class="imagenJuegos rounded"
+              />
+              <div class="infoCardJuego text-light p-2">
+                <h5 class="fw-bold pe-1">Star Wars: Jedi Survivor</h5>
+                <div class="d-flex flex-row-reverse">
+                  <p class="me-3 mb-0 badge text-bg-success fs-6">$1000</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3 col-lg-2 rounded mb-4 position-relative containerImagenJuegos overflow-hidden"
+            >
+              <img
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202211/2222/mBqBHTdjAZ2ri7KTJytFGqJt.png"
+                alt="Star Wars: Jedi Survivor"
+                class="imagenJuegos rounded"
+              />
+              <div class="infoCardJuego text-light p-2">
+                <h5 class="fw-bold pe-1">Star Wars: Jedi Survivor</h5>
+                <div class="d-flex flex-row-reverse">
+                  <p class="me-3 mb-0 badge text-bg-success fs-6">$1000</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-6 col-md-3 col-lg-2 rounded mb-4 position-relative containerImagenJuegos overflow-hidden"
+            >
+              <img
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202211/2222/mBqBHTdjAZ2ri7KTJytFGqJt.png"
+                alt="Star Wars: Jedi Survivor"
+                class="imagenJuegos rounded"
+              />
+              <div class="infoCardJuego text-light p-2">
+                <h5 class="fw-bold pe-1">Star Wars: Jedi Survivor</h5>
+                <div class="d-flex flex-row-reverse">
+                  <p class="me-3 mb-0 badge text-bg-success fs-6">$1000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <!-- Link Bootstrap-->
