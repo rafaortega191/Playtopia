@@ -26,6 +26,11 @@ body {
    color:  #ffffff - rgb(255, 255, 255);
  }
 
+ /* Seccion Recomendados Index */
+ .badgePrecio {
+  width: 100px;
+ }
+
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
