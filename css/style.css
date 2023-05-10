@@ -46,6 +46,16 @@ nav ul li a{
    background-color: #631291;
    color:  #ffffff;
  }
+ /* Seccion Recomendados Index */
+ .badgePrecio {
+  width: 100px;
+ }
+ #imagenRecomendados {
+  object-fit: cover;
+ }
+ .cardRecomendados:hover {
+  transform: scale(1.02);
+ }
 /*Estilos para pagina detalle*/
 #tituloDetalle{
   color: #631291;
@@ -135,6 +145,9 @@ iframe{
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
+  #imagenRecomendados {
+  display: none;
+  }
   #fuenteLogo{
     font-size: 20px;
     font-weight: 500;
