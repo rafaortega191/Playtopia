@@ -25,20 +25,20 @@
     <main >
         <div class="contenedor">
             <form class="formulario">
-                <h1 class="titulo">Iniciar sesion</h1>
+                <h1 class="titulo">Iniciar sesión</h1>
                 <div class="formulario_grupo">
                     <ion-icon class="formulario_icono" name="person-outline"></ion-icon>
-                    <input type="text" placeholder="Nombre de usuario" required class="formulario_ingresar" />
+                    <input type="text" placeholder="Nombre de usuario" maxlength="40" required class="formulario_ingresar" />
                     <span class="formulario_renglon"></span>
                 </div>
 
                 <div class="formulario_grupo">
                     <ion-icon class="formulario_icono" name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="Contraseña" required class="formulario_ingresar" />
+                    <input type="password" placeholder="Contraseña" minlength="6" maxlength="20"required class="formulario_ingresar" />
                     <span class="formulario_renglon"></span>
                 </div>
 
-                <button type="submit" class="formulario_boton">Iniciar sesion</button>
+                <button type="submit" class="formulario_boton">Iniciar sesión</button>
                 <p class="formulario_switch">
                     No tenes cuenta? <a href="#">Unete a Playtopia</a>
                 </p>
