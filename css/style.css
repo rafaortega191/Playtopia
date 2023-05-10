@@ -132,7 +132,7 @@ input {
 	height: 2px;
 	transform: scaleX(0);
 	transform-origin: left;
-	transition: transform 0.5s;
+	transition: transform 0.7s;
 }
 
 .formulario_ingresar:focus + .formulario_renglon::before,
