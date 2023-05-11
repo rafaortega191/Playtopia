@@ -20,6 +20,56 @@ body {
   main{
     background-color: #808080;
   }
+
+  #carouselIndex img {
+    height: 400px;
+    min-height: 400px;
+    object-fit: cover;
+  }
+  #bannerTheLastOfUs{
+    object-position: 70% 10%;
+  }
+  #bannerSpiderMan{
+    object-position: 80% 0%;
+  }
+
+  .containerJuegosOferta{
+    transition: scale 0.3s ease-out;
+  }
+  .containerJuegosOferta:hover{
+    scale: 1.03;
+  }
+
+  .imagenJuegos{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: filter 0.35s ease-out;
+  }
+
+  .containerImagenJuegos{
+    transition: scale 0.3s ease-out;
+  }
+
+  .containerImagenJuegos:hover{
+    scale: 1.05;
+  }
+
+  .containerImagenJuegos:hover img{
+    filter: brightness(30%);
+  }
+
+  .containerImagenJuegos:hover .infoCardJuego{
+    bottom: 5px;
+  }
+
+  .infoCardJuego{
+    position: absolute;
+    z-index: 1;
+    bottom: -300px;
+    transition: bottom 0.25s ease-out;
+  }
+
   /*Colores Navbar y footer light*/
  nav.navbar{
     background-color: #932fa2; 
@@ -195,5 +245,12 @@ iframe{
 /*Medianos*/
 @media all and (min-width: 577px) and (max-width: 991px){
 
+}
+/*Grandes*/
+@media all and (min-width: 991px){
+  #bannerHogwartsLegacy{
+    object-position: 0 66%;
+  }
+  
 }
 }
