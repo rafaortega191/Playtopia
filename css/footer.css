@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Orbitron:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Bruno+Ace+SC&family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Libre+Franklin:wght@200&family=Orbitron:wght@400;500&family=Ruda:wght@500&display=swap');
+/* Fuente general */
 footer{
     background-color: rgb(147, 47, 162);
     color: #fff;
@@ -13,9 +16,11 @@ footer{
   }
   
   .textologo {
+    font-family: 'Urbanist', sans-serif;
     padding-top: 35px;
-    padding-left: 35px;
+    padding-left: 5px;
     font-size: 30px;
+    font-weight: 600;
   }
   
   .contenedor {
