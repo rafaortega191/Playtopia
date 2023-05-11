@@ -303,15 +303,9 @@ iframe {
 }
 
 
-/*Login*
-/*Fondo Login*/
-#fondoLogin {
-  background-image: url(/img/fondoLogin.jpg);
-  background-position: center;
-  background-size: cover;
-}
+/*Login*/
 
-.clase_body {
+ body {
   font-family: 'Libre Franklin', sans-serif;
   min-height: 100vh;
   display: flex;
@@ -323,26 +317,28 @@ iframe {
   display: grid;
   place-items: center;
 }
-
+#fondoLogin {
+  background-image: url(/img/fondoLogin.jpg);
+  background-position: center;
+  background-size: cover;
+}
 button,
 input {
   border: none;
   outline: none;
 }
-
 .contenedor {
   position: relative;
   isolation: isolate;
-  width: 30rem;
+  width: 40rem;
   padding-top: 75px;
   background: transparent;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 20px;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(15px);
   border-radius: 1rem;
   box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
 }
-
 .contenedor::before {
   content: '';
   position: absolute;
@@ -353,34 +349,29 @@ input {
   height: 60px;
   box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1)
 }
-
 .titulo {
   position: absolute;
   top: 10px;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 3rem;
+  font-size: 4rem;
 }
-
 .formulario {
-  margin: 2.5rem;
+  padding: 2.5rem;
   background-color: transparent;
 }
-
 .formulario_grupo {
   position: relative;
   display: flex;
   align-items: baseline;
   margin-inline: auto;
 }
-
 .formulario_icono {
   font-size: 2rem;
   margin-right: 1rem;
-  color: #932fa2;
+  color: #631291;
 }
-
 .formulario_ingresar {
   position: relative;
   width: 100%;
@@ -391,38 +382,33 @@ input {
   width: 100%;
   height: 50px;
 }
-
 .formulario_renglon {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color:
-    rgb(255, 255, 255);
-  width: 100%;
-  height: 1px;
+	left: 0;
+	bottom: 0;
+	background-color: 
+		rgb(255, 255, 255);
+	width: 100%;
+	height: 1px;
 }
-
 .formulario_renglon::before {
   content: '';
-  position: absolute;
-  background-color: #932fa2;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.7s;
+	position: absolute;
+	background-color: #631291;
+	width: 100%;
+	height: 2px;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.5s;
 }
-
-.formulario_ingresar:focus+.formulario_renglon::before,
-.formulario_ingresar:valid+.formulario_renglon::before {
-  transform: scaleX(1);
+.formulario_ingresar:focus + .formulario_renglon::before,
+.formulario_ingresar:valid + .formulario_renglon::before {
+	transform: scaleX(1);
 }
-
 .formulario_boton {
   display: block;
-  font-size: 20px;
-  margin: 1rem auto 2rem;
-  padding: 1rem 2.5rem;
+  margin: 2.5rem auto 3rem;
+  padding: 1rem 5rem;
   background-color: #631291;
   color: #fff;
   border-radius: 3rem;
@@ -435,31 +421,41 @@ input {
   -webkit-transition: .5s, color .10s;
   -moz-transition: .5s, color .10s;
 }
-
 .formulario_boton:hover {
   background-color: #932fa2;
   cursor: pointer;
   transform: scale3d(1.5, 1.5, 0.3);
   -webkit-transform: scale3d(1.2, 1.2, 0.3);
 }
-
 .formulario_switch {
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
   color: #ffffff;
 }
-
 .formulario_switch a {
   cursor: pointer;
   text-decoration: line;
   color: #ffffff;
 }
-
 .formulario_swicth a:hover {
   cursor: pointer;
   text-decoration: underline;
-
 }
+.terminos{
+  margin: 10px 0 15px;
+  font-size: 15px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.terminos label a{
+  color: #fff;
+  text-decoration: none;
+}
+.terminos label a:hover{
+  text-decoration: underline;
+}
+
 
 /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
@@ -520,103 +516,15 @@ input {
     position: relative;
   }
 
-  /*Login*/
   #fondoLogin {
+    background-image: url(/img/fondoLogin.jpg.jpg);
     background-position: center;
-  }
-
-  .contenedor {
-    position: relative;
-    isolation: isolate;
-    width: 300px;
-    padding-top: 75px;
-    background: transparent;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    border-radius: 1rem;
-    box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
-  }
-
-  .titulo {
-    font-size: 2rem;
-  }
-
-  .formulario_boton {
-    display: block;
-    font-size: 15px;
-    margin: 1rem auto 1.5rem;
-    padding: 1rem 1.5rem;
-    background-color: #631291;
-    color: #fff;
-    border-radius: 3rem;
-    cursor: pointer;
-    -webkit-transition: background-color 1s ease-out;
-    -moz-transition: background-color 1s ease-out;
-    -o-transition: background-color 1s ease-out;
-    transition: background-color 1s ease-out;
-    transition: .5s, color .10s;
-    -webkit-transition: .5s, color .10s;
-    -moz-transition: .5s, color .10s;
   }
 }
 
 /*Medianos*/
 @media all and (min-width: 577px) and (max-width: 991px) {
-  .contenedor {
-    position: relative;
-    isolation: isolate;
-    width: 500px;
-    padding-top: 70px;
-    background: transparent;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    border-radius: 1rem;
-    box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
-  }
-
-  .formulario_icono {
-    font-size: 2rem;
-    margin-right: 1rem;
-    color: #932fa2;
-  }
-
-  .formulario_ingresar {
-    position: relative;
-    font-size: 1.5rem;
-    width: 100%;
-    margin-top: 0.5rem;
-    padding-block: 1rem;
-    background: transparent;
-    color: #ffffff;
-    width: 100%;
-    height: 50px;
-  }
-
-  .formulario_boton {
-    display: block;
-    font-size: 25px;
-    margin: 2rem auto 1.5rem;
-    padding: 1rem 1.5rem;
-    background-color: #631291;
-    color: #fff;
-    border-radius: 3rem;
-    cursor: pointer;
-    -webkit-transition: background-color 1s ease-out;
-    -moz-transition: background-color 1s ease-out;
-    -o-transition: background-color 1s ease-out;
-    transition: background-color 1s ease-out;
-    transition: .5s, color .10s;
-    -webkit-transition: .5s, color .10s;
-    -moz-transition: .5s, color .10s;
-  }
-
-  .formulario_switch {
-    font-size: 1.3rem;
-    text-align: center;
-    color: #ffffff;
-  }
+ 
 }
 
 /*Grandes*/
