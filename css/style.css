@@ -305,7 +305,7 @@ iframe {
 
 /*Login*/
 
- body {
+body {
   font-family: 'Libre Franklin', sans-serif;
   min-height: 100vh;
   display: flex;
@@ -322,6 +322,7 @@ iframe {
   background-position: center;
   background-size: cover;
 }
+
 button,
 input {
   border: none;
@@ -335,7 +336,7 @@ input {
   background: transparent;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 20px;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(20px);
   border-radius: 1rem;
   box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
 }
@@ -370,7 +371,7 @@ input {
 .formulario_icono {
   font-size: 2rem;
   margin-right: 1rem;
-  color: #631291;
+  color: #932fa2;
 }
 .formulario_ingresar {
   position: relative;
@@ -394,7 +395,7 @@ input {
 .formulario_renglon::before {
   content: '';
 	position: absolute;
-	background-color: #631291;
+	background-color: #932fa2;
 	width: 100%;
 	height: 2px;
 	transform: scaleX(0);
@@ -441,21 +442,6 @@ input {
   cursor: pointer;
   text-decoration: underline;
 }
-.terminos{
-  margin: 10px 0 15px;
-  font-size: 15px;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-}
-.terminos label a{
-  color: #fff;
-  text-decoration: none;
-}
-.terminos label a:hover{
-  text-decoration: underline;
-}
-
 
 /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
@@ -520,11 +506,35 @@ input {
     background-image: url(/img/fondoLogin.jpg.jpg);
     background-position: center;
   }
+
+  .contenedor {
+    position: relative;
+    isolation: isolate;
+    width: 300px;
+    padding-top: 75px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
+  }
 }
 
 /*Medianos*/
 @media all and (min-width: 577px) and (max-width: 991px) {
- 
+  .contenedor {
+    position: relative;
+    isolation: isolate;
+    width: 450px;
+    padding-top: 70px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
+  }
 }
 
 /*Grandes*/
