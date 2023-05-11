@@ -27,7 +27,85 @@
     <title>Playtopia</title>
   </head>
   <body data-bs-theme="light">
-    <header></header>
+    <header>
+      <!-- Navbar-->
+      <nav class="navbar navbar-dark navbar-expand-lg ">
+        <div class="container">
+          <!--Boton hamburguesa-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--Logo-->
+          <span class="">
+            <a class="navbar-brand d-flex align-items-center" id="fuenteLogo" href="/index.html">
+              <img
+                src="/img/LogoBlanco.png"
+                width="40px"
+                id="logo"
+                class=""
+                alt="Logo de playtopia"
+              />
+              <span class="d-none d-lg-inline ms-lg-2">Playtopia</span></a
+            >
+          </span>
+          <!--Lista de navbar-->
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto d-flex align-items-start align-items-lg-center gap-lg-2">
+              <li class="nav-item">
+                <a class="nav-link  active" aria-current="page" href="/index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/pages/admin.html">Administrador</a>
+              </li>
+              <!--Desplegable para modo claro/modo oscuro-->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle "
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-brightness-high-fill fs-5"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      ><i class="bi bi-brightness-high-fill fs-6 me-2"></i>Tema claro</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      ><i class="bi bi-moon-fill  fs-6 me-2"></i>Tema oscuro</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/pages/error404.html"
+                  ><i class="bi bi-cart-fill fs-5"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/pages/error404.html"
+                  ><i class="bi bi-person-circle fs-5"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main>
       <section id="carouselIndex" class="carousel slide">
         <div class="carousel-indicators">
@@ -278,6 +356,83 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="container my-3">
+        <div class="row">
+          <aside class="col-md-8 col-sm-12">
+            <div class="card my-1 cardRecomendados" onmouseover="mostrarImagen('https://cdn.akamai.steamstatic.com/steam/apps/730/ss_d196d945c6170e9cadaf67a6dea675bd5fa7a046.1920x1080.jpg?t=1683566799')" onmouseout="imagenPorDefecto()">
+              <div class="card-body">
+                <h5 class="card-title">Counter-Strike: Global Offensive</h5>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <span class="badge bg-secondary">Primera Persona</span>
+                    <span class="badge bg-secondary">Táctico</span>
+                    <span class="badge bg-primary-subtle">Multijugador</span>
+                  </div>
+                  <span class="badge bg-success p-3 badgePrecio">$1235,00</span>
+                </div>
+              </div>
+            </div>
+            <div class="card my-1 cardRecomendados" onmouseover="mostrarImagen('https://cdn.akamai.steamstatic.com/steam/apps/570/ss_b33a65678dc71cc98df4890e22a89601ee56a918.1920x1080.jpg?t=1682639497')" onmouseout="imagenPorDefecto()">
+              <div class="card-body">
+                <h5 class="card-title">Dota 2</h5>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <span class="badge bg-secondary">Estrategia</span>
+                    <span class="badge bg-primary-subtle">Multijugador</span>
+                  </div>
+                  <span class="badge bg-success p-3 badgePrecio">$3219.99</span>
+                </div>
+              </div>
+            </div>
+            <div class="card my-1 cardRecomendados" onmouseover="mostrarImagen('https://cdn.akamai.steamstatic.com/steam/apps/271590/ss_6b3e35dfc1acf5a742998fcd21690b5cddc367df.1920x1080.jpg?t=1678296348')" onmouseout="imagenPorDefecto()">
+              <div class="card-body">
+                <h5 class="card-title">Grand Theft Auto V: Los Santos</h5>
+                <div class="d-flex justify-content-between">
+                  <div class="">
+                    <span class="badge bg-secondary">Mundo Abierto</span>
+                    <span class="badge bg-secondary">Acción</span>
+                    <span class="badge bg-primary-subtle">Multijugador</span>
+                  </div>
+                  <span class="badge bg-success p-3 badgePrecio">$2679,00</span>
+                </div>
+              </div>
+            </div>
+            <div class="card my-1 cardRecomendados" onmouseover="mostrarImagen('https://cdn.akamai.steamstatic.com/steam/apps/1904540/ss_8d2a70ea08faf17cb96b7f9efff3bdb68d5bb425.1920x1080.jpg?t=1680627762')" onmouseout="imagenPorDefecto()">
+              <div class="card-body">
+                <h5 class="card-title">Football Manager 2023</h5>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <span class="badge bg-secondary">Deportes</span>
+                    <span class="badge bg-secondary">Simuladores</span>
+                    <span class="badge bg-primary-subtle">Multijugador</span>
+                  </div>
+                  <span class="badge bg-success p-3 badgePrecio">$856,00</span>
+                </div>
+              </div>
+            </div>
+            <div class="card my-1 cardRecomendados" onmouseover="mostrarImagen('https://cdn.akamai.steamstatic.com/steam/apps/289070/ss_b2bf12299c38214fe520af0f724a6349d17ed330.1920x1080.jpg?t=1680898825')" onmouseout="imagenPorDefecto()">
+              <div class="card-body">
+                <h5 class="card-title">Civilization VI</h5>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <span class="badge bg-secondary">Estrategia</span>
+                    <span class="badge bg-primary-subtle">Multijugador</span>
+                  </div>
+                  <span class="badge bg-success p-3 badgePrecio">$3219.99</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <aside class="col-md-3 container d-flex">
+            <img
+              class="img-fluid rounded"
+              src="img/Gif_logo_negro.gif"
+              alt="Imagen del juego recomendado"
+              id="imagenRecomendados"
+            />
+          </aside>
         </div>
       </section>
     </main>
