@@ -27,7 +27,84 @@
     <title>Playtopia | Detalle</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav class="navbar navbar-dark navbar-expand-lg ">
+        <div class="container">
+          <!--Boton hamburguesa-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--Logo-->
+          <span class="">
+            <a class="navbar-brand d-flex align-items-center" id="fuenteLogo" href="../index.html">
+              <img
+                src="./img/LogoBlanco.png"
+                width="40px"
+                id="logo"
+                class=""
+                alt="Logo de playtopia"
+              />
+              <span class="d-none d-lg-inline ms-lg-2">Playtopia</span></a
+            >
+          </span>
+          <!--Lista de navbar-->
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto d-flex align-items-start align-items-lg-center gap-lg-2">
+              <li class="nav-item">
+                <a class="nav-link  active" aria-current="page" href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./admin.html">Administrador</a>
+              </li>
+              <!--Desplegable para modo claro/modo oscuro-->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle "
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-brightness-high-fill fs-5"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      ><i class="bi bi-brightness-high-fill fs-6 me-2"></i>Tema claro</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      ><i class="bi bi-moon-fill  fs-6 me-2"></i>Tema oscuro</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./error404.html"
+                  ><i class="bi bi-cart-fill fs-5"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./error404.html"
+                  ><i class="bi bi-person-circle fs-5"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main>
       <section>
         <div>
