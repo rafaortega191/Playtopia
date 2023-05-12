@@ -20,9 +20,6 @@ body {
     font-family: 'Urbanist', sans-serif;
   }
   /*Background-color del main en modo oscuro*/
-  main{
-    background-color: #808080;
-  }
   #carouselIndex img {
     height: 400px;
     min-height: 400px;
