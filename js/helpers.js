@@ -89,7 +89,14 @@ function validarRam(ram){
     }
 }
 function validarProcesador(procesador){
-
+    let patron = /^[a-zA-Z0-9 -|]*$/;
+    if(patron.test(procesador)){
+        console.log(`Dato correcto`)
+        return true
+    } else{
+        console.log(`Dato incorrecto`)
+        return false
+    }
 }
 
 export function sumarioValidacion(nombre, precio, precioOferta, descripcion, imagen, trailer, categoria, desarrollador, almacenamiento, placaGrafica, ram, procesador){
@@ -126,6 +133,9 @@ export function sumarioValidacion(nombre, precio, precioOferta, descripcion, ima
     }
     if(!validarRam(ram)){
         resumen += `El campo de ram debe contener letras y números. <br>`
+    }
+    if(!validarProcesador(procesador)){
+        resumen += `El campo de procesador debe contener letras y numeros. <br>`
     }
     return resumen 
 }
