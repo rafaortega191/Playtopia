@@ -316,6 +316,7 @@ input {
   border: none;
   outline: none;
 }
+
 .clase_body {
   font-family: 'Libre Franklin', sans-serif;
   min-height: 100vh;
@@ -619,12 +620,14 @@ input {
     -webkit-transition: .5s, color .10s;
     -moz-transition: .5s, color .10s;
   }
+
   .formulario_boton:hover {
     background-color: #932fa2;
     cursor: pointer;
     transform: scale3d(1.5, 1.5, 0.3);
     -webkit-transform: scale3d(1.1, 1.1, 0.3);
   }
+
   .formulario_switch {
     font-size: 1.3rem;
     text-align: center;
