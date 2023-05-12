@@ -58,6 +58,39 @@ function validarCategoria(categoria){
         return false
     }
 }
+function validarAlmacenamiento(almacenamiento){
+    let patron = /^[a-zA-Z0-9 -|]*$/;
+    if(patron.test(almacenamiento)){
+        console.log(`Completado correctamente`)
+        return true
+    } else{
+        console.log(`No fue completado correctamente`)
+        return false
+    }
+}
+function validarPlaca(placaGrafica){
+    let patron = /^[a-zA-Z0-9 -|]*$/;
+    if(patron.test(placaGrafica)){
+        console.log(`Dato correcto`)
+        return true
+    } else{
+        console.log(`Dato incorrecto`)
+        return false
+    }
+}
+function validarRam(ram){
+    let patron = /^[a-zA-Z0-9 -|]*$/;
+    if(patron.test(ram)){
+        console.log(`Dato correcto`)
+        return true
+    } else {
+        console.log(`Dato incorrecto`)
+        return false
+    }
+}
+function validarProcesador(procesador){
+
+}
 
 export function sumarioValidacion(nombre, precio, precioOferta, descripcion, imagen, trailer, categoria, desarrollador, almacenamiento, placaGrafica, ram, procesador){
     let resumen = ``;
@@ -85,6 +118,14 @@ export function sumarioValidacion(nombre, precio, precioOferta, descripcion, ima
     if(!validarCantidadCaracteres(desarrollador, 2, 30)){
         resumen += `El desarrollador del juego debe tener entre 2 y 30 caracteres. <br>`
     }
-
+    if(!validarAlmacenamiento(almacenamiento)){
+        resumen += `El campo de almacenamiento debe contener letras y numeros. <br>`
+    }
+    if(!validarPlaca(placaGrafica)){
+        resumen += `El campo de placa gráfica debe contener letras y numeros.<br>`
+    }
+    if(!validarRam(ram)){
+        resumen += `El campo de ram debe contener letras y números. <br>`
+    }
     return resumen 
 }
