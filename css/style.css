@@ -246,6 +246,17 @@ iframe{
   box-shadow: 0 4px 16px #b74ac8;
   transition: all 0.2s ease;
 }
+
+.acercadenosotros{
+  padding: 20px 20px 20px 20px;
+  justify-content: space-around;
+}
+
+.card-img-top-adn {
+  height: 600px;
+  object-fit: cover;
+}
+
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
