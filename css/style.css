@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Orbitron:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Bruno+Ace+SC&family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Libre+Franklin:wght@200&family=Orbitron:wght@400;500&family=Ruda:wght@500&display=swap');
 /* Fuente general */
-* {
-    font-family: 'Libre Franklin', sans-serif;
-}
 body {
     min-height: 100vh;
     display: flex;
@@ -10,28 +8,313 @@ body {
   }
   main {
     flex-grow: 1;
+    font-family: 'Libre Franklin', sans-serif;
+  }
+  #fuenteLogo{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: white
+  }
+  .tituloUrbanist{
+    font-family: 'Urbanist', sans-serif;
   }
   /*Background-color del main en modo oscuro*/
   main{
-    background-color: #808080 - rgb(128, 128, 128);
+    background-color: #808080;
+  }
+  #carouselIndex img {
+    height: 400px;
+    min-height: 400px;
+    object-fit: cover;
+  }
+  #bannerTheLastOfUs{
+    object-position: 70% 10%;
+  }
+  #bannerSpiderMan{
+    object-position: 80% 0%;
+  }
+  .containerJuegosOferta{
+    transition: scale 0.3s ease-out;
+  }
+  .containerJuegosOferta:hover{
+    scale: 1.03;
+  }
+  .imagenJuegos{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: filter 0.35s ease-out;
+  }
+  .containerImagenJuegos{
+    transition: scale 0.3s ease-out;
+  }
+  .containerImagenJuegos:hover{
+    scale: 1.05;
+  }
+  .containerImagenJuegos:hover img{
+    filter: brightness(30%);
+  }
+  .containerImagenJuegos:hover .infoCardJuego{
+    bottom: 5px;
+  }
+  .infoCardJuego{
+    position: absolute;
+    z-index: 1;
+    bottom: -300px;
+    transition: bottom 0.25s ease-out;
   }
   /*Colores Navbar y footer light*/
-  nav{
-    background-color: #932fa2 - rgb(147, 47, 162);
-    color: #ffffff - rgb(255, 255, 255);
+ nav.navbar{
+    background-color: #932fa2; 
   }
+.dropdown-menu{
+    background-color: #932fa2; 
+}
+.dropdown-item:hover{
+  background-color: #c967cb;
+}
+/*Estilos de navbar*/
+nav ul li a{
+    color: #ffffff;
+    font-family: 'Urbanist', sans-serif;
+}
+.navbar-toggler-icon{
+  color: #ffffff;
+}
+.dropdown-toggle::after{
+  margin-left: 0;
+}
   /*Colores Navbar y footer dark */
  footer{
-   background-color: #631291 - rgb(99, 18, 145);
-   color:  #ffffff - rgb(255, 255, 255);
+   background-color: #631291;
+   color:  #ffffff;
  }
+/*Estilos para botones en pagina administrador*/
+#btnFormulario{
+  background-color: #631291;  
+}
+#btnFormulario:hover{
+  background-color:rgb(147, 47, 162);
+}
+#btnCrearJuego{
+  background-color: #631291;
+  border-radius: 30px;
+}
+#btnCrearJuego:hover{
+  background-color:rgb(147, 47, 162);
+}
+.btnEditar{
+  background-color: rgb(250, 250, 120);
+  border-radius: 30px;
+}
+.btnEditar:hover{
+  background-color: rgb(242, 242, 60);
+}
+.btnEliminar{
+  background-color: rgb(250, 111, 111);
+  border-radius: 30px;
+}
+.btnEliminar:hover{
+  background-color: rgb(250, 87, 87);
+}
+/*Estilos para tabla administrador*/
+#seccionTabla{
+  background-color: #e0c9ee;
+}
+table thead {
+  background:#932fa2;
+  color: #fff;
+  font-size: 15px;
+}
+.tamanioCelda {
+  max-width: 10rem;
+}
+table tbody tr:nth-child(odd) {
+	background:#fac7fa;
+  font-family: 'Libre Franklin', sans-serif
+}
+table tbody tr:nth-child(even) {
+	background:#c967cb;
+  font-family: 'Libre Franklin', sans-serif
+}
+/*Estilos para formulario*/
+.modal-content{
+  background: hsla(292, 55%, 41%, 1);
+
+background: linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+
+background: -moz-linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+
+background: -webkit-linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#932FA2", endColorstr="#631291", GradientType=1 );
+}
+ /* Seccion Recomendados Index */
+ .badgePrecio {
+  width: 100px;
+ }
+ #imagenRecomendados {
+  object-fit: cover;
+ }
+ .cardRecomendados:hover {
+  transform: scale(1.02);
+ }
+/*Estilos para pagina detalle*/
+#tituloDetalle{
+  color: #631291;
+  text-shadow: #ffffff;
+}
+.hrDetalle{
+  height: 4px;
+  width: 100px;
+  background-color: #631291;
+  border-color: #932fa2;
+}
+.hrDetalleRequisitos{
+  height: 4px;
+  width: 200px;
+  background-color: #631291;
+  border-color: #932fa2;
+}
+#imgDetalleJuego{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.rounded-pill{
+  background-color: #b74ac8;
+}
+iframe{
+  width:100%; 
+  height:400px;
+  object-fit: cover;
+}
+#listaRequisitos{
+  list-style:none;
+}
+.itemRequisito{
+  background-color: #b74ac8;
+}
+.btnDetalle{
+  width: 250px;
+}
+.btnComprar{
+  height: 50px;
+  background-color: #631291;
+  color: white  !important;
+  font-size: 25px;
+  font-weight: 500;
+  border-color: #631291 ;
+  border: 2px solid;
+  position: relative;
+}
+.btnComprar:hover{
+  background-color: #631291;
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px #500f76;
+  transition: all 0.2s ease;
+}
+.btnCarrito{
+  background-color: #932fa2;
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 500;
+  font-weight: 500;
+  border-color: #932fa2 ;
+  border: 2px solid;
+  position: relative;
+}
+.btnCarrito:hover{
+  background-color: #932fa2;
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px #932fa2;
+  transition: all 0.2s ease;
+}
+.btnDeseos{
+  background-color: #b74ac8;
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 500;
+  border-color: #b74ac8;
+  border: 2px solid;
+  position: relative;
+}
+.btnDeseos:hover{
+  background-color: #b74ac8;
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px #b74ac8;
+  transition: all 0.2s ease;
+}
+
+.acercadenosotros{
+  padding: 20px 20px 20px 20px;
+  justify-content: space-around;
+}
+
+.card-img-top-adn {
+  height: 600px;
+  object-fit: cover;
+}
 
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
-
+  #imagenRecomendados {
+  display: none;
+  }
+  #fuenteLogo{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  #logo{
+    width: 30px;
+  }
+  .navbar-nav{
+    font-size: 15px;
+  }
+  .navbar-nav .i{
+    font-size: 15px;
+  }
+  .dropdown-menu{
+    font-size: 13px;
+  }
+  .btnComprar{
+    height: 50px;
+    background-color: #631291;
+    color: white  !important;
+    font-size: 18px;
+    font-weight: 500;
+    border-color: #631291 ;
+    border: 2px solid;
+    position: relative;
+  }
+  .btnCarrito{
+    background-color: #932fa2;
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 500;
+    border-color: #932fa2 ;
+    border: 2px solid;
+    position: relative;
+  }
+  .btnDeseos{
+    background-color: #b74ac8;
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 500;
+    border-color: #b74ac8;
+    border: 2px solid;
+    position: relative;
+  }
 }
 /*Medianos*/
 @media all and (min-width: 577px) and (max-width: 991px){
-
+}
+/*Grandes*/
+@media all and (min-width: 991px){
+  #bannerHogwartsLegacy{
+    object-position: 0 66%;
+  }
+  
 }
