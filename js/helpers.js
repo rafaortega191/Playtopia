@@ -49,6 +49,15 @@ function validarTrailer(trailer){
         return false
     }
 }
+function validarCategoria(categoria){
+    if (categoria == ""){
+        console.log (`No eligio ninguna categoria`)
+        return true
+    } else {
+        console.log (`Eligió una categoría`)
+        return false
+    }
+}
 
 export function sumarioValidacion(nombre, precio, precioOferta, descripcion, imagen, trailer, categoria, desarrollador, almacenamiento, placaGrafica, ram, procesador){
     let resumen = ``;
@@ -69,6 +78,9 @@ export function sumarioValidacion(nombre, precio, precioOferta, descripcion, ima
     }
     if(!validarTrailer(trailer)){
         resumen += `El trailer debe ser un link extraído de Youtube, en la sección Incorporar. <br>`
+    }
+    if(!validarCategoria(categoria)){
+        resumen += `Debe seleccionar una de las categorías disponibles.`
     }
     if(!validarCantidadCaracteres(desarrollador, 2, 30)){
         resumen += `El desarrollador del juego debe tener entre 2 y 30 caracteres. <br>`
