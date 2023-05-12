@@ -315,7 +315,7 @@ iframe {
 /*Login*
 /*Fondo Login*/
 #fondoLogin {
-  background-image: url(/img/fondoLogin.jpg);
+  background-image: url(../img/fondoLogin.jpg);
   background-position: center;
   background-size: cover;
 }
