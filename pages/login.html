@@ -20,27 +20,29 @@
     <title>Playtopia | Login</title>
 </head>
 
-<body id="fondoLogin">
+<body id="fondoLogin" class="clase_body">
     <header></header>
     <main>
-        <div class="contenedor">
-            <form class="formulario">
-                <h1 class="titulo">Iniciar sesión</h1>
+        <div class="contenedor_login">
+            <h1 class="titulo_login">Iniciar sesión</h1>
+            <form class="formulario_login">
                 <div class="formulario_grupo">
-                    <ion-icon class="formulario_icono" name="person-outline"></ion-icon>
-                    <input type="text" placeholder="Nombre de usuario" maxlength="40" required class="formulario_ingresar" />
+                    <i class="bi bi-person formulario_icono"></i>
+                    <input type="text" placeholder="Nombre de usuario" maxlength="35" required
+                        class="formulario_ingresar" />
                     <span class="formulario_renglon"></span>
                 </div>
 
                 <div class="formulario_grupo">
-                    <ion-icon class="formulario_icono" name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="Contraseña" minlength="6" maxlength="20" required class="formulario_ingresar" />
+                    <i class="bi bi-lock formulario_icono"></i>
+                    <input type="password" placeholder="Contraseña" minlength="6" maxlength="20" required
+                        class="formulario_ingresar" />
                     <span class="formulario_renglon"></span>
                 </div>
 
-                <button type="submit" class="formulario_boton">Iniciar sesión</button>
+                <a class="btn formulario_boton p-2" role="button">Iniciar sesión</a>
                 <p class="formulario_switch">
-                    No tenes cuenta? <a href="#">Unete a Playtopia</a>
+                    No tenes cuenta? <a href="">Unete a Playtopia</a>
                 </p>
             </form>
         </div>
