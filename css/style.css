@@ -302,166 +302,17 @@ iframe {
   transition: all 0.2s ease;
 }
 
-
-/*Login*
-/*Fondo Login*/
-#fondoLogin {
-  background-image: url(/img/fondoLogin.jpg);
-  background-position: center;
-  background-size: cover;
+.acercadenosotros{
+  padding: 20px 20px 20px 20px;
+  justify-content: space-around;
 }
 
-button,
-input {
-  border: none;
-  outline: none;
+.card-img-top-adn {
+  height: 600px;
+  object-fit: cover;
 }
 
-.clase_body {
-  font-family: 'Libre Franklin', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  font-size: 1.6rem;
-  color: #fff;
-  background-color: #000;
-  display: grid;
-  place-items: center;
-}
-
-
-.contenedor_login {
-  position: relative;
-  isolation: isolate;
-  width: 30rem;
-  padding-top: 75px;
-  background: transparent;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  border-radius: 1rem;
-  box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
-}
-
-.contenedor_login::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 60px;
-  box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1)
-}
-
-.titulo_login {
-  position: absolute;
-  top: 10px;
-  text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 3rem;
-}
-
-.formulario_login {
-  margin: 2.5rem;
-  background-color: transparent;
-}
-
-.formulario_grupo {
-  position: relative;
-  display: flex;
-  align-items: baseline;
-  margin-inline: auto;
-}
-
-.formulario_icono {
-  font-size: 2rem;
-  margin-right: 1rem;
-  color: #932fa2;
-}
-
-.formulario_ingresar {
-  position: relative;
-  width: 100%;
-  margin-top: 0.5rem;
-  padding-block: 1rem;
-  background: transparent;
-  color: #ffffff;
-  width: 100%;
-  height: 50px;
-}
-
-.formulario_renglon {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color:
-    rgb(255, 255, 255);
-  width: 100%;
-  height: 1px;
-}
-
-.formulario_renglon::before {
-  content: '';
-  position: absolute;
-  background-color: #932fa2;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.7s;
-}
-
-.formulario_ingresar:focus+.formulario_renglon::before,
-.formulario_ingresar:valid+.formulario_renglon::before {
-  transform: scaleX(1);
-}
-
-.formulario_boton {
-  display: block;
-  font-size: 20px;
-  margin: 1.2rem 4.5rem 1.2rem 4.5rem;
-  background-color: #631291;
-  color: #fff;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  -webkit-transition: background-color 1s ease-out;
-  -moz-transition: background-color 1s ease-out;
-  -o-transition: background-color 1s ease-out;
-  transition: background-color 1s ease-out;
-  transition: .5s, color .10s;
-  -webkit-transition: .5s, color .10s;
-  -moz-transition: .5s, color .10s;
-}
-
-.formulario_boton:hover {
-  background-color: #932fa2;
-  cursor: pointer;
-  transform: scale3d(1.5, 1.5, 0.3);
-  -webkit-transform: scale3d(1.2, 1.2, 0.3);
-}
-
-.formulario_switch {
-  font-size: 1rem;
-  text-align: center;
-  color: #ffffff;
-}
-
-.formulario_switch a {
-  cursor: pointer;
-  text-decoration: line;
-  color: #ffffff;
-}
-
-.formulario_swicth a:hover {
-  cursor: pointer;
-  text-decoration: underline;
-
-}
-
-/* Media Query para disposiitovs pequeños y medianos*/
+ /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px) {
   #imagenRecomendados {
