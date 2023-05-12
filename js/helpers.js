@@ -39,7 +39,16 @@ function validarImagen(imagen){
         return false
     }
 }
-
+function validarTrailer(trailer){
+    let patron = /http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?[\w\?‌​=]*)?/;
+    if (patron.test(trailer)){
+        console.log(`Link correcto`)
+        return true
+    } else{
+        console.log(`Link erróneo`)
+        return false
+    }
+}
 
 export function sumarioValidacion(nombre, precio, precioOferta, descripcion, imagen, trailer, categoria, desarrollador, almacenamiento, placaGrafica, ram, procesador){
     let resumen = ``;
@@ -57,6 +66,9 @@ export function sumarioValidacion(nombre, precio, precioOferta, descripcion, ima
     }
     if(!validarImagen(imagen)){
         resumen += 'La imagen de la pelicula debe ser una URL valida terminada en (.jpg, .png o .gif). <br>'
+    }
+    if(!validarTrailer(trailer)){
+        resumen += `El trailer debe ser un link extraído de Youtube, en la sección Incorporar. <br>`
     }
     if(!validarCantidadCaracteres(desarrollador, 2, 30)){
         resumen += `El desarrollador del juego debe tener entre 2 y 30 caracteres. <br>`
