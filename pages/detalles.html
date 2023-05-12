@@ -27,7 +27,84 @@
     <title>Playtopia | Detalle</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav class="navbar navbar-dark navbar-expand-lg ">
+        <div class="container">
+          <!--Boton hamburguesa-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--Logo-->
+          <span class="">
+            <a class="navbar-brand d-flex align-items-center" id="fuenteLogo" href="../index.html">
+              <img
+                src="../img/LogoBlanco.png"
+                width="40px"
+                id="logo"
+                class=""
+                alt="Logo de playtopia"
+              />
+              <span class="d-none d-lg-inline ms-lg-2">Playtopia</span></a
+            >
+          </span>
+          <!--Lista de navbar-->
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto d-flex align-items-start align-items-lg-center gap-lg-2">
+              <li class="nav-item">
+                <a class="nav-link  active" aria-current="page" href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./admin.html">Administrador</a>
+              </li>
+              <!--Desplegable para modo claro/modo oscuro-->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle "
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-brightness-high-fill fs-5"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      ><i class="bi bi-brightness-high-fill fs-6 me-2"></i>Tema claro</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-light" href="#"
+                      ><i class="bi bi-moon-fill  fs-6 me-2"></i>Tema oscuro</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./error404.html"
+                  ><i class="bi bi-cart-fill fs-5"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./error404.html"
+                  ><i class="bi bi-person-circle fs-5"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main>
       <section>
         <div>
@@ -35,16 +112,16 @@
         </div>
       </section>
       <section class="container my-3">
-        <h1 class="display-3 text-center" id="tituloDetalle">The last of us</h1>
-        <h4 class="fs-5">Categoría: <span class="badge rounded-pill fs-6">Supervivencia</span></h4> 
+        <h1 class="display-3 text-center fw-bold" id="tituloDetalle">The last of us</h1>
+        <h4 class="fs-5 fw-bolder">Categoría: <span class="badge rounded-pill fs-6 fw-bold">Supervivencia</span></h4> 
         <div class="fs-6 mt-lg-3 d-flex flex-column flex-md-row">
             <aside class="col-md-8 col-lg-7" id="asideDescripcion">
-                <h5>Descripción</h5>
+                <h5 class="fw-bold">Descripción</h5>
                 <hr class="my-1 hrDetalle">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, eius perspiciatis. Ad aliquid quaerat vitae maxime facilis minus quisquam distinctio molestiae similique tenetur laudantium repudiandae impedit recusandae aliquam eius cumque voluptatem esse libero perferendis, necessitatibus quos minima nulla iure! Recusandae voluptate dolorum enim. Nesciunt alias, error animi magnam laboriosam quisquam repudiandae, necessitatibus soluta incidunt, laborum accusantium sed ipsa ut nisi exercitationem sit porro omnis! Atque voluptatibus consequatur saepe magnam vitae! Qui quis consequuntur quaerat vero adipisci, eaque atque ducimus animi sit fuga asperiores eligendi sapiente, possimus non amet enim! Facilis iste recusandae eligendi maxime error, quis sunt possimus consequuntur explicabo!</p>
+                <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, eius perspiciatis. Ad aliquid quaerat vitae maxime facilis minus quisquam distinctio molestiae similique tenetur laudantium repudiandae impedit recusandae aliquam eius cumque voluptatem esse libero perferendis, necessitatibus quos minima nulla iure! Recusandae voluptate dolorum enim. Nesciunt alias, error animi magnam laboriosam quisquam repudiandae, necessitatibus soluta incidunt, laborum accusantium sed ipsa ut nisi exercitationem sit porro omnis! Atque voluptatibus consequatur saepe magnam vitae! Qui quis consequuntur quaerat vero adipisci, eaque atque ducimus animi sit fuga asperiores eligendi sapiente, possimus non amet enim! Facilis iste recusandae eligendi maxime error, quis sunt possimus consequuntur explicabo!</p>
             </aside>
             <aside class="mb-3 col-md-4 col-lg-5 ms-md-3 py-md-3">
-                <p class="text-center fs-4">Precio: $3500 ARS</p>
+                <p class="text-center fs-4 fw-bold">Precio: $3500 ARS</p>
                 <div class="d-flex flex-column align-items-center">
                   <a href="./error404.html"> <button type="button" class="btn btnComprar btnDetalle">Comprar ahora</button></a>
                   <a href="./error404.html"> <button type="button" class="btn btnCarrito btnDetalle my-3"><i class="fs-5 bi bi-bag-plus-fill"></i>  Agregar al carrito</button></a>
@@ -56,9 +133,9 @@
             <iframe src="https://www.youtube.com/embed/8a3Aga7JJgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </article>
         <article class="mt-4">
-            <h6 class="fs-5">Requisitos del sistema:</h6>
+            <h6 class="fs-5 fw-bold">Requisitos del sistema:</h6>
             <hr class="hrDetalleRequisitos">
-            <ul class="row" id="listaRequisitos">
+            <ul class="row fw-bolder" id="listaRequisitos">
                 <li class="me-1 mb-1 mb-lg-0 me-lg-0 itemRequisito col-5 col-lg-2">Uno</li>
                 <li class="mb-1 mb-lg-0 mx-lg-2 itemRequisito col-5 col-lg-2">Dos</li>
                 <li class="me-1 me-lg-2 itemRequisito col-5 col-lg-2">Tres</li>
@@ -67,7 +144,7 @@
         </article>
       </section>
       <section class="mt-5 container">
-        <h6 class="fs-4 text-center">Juegos recomendados</h6>
+        <h6 class="fs-4 text-center fw-bolder">Juegos recomendados</h6>
       </section>
     </main>
     <footer></footer>
