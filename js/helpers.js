@@ -8,7 +8,16 @@ function validarCantidadCaracteres(texto, min, max){
         return false
     }
 }
-
+function validarPrecio(precio){
+    let patron = /^[0-9]{2,5}$/;
+    if (patron.test(precio)){
+        console.log(`Dato correcto`)
+        return true
+    } else {
+        console.log(`Dato incorrecto`)
+        return false
+    }
+}
 function validarImagen(imagen){
     let patron = /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/
     if (patron.test(imagen)){
@@ -25,6 +34,9 @@ export function sumarioValidacion(nombre, precio, precioOferta, descripcion, ima
     let resumen = ``;
     if(!validarCantidadCaracteres(nombre, 2, 50)){
         resumen += `El nombre del juego debe tener entre 2 y 50 caracteres. <br>`
+    }
+    if(!validarPrecio(precio)){
+        resumen += `El precio debe contener entre 2 y 5 números. <br>`
     }
     if(!validarCantidadCaracteres(descripcion, 5, 500)){
         resumen += `La descripción del juego debe tener entre 5 y 500 caracteres. <br>`
