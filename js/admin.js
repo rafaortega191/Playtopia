@@ -2,9 +2,9 @@ import Juego from "./classJuego.js"
 import { sumarioValidacion } from "./helpers.js"
 
 let formularioAdminJuego = document.getElementById(`formJuego`);
-
 let btnCrearJuego = document.getElementById(`btnCrearJuego`);
 let modalJuegos = new bootstrap.Modal(document.getElementById(`modalJuegos`));
+// traigo los campos del formulario
 let codigo = document.getElementById(`codigo`);
 let nombre = document.getElementById(`nombre`);
 let precio = document.getElementById(`precio`);
