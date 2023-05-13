@@ -11,7 +11,7 @@ let modalJuegos = new bootstrap.Modal(document.getElementById(`modalJuegos`));
 let codigo = document.getElementById(`codigo`);
 let nombre = document.getElementById(`nombre`);
 let precio = document.getElementById(`precio`);
-let precioParaJuegoEnOferta = null;
+let precioOferta = 0;
 let descripcion = document.getElementById(`descripcion`); 
 let imagen = document.getElementById(`imagen`); 
 let trailer = document.getElementById(`trailer`); 
@@ -32,8 +32,7 @@ noOferta.addEventListener(`click`, noPonerEnOferta)
 function ponerEnOferta(){
     let divPrecioOferta = document.getElementById(`divPrecioOferta`);
     divPrecioOferta.className = `mb-3`
-    let precioOferta = document.getElementById(`precioOferta`);
-    precioParaJuegoEnOferta = precioOferta;
+    precioOferta = document.getElementById(`precioOferta`).value;
     agregarJuegoEnOferta(juego)
 }
 function agregarJuegoEnOferta(juego){
