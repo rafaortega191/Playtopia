@@ -45,6 +45,8 @@ function agregarJuegoEnOferta(juego){
 }
 function noPonerEnOferta(){
     enOferta = false;
+    let divPrecioOferta = document.getElementById(`divPrecioOferta`);
+    divPrecioOferta.className = `mb-3 d-none`
 }
 
 
