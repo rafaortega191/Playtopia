@@ -59,7 +59,7 @@ function validarCategoria(categoria){
     }
 }
 function validarAlmacenamiento(almacenamiento){
-    let patron = /^[a-zA-Z0-9 -|]*$/;
+    let patron = /^[1-9][0-9]+(\.[0-9]+)?(MB|GB|TB)$/;
     if(patron.test(almacenamiento)){
         console.log(`Completado correctamente`)
         return true
