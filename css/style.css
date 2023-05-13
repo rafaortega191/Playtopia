@@ -192,6 +192,70 @@ iframe{
   box-shadow: 0 4px 16px #b74ac8;
   transition: all 0.2s ease;
 }
+
+/* Clases para el footer */
+footer {
+  background-color: rgb(147, 47, 162);
+  color: #fff;
+  padding: 10px 0;
+
+  bottom: 0;
+  width: 100%;
+}
+
+footer .logo {
+  width: 70px;
+  height: 70px;
+}
+
+.textologo {
+  font-family: "Urbanist", sans-serif;
+  padding-top: 17px;
+  padding-left: 5px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.izquierda {
+  display: flex;
+  flex-direction: row;
+}
+
+.centro {
+  flex: flex;
+}
+
+.a-footer {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.derecha {
+  flex: flex;
+  text-align: right;
+}
+
+.btn {
+  background-color: rgb(147, 47, 162);
+  border-color: rgb(147, 47, 162);
+}
+
+.btb:hover {
+  background-color: gray;
+  border-color: gray;
+}
+
+.hr-footer {
+  margin-top: -10px;
+}
  /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px){
@@ -242,10 +306,110 @@ iframe{
     position: relative;
   }
 }
-/*Medianos*/
-@media all and (min-width: 577px) and (max-width: 991px){
 
+@media all and (max-width: 480px) {
+  footer .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .textologo {
+    padding-top: 25px;
+    padding-left: 25px;
+    font-size: 20px;
+    display: none;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .izquierda {
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+
+  .centro {
+    margin-bottom: 10px;
+  }
+
+  .derecha {
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  .hr-footer {
+    margin-top: 3px;
+  }
+  
 }
+
+/*Medianos*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    background-color: rgb(147, 47, 162);
+    color: #fff;
+    padding: 15px 0;
+
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .textologo {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 24px;
+    display: none;
+  }
+
+  .contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .izquierda {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+  }
+
+  .a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .derecha {
+    padding-right: 20px;
+  }
+
+  .btn {
+    background-color: rgb(147, 47, 162);
+    border-color: rgb(147, 47, 162);
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  .btb:hover {
+    background-color: gray;
+    border-color: gray;
+  }
+}
+
 /*Grandes*/
 @media all and (min-width: 991px){
   #bannerHogwartsLegacy{
