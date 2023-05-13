@@ -21,8 +21,7 @@ let almacenamiento = document.getElementById(`almacenamiento`);
 let placaGrafica = document.getElementById(`placa`); 
 let ram = document.getElementById(`ram`); 
 let procesador = document.getElementById(`procesador`);
-// variable que cambia a true si el administrador pone que SI esta en oferta
-let enOferta = false;
+
 // traigo los type radio del formulario
 let siOferta = document.getElementById(`siOferta`)
 let noOferta = document.getElementById(`noOferta`)
@@ -31,7 +30,6 @@ siOferta.addEventListener(`click`, ponerEnOferta)
 noOferta.addEventListener(`click`, noPonerEnOferta)
 // Funciones relacionadas a poner o no juego en oferta
 function ponerEnOferta(){
-    enOferta = true;
     let divPrecioOferta = document.getElementById(`divPrecioOferta`);
     divPrecioOferta.className = `mb-3`
     let precioOferta = document.getElementById(`precioOferta`);
@@ -39,12 +37,9 @@ function ponerEnOferta(){
     agregarJuegoEnOferta(juego)
 }
 function agregarJuegoEnOferta(juego){
-    if(enOferta == true){
         listaJuegosOferta.push(juego)
-    }
 }
 function noPonerEnOferta(){
-    enOferta = false;
     let divPrecioOferta = document.getElementById(`divPrecioOferta`);
     divPrecioOferta.className = `mb-3 d-none`
 }
