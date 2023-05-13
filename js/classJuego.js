@@ -13,11 +13,11 @@ export default class Juego {
     #ram;
     #procesador;
   
-    constructor(codigo = uuidv4(), nombre, precio, descripcion, imagen, trailer, categoria, desarrollador, almacenamiento, placaGrafica, ram, procesador) {
+    constructor(codigo = uuidv4(), nombre, precio, precioOferta = 0, descripcion, imagen, trailer, categoria, desarrollador, almacenamiento, placaGrafica, ram, procesador) {
       this.#codigo = codigo;
       this.#nombre = nombre;
       this.#precio = precio;
-      this.#precioOferta = 0;
+      this.#precioOferta = precioOferta;
       this.#descripcion = descripcion;
       this.#imagen = imagen;
       this.#trailer = trailer;
