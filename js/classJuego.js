@@ -66,7 +66,7 @@ export default class Juego {
     }
   
     set descripcion(descripcion) {
-      this.#descripcio = descripcion;
+      this.#descripcion = descripcion;
     }
   
     get imagen() {
