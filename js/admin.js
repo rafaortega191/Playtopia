@@ -20,6 +20,11 @@ let ram = document.getElementById(`ram`);
 let procesador = document.getElementById(`procesador`);
 
 btnCrearJuego.addEventListener(`click`, mostrarFormularioJuego)
+
 function mostrarFormularioJuego(){
+    limpiarFormulario()
     modalJuegos.show()
+}
+function limpiarFormulario(){
+    formularioAdminJuego.requestFullscreen()
 }
