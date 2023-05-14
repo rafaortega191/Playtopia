@@ -226,12 +226,6 @@ table tbody tr:nth-child(even) {
   border-color: #932fa2;
 }
 
-#imgDetalleJuego {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
 .rounded-pill {
   background-color: #b74ac8;
 }
