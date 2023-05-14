@@ -11,7 +11,7 @@ function imagenPorDefecto() {
 }
 //Cambiar temas de las paginas
 
-//se obtiene el tema del local, si no hay uno se asigna uno por defecto
+//se obtiene el tema del localstorage, si no hay uno se asigna uno por defecto
 let temaConfigurado = JSON.parse(localStorage.getItem("tema")) || "light";
 cambiarTema(temaConfigurado);
 
