@@ -5,9 +5,9 @@ let listaJuegos = JSON.parse(localStorage.getItem("listaJuegos")) || [];
 
 const juegoBuscado = listaJuegos.find((juego) => juego.codigo === parametroCodigo.get("codigo"));
 
-const url = new URL(juegoBuscado.trailer)
+const url = new URL(juegoBuscado.trailer);
 const searchParams = new URLSearchParams(url.search);
-const videoId = searchParams.get('v');
+const videoId = searchParams.get("v");
 
 let seccion = document.getElementById("seccionDetalle");
 seccion.innerHTML = `
@@ -37,11 +37,19 @@ seccion.innerHTML = `
   <article class="mt-4">
       <h6 class="fs-5 fw-bold">Requisitos del sistema:</h6>
       <hr class="hrDetalleRequisitos">
-      <ul class="row fw-bolder" id="listaRequisitos">
-          <li class="me-1 mb-1 mb-lg-0 me-lg-0 itemRequisito col-5 col-lg-2">Uno</li>
-          <li class="mb-1 mb-lg-0 mx-lg-2 itemRequisito col-5 col-lg-2">Dos</li>
-          <li class="me-1 me-lg-2 itemRequisito col-5 col-lg-2">Tres</li>
-          <li class="itemRequisito col-5 col-lg-2">Cuatro</li>
+      <ul class="row fw-bolder p-0" id="listaRequisitos">
+        <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+          <li class="itemRequisito d-flex">Procesador:<span class="componenteRequisitos">${juegoBuscado.procesador}<span></li>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+          <li class="itemRequisito d-flex">Graficos:<span class="componenteRequisitos">${juegoBuscado.placaGrafica}<span></li>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+          <li class="itemRequisito d-flex">RAM:<span class="componenteRequisitos">${juegoBuscado.ram}<span></li>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+          <li class="itemRequisito d-flex">Almacenamiento:<span class="componenteRequisitos">${juegoBuscado.almacenamiento}<span></li>
+        </div> 
       </ul>
   </article>
 `;

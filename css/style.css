@@ -242,6 +242,15 @@ iframe {
 
 .itemRequisito {
   background-color: #b74ac8;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+.componenteRequisitos {
+  color: #fffd;
+  margin-left: 0.5rem;
 }
 
 .btnDetalle {
