@@ -76,6 +76,10 @@ main {
   transition: bottom 0.25s ease-out;
 }
 
+.btnVerMas:hover {
+  background-color: #812b8f;
+}
+
 a:link,
 a:visited,
 a:active {
