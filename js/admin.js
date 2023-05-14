@@ -1,5 +1,5 @@
-import Juego from "./classJuego.js"
-import { sumarioValidacion } from "./helpers.js"
+import Juego from "./classJuego.js";
+import { sumarioValidacion } from "./helpers.js";
 // listas de juegos y juegos en oferta
 let listaJuegos = [];
 let listaJuegosOferta = [];
@@ -11,47 +11,97 @@ let modalJuegos = new bootstrap.Modal(document.getElementById(`modalJuegos`));
 let codigo = document.getElementById(`codigo`);
 let nombre = document.getElementById(`nombre`);
 let precio = document.getElementById(`precio`);
-let precioOferta = 0;
-let descripcion = document.getElementById(`descripcion`); 
-let imagen = document.getElementById(`imagen`); 
-let trailer = document.getElementById(`trailer`); 
-let categoria = document.getElementById(`categoria`); 
-let desarrollador = document.getElementById(`desarrollador`); 
-let almacenamiento = document.getElementById(`almacenamiento`); 
-let placaGrafica = document.getElementById(`placa`); 
-let ram = document.getElementById(`ram`); 
+let precioOferta = document.getElementById(`precioOferta`);
+let descripcion = document.getElementById(`descripcion`);
+let imagen = document.getElementById(`imagen`);
+let trailer = document.getElementById(`trailer`);
+let categoria = document.getElementById(`categoria`);
+let desarrollador = document.getElementById(`desarrollador`);
+let almacenamiento = document.getElementById(`almacenamiento`);
+let placaGrafica = document.getElementById(`placa`);
+let ram = document.getElementById(`ram`);
 let procesador = document.getElementById(`procesador`);
 
 // traigo los type radio del formulario
-let siOferta = document.getElementById(`siOferta`)
-let noOferta = document.getElementById(`noOferta`)
+let siOferta = document.getElementById(`siOferta`);
+let noOferta = document.getElementById(`noOferta`);
 // eventos para si elige Si esta en oferta o No esta en oferta
-siOferta.addEventListener(`click`, ponerEnOferta)
-noOferta.addEventListener(`click`, noPonerEnOferta)
+siOferta.addEventListener(`click`, ponerEnOferta);
+noOferta.addEventListener(`click`, noPonerEnOferta);
 // Funciones relacionadas a poner o no juego en oferta
-function ponerEnOferta(){
-    let divPrecioOferta = document.getElementById(`divPrecioOferta`);
-    divPrecioOferta.className = `mb-3`
-    precioOferta = document.getElementById(`precioOferta`).value;
-    agregarJuegoEnOferta(juego)
+function ponerEnOferta() {
+  let divPrecioOferta = document.getElementById(`divPrecioOferta`);
+  divPrecioOferta.className = `mb-3`;
+  precioOferta = document.getElementById(`precioOferta`).value;
+  agregarJuegoEnOferta(juego);
 }
-function agregarJuegoEnOferta(juego){
-        listaJuegosOferta.push(juego)
+function agregarJuegoEnOferta(juego) {
+  listaJuegosOferta.push(juego);
 }
-function noPonerEnOferta(){
-    let divPrecioOferta = document.getElementById(`divPrecioOferta`);
-    divPrecioOferta.className = `mb-3 d-none`
+function noPonerEnOferta() {
+  let divPrecioOferta = document.getElementById(`divPrecioOferta`);
+  divPrecioOferta.className = `mb-3 d-none`;
 }
-
 
 // Aqui empiezan los eventos de botones
-btnCrearJuego.addEventListener(`click`, mostrarFormularioJuego)
+btnCrearJuego.addEventListener(`click`, mostrarFormularioJuego);
+formularioAdminJuego.addEventListener("submit", prepararFormulario);
 
 // Aqui empiezan las funciones
-function mostrarFormularioJuego(){
-    limpiarFormulario()
-    modalJuegos.show()
+function mostrarFormularioJuego() {
+  limpiarFormulario();
+  modalJuegos.show();
 }
-function limpiarFormulario(){
-    formularioAdminJuego.reset()
+function limpiarFormulario() {
+  formularioAdminJuego.reset();
+}
+
+function prepararFormulario(e) {
+  e.preventDefault();
+  crearJuego();
+}
+
+function crearJuego() {
+  let resumen = sumarioValidacion(
+    nombre.value,
+    precio.value,
+    precioOferta.value,
+    descripcion.value,
+    imagen.value,
+    trailer.value,
+    categoria.value,
+    desarrollador.value,
+    almacenamiento.value,
+    placaGrafica.value,
+    ram.value,
+    procesador.value
+  );
+  if (resumen.length === 0) {
+    const juegoNuevo = new Juego(
+      undefined,
+      nombre.value,
+      precio.value,
+      precioOferta.value,
+      descripcion.value,
+      imagen.value,
+      trailer.value,
+      categoria.value,
+      desarrollador.value,
+      almacenamiento.value,
+      placaGrafica.value,
+      ram.value,
+      procesador.value
+    );
+    //agrego al array
+    listaJuegos.push(juegoNuevo);
+    //guardo en LocalStorage
+    localStorage.setItem("listaJuegos", JSON.stringify(listaJuegos));
+    limpiarFormulario();
+    //cierro el modal
+    modalJuegos.hide();
+  } else {
+    let alerta = document.getElementById("alerta");
+    alerta.innerHTML = resumen;
+    alerta.className = "alert alert-danger mt-3";
+  }
 }
