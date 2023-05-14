@@ -28,7 +28,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-dark navbar-expand-lg ">
+      <nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container">
           <!--Boton hamburguesa-->
           <button
@@ -44,7 +44,11 @@
           </button>
           <!--Logo-->
           <span class="">
-            <a class="navbar-brand d-flex align-items-center" id="fuenteLogo" href="../index.html">
+            <a
+              class="navbar-brand d-flex align-items-center"
+              id="fuenteLogo"
+              href="../index.html"
+            >
               <img
                 src="../img/LogoBlanco.png"
                 width="40px"
@@ -56,8 +60,10 @@
             >
           </span>
           <!--Lista de navbar-->
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto d-flex align-items-start align-items-lg-center gap-lg-2">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav ms-auto d-flex align-items-start align-items-lg-center gap-lg-2"
+            >
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="../index.html"
                   >Inicio</a
@@ -69,7 +75,7 @@
               <!--Desplegable para modo claro/modo oscuro-->
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle "
+                  class="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -80,23 +86,24 @@
                 <ul class="dropdown-menu">
                   <li>
                     <a class="dropdown-item text-light" href="#"
-                      ><i class="bi bi-brightness-high-fill fs-6 me-2"></i>Tema claro</a
+                      ><i class="bi bi-brightness-high-fill fs-6 me-2"></i>Tema
+                      claro</a
                     >
                   </li>
                   <li>
                     <a class="dropdown-item text-light" href="#"
-                      ><i class="bi bi-moon-fill  fs-6 me-2"></i>Tema oscuro</a
+                      ><i class="bi bi-moon-fill fs-6 me-2"></i>Tema oscuro</a
                     >
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="./error404.html"
+                <a class="nav-link" href="./error404.html"
                   ><i class="bi bi-cart-fill fs-5"></i
                 ></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="./error404.html"
+                <a class="nav-link" href="./error404.html"
                   ><i class="bi bi-person-circle fs-5"></i
                 ></a>
               </li>
@@ -106,7 +113,9 @@
       </nav>
     </header>
     <main class="container my-5 bg-white">
-      <h1 class="display-5 tituloUrbanist text-center">Página del administrador</h1>
+      <h1 class="display-5 tituloUrbanist text-center">
+        Página del administrador
+      </h1>
       <section class="d-flex justify-content-center mt-1">
         <h2 class="mb-0 fs-3 tituloUrbanist">Agregar</h2>
         <button
@@ -115,12 +124,14 @@
           data-bs-target="#modalJuegos"
           data-bs-toggle="modal"
         >
-        <i class="bi bi-controller text-white fs-5"></i>
+          <i class="bi bi-controller text-white fs-5"></i>
         </button>
       </section>
-      <hr>
+      <hr />
       <section class="mt-4" id="seccionTabla">
-        <h4 class="fs-5 text-center pt-3 pb-1"><b>Lista de juegos disponibles</b></h4>
+        <h4 class="fs-5 text-center pt-3 pb-1">
+          <b>Lista de juegos disponibles</b>
+        </h4>
         <article class="table-responsive">
           <table class="table table-striped">
             <thead>
@@ -143,7 +154,7 @@
                   que comienza una peregrinación para descubrir su destino
                 </td>
                 <td class="tamanioCelda text-truncate">
-                    https://darksouls.fandom.com/es/wiki/Dark_Souls?file=Dark_Souls_Portada.jpg
+                  https://darksouls.fandom.com/es/wiki/Dark_Souls?file=Dark_Souls_Portada.jpg
                 </td>
                 <td>Aventura</td>
                 <td class="text-center">
@@ -164,7 +175,7 @@
                   que comienza una peregrinación para descubrir su destino
                 </td>
                 <td class="tamanioCelda text-truncate">
-                    https://darksouls.fandom.com/es/wiki/Dark_Souls?file=Dark_Souls_Portada.jpg
+                  https://darksouls.fandom.com/es/wiki/Dark_Souls?file=Dark_Souls_Portada.jpg
                 </td>
                 <td>Aventura</td>
                 <td class="text-center">
@@ -181,79 +192,102 @@
         </article>
       </section>
     </main>
-        <!-- Modal para administrar juegos -->
-        <div
-        class="modal fade"
-        id="modalJuegos"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title text-white text-center tituloUrbanist" id="exampleModalLabel">
-                <b>Administrar juegos</b>
-              </h5>
-              <button
-                type="button"
-                class="btn-close text-white"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <form id="formJuego">
-                <!--CODIGO-->
-                <div class="mb-3">
-                  <label class="text-white" for="codigo"><b>Código</b></label>
+    <!-- Modal para administrar juegos -->
+    <div
+      class="modal fade"
+      id="modalJuegos"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title text-white text-center tituloUrbanist"
+              id="exampleModalLabel"
+            >
+              <b>Administrar juegos</b>
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formJuego">
+              <!--CODIGO-->
+              <div class="mb-3">
+                <label class="text-white" for="codigo"><b>Código</b></label>
+                <input
+                  id="codigo"
+                  type="text"
+                  class="form-control"
+                  placeholder="123"
+                  maxlength="30"
+                  minlength="1"
+                  disabled
+                />
+              </div>
+              <!--NOMBRE-->
+              <div class="mb-3">
+                <label class="text-white" for="nombre"><b>Nombre *</b></label>
+                <input
+                  id="nombre"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: Dark Souls"
+                />
+              </div>
+              <!--PRECIO-->
+              <div class="mb-3">
+                <label class="text-white" for="precio"
+                  ><b>Precio (en pesos) *</b></label
+                >
+                <input
+                  id="precio"
+                  type="number"
+                  class="form-control"
+                  placeholder="2500"
+                />
+              </div>
+              <!--ESTA EN OFERTA-->
+              <div class="mb-3">
+                <p class="fs-6 text-white mb-1">
+                  <b>¿El juego está en oferta?</b>
+                </p>
+                <div>
                   <input
-                    id="codigo"
-                    type="text"
-                    class="form-control"
-                    placeholder="123"
-                    maxlength="30"
-                    minlength="1"
-                    disabled
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="siOferta"
+                    value="si"
                   />
+                  <label class="form-check-label text-white fs-6" for="siOferta"
+                    >Si</label
+                  >
                 </div>
-                <!--NOMBRE-->
-                <div class="mb-3">
-                  <label class="text-white" for="nombre"><b>Nombre *</b></label>
+                <div>
                   <input
-                    id="nombre"
-                    type="text"
-                    class="form-control"
-                    placeholder="Ej: Dark Souls"
-                  
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="noOferta"
+                    value="no"
                   />
+                  <label class="form-check-label text-white fs-6" for="noOferta"
+                    >No</label
+                  >
                 </div>
-                <!--PRECIO-->
-                <div class="mb-3">
-                  <label class="text-white" for="precio"><b>Precio (en pesos) *</b></label>
-                  <input
-                    id="precio"
-                    type="number"
-                    class="form-control"
-                    placeholder="2500"
-                  />
-                </div>
-                <!--ESTA EN OFERTA-->              
-                <div class="mb-3">
-                  <p class="fs-6 text-white mb-1"><b>¿El juego está en oferta?</b></p>
-                  <div>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="siOferta"
-                   value="si">
-                    <label class="form-check-label text-white fs-6"  for="siOferta">Si</label>
-                  </div>
-                  <div>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="noOferta" value="no">
-                    <label class="form-check-label text-white fs-6" for="noOferta">No</label>
-                  </div>
               </div>
               <!--En caso de estar en oferta, se despliega esta pregunta-->
               <div class="mb-3 d-none" id="divPrecioOferta">
-                <label class="text-white" for="precioOferta"><b>Precio con descuento aplicado (en pesos)</b></label>
+                <label class="text-white" for="precioOferta"
+                  ><b>Precio con descuento aplicado (en pesos)</b></label
+                >
                 <input
                   id="precioOferta"
                   type="number"
@@ -263,137 +297,158 @@
               </div>
               <!--CATEGORIA-->
               <div class="mb-3">
-                  <label class="text-white" for="categoria"><b>Categoría *</b></label>
-                  <select id="categoria" class="form-control">
-                    <option value="">Selecione una opcion</option>
-                    <option value="accion">Acción</option>
-                    <option value="aventura">Aventura</option>
-                    <option value="cienciaFiccion">Ciencia ficción</option>
-                    <option value="deporte">Deportes y carreras</option>
-                    <option value="estrategia">Estrategia</option>
-                    <option value="militar">Militar</option>
-                    <option value="puzzle">Puzzle</option>
-                    <option value="rol">Rol</option>
-                    <option value="simulacion">Simulación</option>
-                    <option value="supervivencia">Supervivencia</option>
-                    <option value="terror">Terror</option>
-                  </select>
-                </div>
-                <!--IMAGEN-->
-                <div class="mb-3">
-                  <label class="text-white" for="imagen"><b>Imagen de portada *</b><small class="text-white">
-                    (URL con formato .png, .jpg o gif)</small></label>
-                  <input
-                    id="imagen"
-                    type="text"
-                    class="form-control"
-                    placeholder="Ej: http://127.0.0.1:5500/pages/macross.png"
-                    maxlength="120"
-                    minlength="2"
-                  />
-                </div>
-                <!--VIDEO-->
-                <div class="mb-3">
-                  <label class="text-white" for="trailer"><b>Trailer *</b><small class="text-white">
-                    Link obtenido de youtube</small></label>
-                  <input
-                    id="trailer"
-                    type="text"
-                    class="form-control"
-                    placeholder='Ej: https://www.youtube.com/embed/c-4wFMGFuCg'
-                    maxlength="500"
-                    minlength="100"
-                  />
-                </div>
-                <!--DESCRIPCION-->
-                <div class="mb-3">
-                  <label class="text-white" for="descripcion"><b>Descripción *</b></label>
-                  <textarea
-                    id="descripcion"
-                    type="text"
-                    rows="4"
-                    class="form-control"
-                    placeholder="Ej: Sucesor espiritual de Demon's Souls, es el primer juego de la saga Dark Souls. El juego tiene lugar en el reino de Lordran, donde los jugadores asumen el papel de un personaje no muerto maldito que comienza una peregrinación para descubrir su destino. "
-                    maxlength="300"
-                    minlength="2"
-                  ></textarea>
-                </div>
-                <!--DESARROLLADOR-->
-                <div class="mb-3">
-                  <label class="text-white" for="desarrollador"><b>Desarrollador *</b></label>
-                  <input
-                    id="desarrollador"
-                    type="text"
-                    class="form-control"
-                    placeholder="Ej: FromSoftware"
-                    maxlength="4"
-                    minlength="20"
-                  />
-                </div>
-                <!--REQUISITOS DEL SISTEMA-->
-                <p class="fs-6 text-light mb-1"><b>Requisitos del sistema *</b></p>
-                <div class="ms-2 mb-3 p-1 row">
-                  <div class="col-md-6">
-                    <label class="text-white" for="procesador"><b>Procesador</b></label>
-                    <input
-                      id="procesador"
-                      type="text"
-                      class="form-control"
-                      placeholder="Ej: Intel Core "
-                      maxlength="4"
-                      minlength="20"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <label class="text-white" for="placa"><b>Placa gráfica</b></label>
-                    <input
-                      id="placa"
-                      type="text"
-                      class="form-control"
-                      placeholder="Ej: Nvidia RTX 4090"
-                      maxlength="4"
-                      minlength="20"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <label class="text-white" for="ram"><b>RAM</b></label>
-                    <input
-                      id="ram"
-                      type="text"
-                      class="form-control"
-                      placeholder="Ej: RAM DDR4"
-                      maxlength="4"
-                      minlength="10"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <label class="text-white" for="almacenamiento"><b>Almacenamiento</b></label>
-                    <input
-                      id="almacenamiento"
-                      type="text"
-                      class="form-control"
-                      placeholder="Ej: 8GB"
-                      maxlength="4"
-                      minlength="10"
-                    />
-                  </div>
-                </div>
-                <!--Alert visible cuando no se completa algun campo o es incorrecto-->
-                <div
-                  class="alert alert-danger mt-3 d-none"
-                  role="alert"
-                  id="alerta"
+                <label class="text-white" for="categoria"
+                  ><b>Categoría *</b></label
                 >
+                <select id="categoria" class="form-control">
+                  <option value="">Selecione una opcion</option>
+                  <option value="accion">Acción</option>
+                  <option value="aventura">Aventura</option>
+                  <option value="cienciaFiccion">Ciencia ficción</option>
+                  <option value="deporte">Deportes y carreras</option>
+                  <option value="estrategia">Estrategia</option>
+                  <option value="militar">Militar</option>
+                  <option value="puzzle">Puzzle</option>
+                  <option value="rol">Rol</option>
+                  <option value="simulacion">Simulación</option>
+                  <option value="supervivencia">Supervivencia</option>
+                  <option value="terror">Terror</option>
+                </select>
               </div>
+              <!--IMAGEN-->
+              <div class="mb-3">
+                <label class="text-white" for="imagen"
+                  ><b>Imagen de portada *</b
+                  ><small class="text-white">
+                    (URL con formato .png, .jpg o gif)</small
+                  ></label
+                >
+                <input
+                  id="imagen"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: http://127.0.0.1:5500/pages/macross.png"
+                  maxlength="120"
+                  minlength="2"
+                />
+              </div>
+              <!--VIDEO-->
+              <div class="mb-3">
+                <label class="text-white" for="trailer"
+                  ><b>Trailer *</b
+                  ><small class="text-white">
+                    Link obtenido de youtube</small
+                  ></label
+                >
+                <input
+                  id="trailer"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: https://www.youtube.com/embed/c-4wFMGFuCg"
+                  maxlength="500"
+                  minlength="10"
+                />
+              </div>
+              <!--DESCRIPCION-->
+              <div class="mb-3">
+                <label class="text-white" for="descripcion"
+                  ><b>Descripción *</b></label
+                >
+                <textarea
+                  id="descripcion"
+                  type="text"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Ej: Sucesor espiritual de Demon's Souls, es el primer juego de la saga Dark Souls. El juego tiene lugar en el reino de Lordran, donde los jugadores asumen el papel de un personaje no muerto maldito que comienza una peregrinación para descubrir su destino. "
+                  maxlength="300"
+                  minlength="2"
+                ></textarea>
+              </div>
+              <!--DESARROLLADOR-->
+              <div class="mb-3">
+                <label class="text-white" for="desarrollador"
+                  ><b>Desarrollador *</b></label
+                >
+                <input
+                  id="desarrollador"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: FromSoftware"
+                  maxlength="20"
+                  minlength="4"
+                />
+              </div>
+              <!--REQUISITOS DEL SISTEMA-->
+              <p class="fs-6 text-light mb-1">
+                <b>Requisitos del sistema *</b>
+              </p>
+              <div class="ms-2 mb-3 p-1 row">
+                <div class="col-md-6">
+                  <label class="text-white" for="procesador"
+                    ><b>Procesador</b></label
+                  >
+                  <input
+                    id="procesador"
+                    type="text"
+                    class="form-control"
+                    placeholder="Ej: Intel Core "
+                    maxlength="20"
+                    minlength="4"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="text-white" for="placa"
+                    ><b>Placa gráfica</b></label
+                  >
+                  <input
+                    id="placa"
+                    type="text"
+                    class="form-control"
+                    placeholder="Ej: Nvidia RTX 4090"
+                    maxlength="20"
+                    minlength="4"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="text-white" for="ram"><b>RAM</b></label>
+                  <input
+                    id="ram"
+                    type="text"
+                    class="form-control"
+                    placeholder="Ej: RAM DDR4"
+                    maxlength="10"
+                    minlength="4"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label class="text-white" for="almacenamiento"
+                    ><b>Almacenamiento</b></label
+                  >
+                  <input
+                    id="almacenamiento"
+                    type="text"
+                    class="form-control"
+                    placeholder="Ej: 8GB"
+                    maxlength="10"
+                    minlength="4"
+                  />
+                </div>
+              </div>
+              <!--Alert visible cuando no se completa algun campo o es incorrecto-->
+              <div
+                class="alert alert-danger mt-3 d-none"
+                role="alert"
+                id="alerta"
+              ></div>
               <!--Botón enviar-->
-                <button class="btn text-white" type="submit" id="btnFormulario">
-                  Agregar
-                </button>
-              </form>
-            </div>
+              <button class="btn text-white" type="submit" id="btnFormulario">
+                Agregar
+              </button>
+            </form>
           </div>
         </div>
       </div>
+    </div>
     <footer></footer>
     <!-- Link Bootstrap-->
     <script

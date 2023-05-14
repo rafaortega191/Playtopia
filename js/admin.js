@@ -11,7 +11,7 @@ let modalJuegos = new bootstrap.Modal(document.getElementById(`modalJuegos`));
 let codigo = document.getElementById(`codigo`);
 let nombre = document.getElementById(`nombre`);
 let precio = document.getElementById(`precio`);
-let precioOferta = 0;
+let precioOferta = document.getElementById(`precioOferta`);
 let descripcion = document.getElementById(`descripcion`);
 let imagen = document.getElementById(`imagen`);
 let trailer = document.getElementById(`trailer`);
@@ -62,27 +62,33 @@ function prepararFormulario(e) {
 }
 
 function crearJuego() {
-  //creo juego
-  const juegoNuevo = new Juego(
-    undefined,
-    "Nombre del juego",
-    59.99,
-    49.99,
-    "Descripción del juego",
-    "imagen.jpg",
-    "trailer.mp4",
-    "Categoría del juego",
-    "Desarrollador del juego",
-    "1TB",
-    "Nvidia RTX 3080",
-    "16GB",
-    "Intel Core i7-10700K"
-  );
-  //agrego al array
-  listaJuegos.push(juegoNuevo);
-  console.log(listaJuegos);
-  //guardo en LocalStorage
-  localStorage.setItem("listaJuegos", JSON.stringify(listaJuegos));
+  let resumen = sumarioValidacion(nombre.value, precio.value, precioOferta.value, descripcion.value, imagen.value, trailer.value, categoria.value, desarrollador.value, almacenamiento.value, placaGrafica.value, ram.value, procesador.value);
+  if (resumen.length === 0) {
+    const juegoNuevo = new Juego(
+      undefined,
+      nombre,
+      precio,
+      precioOferta,
+      descripcion,
+      imagen,
+      trailer,
+      categoria,
+      desarrollador,
+      almacenamiento,
+      placaGrafica,
+      ram,
+      procesador
+    );
+    //agrego al array
+    listaJuegos.push(juegoNuevo);
+    console.log(listaJuegos);
+    //guardo en LocalStorage
+    localStorage.setItem("listaJuegos", JSON.stringify(listaJuegos));
 
-  //cierro el modal
+    //cierro el modal
+  } else {
+    let alerta = document.getElementById("alerta");
+    alerta.innerHTML = resumen;
+    alerta.className = "alert alert-danger mt-3";
+  }
 }
