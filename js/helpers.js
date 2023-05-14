@@ -9,7 +9,7 @@ function validarCantidadCaracteres(texto, min, max) {
   }
 }
 function validarPrecio(precio) {
-  let patron = /^[0-9]{2,5}$/;
+  let patron = /^\d{1,5}/;
   if (patron.test(precio)) {
     console.log(`Dato correcto`);
     return true;
@@ -19,8 +19,8 @@ function validarPrecio(precio) {
   }
 }
 function validarPrecioOferta(precioOferta) {
-  let patron = /^[0-9]{2,5}$/;
-  if (patron.test(precioOferta)) {
+  let patron = /^\d{1,5}/;
+  if (patron.test(precioOferta) && parseInt(precioOferta) < parseInt(precio)) {
     console.log(`Dato correcto`);
     return true;
   } else {
@@ -60,42 +60,12 @@ function validarCategoria(categoria) {
   }
 }
 function validarAlmacenamiento(almacenamiento) {
-  let patron = /^[1-9][0-9]+(\.[0-9]+)?(MB|GB|TB)$/;
+  let patron = /^\d{1,3}( )?(MB|GB|TB)$/;
   if (patron.test(almacenamiento)) {
     console.log(`Completado correctamente`);
     return true;
   } else {
     console.log(`No fue completado correctamente`);
-    return false;
-  }
-}
-function validarPlaca(placaGrafica) {
-  let patron = /^[a-zA-Z0-9 -|]*$/;
-  if (patron.test(placaGrafica)) {
-    console.log(`Dato correcto`);
-    return true;
-  } else {
-    console.log(`Dato incorrecto`);
-    return false;
-  }
-}
-function validarRam(ram) {
-  let patron = /^[a-zA-Z0-9 -|]*$/;
-  if (patron.test(ram)) {
-    console.log(`Dato correcto`);
-    return true;
-  } else {
-    console.log(`Dato incorrecto`);
-    return false;
-  }
-}
-function validarProcesador(procesador) {
-  let patron = /^[a-zA-Z0-9 -|]*$/;
-  if (patron.test(procesador)) {
-    console.log(`Dato correcto`);
-    return true;
-  } else {
-    console.log(`Dato incorrecto`);
     return false;
   }
 }
@@ -123,36 +93,36 @@ export function sumarioValidacion(
   }
   if (precioOferta !== "") {
     if (!validarPrecioOferta(precioOferta)) {
-      resumen += `El precio de oferta debe contener entre 2 y 5 numeros. <br>`;
+      resumen += `El precio de oferta debe contener entre 2 y 5 numeros y debe ser menor al precio base.<br>`;
     }
   }
   if (!validarCantidadCaracteres(descripcion, 5, 500)) {
-    resumen += `La descripción del juego debe tener entre 5 y 500 caracteres. <br>`;
+    resumen += `La descripción del juego debe tener entre 5 y 500 caracteres.<br>`;
   }
   if (!validarImagen(imagen)) {
     resumen +=
-      "La imagen de la pelicula debe ser una URL valida terminada en (.jpg, .png o .gif). <br>";
+      "La imagen de la pelicula debe ser una URL valida terminada en (.jpg, .png o .gif).<br>";
   }
   if (!validarTrailer(trailer)) {
-    resumen += `El trailer debe ser un link extraído de Youtube, en la sección Incorporar. <br>`;
+    resumen += `El trailer debe ser un link extraído de Youtube, en la sección Incorporar.<br>`;
   }
   if (!validarCategoria(categoria)) {
     resumen += `Debe seleccionar una de las categorías disponibles.`;
   }
   if (!validarCantidadCaracteres(desarrollador, 2, 30)) {
-    resumen += `El desarrollador del juego debe tener entre 2 y 30 caracteres. <br>`;
+    resumen += `El desarrollador del juego debe tener entre 2 y 30 caracteres.<br>`;
   }
   if (!validarAlmacenamiento(almacenamiento)) {
-    resumen += `El campo de almacenamiento debe contener letras y numeros. <br>`;
+    resumen += `El campo de almacenamiento debe contener letras y numeros.<br>`;
   }
-  if (!validarPlaca(placaGrafica)) {
-    resumen += `El campo de placa gráfica debe contener letras y numeros.<br>`;
+  if (!validarCantidadCaracteres(placaGrafica, 5, 50)) {
+    resumen += `El campo de placa gráfica debe contener informacion valida entre 5 y 50 caracteres.<br>`;
   }
-  if (!validarRam(ram)) {
-    resumen += `El campo de ram debe contener letras y números. <br>`;
+  if (!validarCantidadCaracteres(ram, 3, 15)) {
+    resumen += `El campo de ram debe contener informacion valida entre 3 y 15 caracteres.<br>`;
   }
-  if (!validarProcesador(procesador)) {
-    resumen += `El campo de procesador debe contener letras y numeros. <br>`;
+  if (!validarCantidadCaracteres(procesador, 5, 50)) {
+    resumen += `El campo de procesador debe informacion valida entre 5 y 50 caracteres.<br>`;
   }
   return resumen;
 }
