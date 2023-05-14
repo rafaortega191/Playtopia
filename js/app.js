@@ -25,4 +25,11 @@ function cambiarTema(colorTema) {
   document.querySelector("body").setAttribute("data-bs-theme", colorTema);
   //guardar en localstorage
   localStorage.setItem("tema", JSON.stringify(colorTema));
+  //cabiar el icono del dropdown segun el tema
+  let logoDropdown = document.querySelector(".logoTema");
+  if (colorTema === "dark") {
+    logoDropdown.innerHTML = `<i class="bi bi-moon-fill  fs-5 me-2"></i>`;
+  } else {
+    logoDropdown.innerHTML = `<i class="bi bi-brightness-high-fill fs-5 me-2">`;
+  }
 }
