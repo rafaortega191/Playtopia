@@ -69,36 +69,6 @@ function validarAlmacenamiento(almacenamiento) {
     return false;
   }
 }
-function validarPlaca(placaGrafica) {
-  let patron = /^[a-zA-Z0-9 -|]*$/;
-  if (patron.test(placaGrafica)) {
-    console.log(`Dato correcto`);
-    return true;
-  } else {
-    console.log(`Dato incorrecto`);
-    return false;
-  }
-}
-function validarRam(ram) {
-  let patron = /^[a-zA-Z0-9 -|]*$/;
-  if (patron.test(ram)) {
-    console.log(`Dato correcto`);
-    return true;
-  } else {
-    console.log(`Dato incorrecto`);
-    return false;
-  }
-}
-function validarProcesador(procesador) {
-  let patron = /^[a-zA-Z0-9 -|]*$/;
-  if (patron.test(procesador)) {
-    console.log(`Dato correcto`);
-    return true;
-  } else {
-    console.log(`Dato incorrecto`);
-    return false;
-  }
-}
 
 export function sumarioValidacion(
   nombre,
@@ -145,14 +115,14 @@ export function sumarioValidacion(
   if (!validarAlmacenamiento(almacenamiento)) {
     resumen += `El campo de almacenamiento debe contener letras y numeros. <br>`;
   }
-  if (!validarPlaca(placaGrafica)) {
-    resumen += `El campo de placa gráfica debe contener letras y numeros.<br>`;
+  if (!validarCantidadCaracteres(placaGrafica, 5, 50)) {
+    resumen += `El campo de placa gráfica debe contener informacion valida entre 5 y 50 caracteres.<br>`;
   }
-  if (!validarRam(ram)) {
-    resumen += `El campo de ram debe contener letras y números. <br>`;
+  if (!validarCantidadCaracteres(ram, 3, 15)) {
+    resumen += `El campo de ram debe contener informacion valida entre 3 y 15 caracteres.<br>`;
   }
-  if (!validarProcesador(procesador)) {
-    resumen += `El campo de procesador debe contener letras y numeros. <br>`;
+  if (!validarCantidadCaracteres(procesador, 5, 50)) {
+    resumen += `El campo de procesador debe informacion valida entre 3 y 15. <br>`;
   }
   return resumen;
 }
