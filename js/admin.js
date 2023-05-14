@@ -55,3 +55,23 @@ function mostrarFormularioJuego(){
 function limpiarFormulario(){
     formularioAdminJuego.reset()
 }
+
+function prepararFormulario(e){
+    e.preventDefault();
+    const juego = new Juego(
+        uuidv4(),
+        "Nombre del juego",
+        59.99,
+        49.99,
+        "Descripción del juego",
+        "imagen.jpg",
+        "trailer.mp4",
+        "Categoría del juego",
+        "Desarrollador del juego",
+        "1TB",
+        "Nvidia RTX 3080",
+        "16GB",
+        "Intel Core i7-10700K"
+      );
+      console.log(juego)
+    }
