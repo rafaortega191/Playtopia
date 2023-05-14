@@ -1,7 +1,28 @@
 import Juego from "./classJuego.js";
 import { sumarioValidacion } from "./helpers.js";
 // listas de juegos y juegos en oferta
-let listaJuegos = [];
+let listaJuegos = JSON.parse(localStorage.getItem('listaJuegos'))||[];
+if (listaJuegos.length !== 0) {
+  listaJuegos = listaJuegos.map(
+    (juego) =>
+      new Juego(
+        juego.codigo,
+        juego.nombre,
+        juego.precio,
+        juego.precioOferta,
+        juego.descripcion,
+        juego.imagen,
+        juego.trailer,
+        juego.categoria,
+        juego.desarrollador,
+        juego.almacenamientro,
+        juego.placaGrafica,
+        juego.procesador
+      )
+  );
+}
+console.log(listaJuegos);
+
 let listaJuegosOferta = [];
 // traigo el modal, el formulario y el boton de crear juego
 let formularioAdminJuego = document.getElementById(`formJuego`);
@@ -99,6 +120,7 @@ function crearJuego() {
     limpiarFormulario();
     //cierro el modal
     modalJuegos.hide();
+    console.log(listaJuegos);
   } else {
     let alerta = document.getElementById("alerta");
     alerta.innerHTML = resumen;
