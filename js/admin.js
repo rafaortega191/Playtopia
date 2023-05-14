@@ -86,6 +86,7 @@ function crearJuego() {
     localStorage.setItem("listaJuegos", JSON.stringify(listaJuegos));
     limpiarFormulario()
     //cierro el modal
+    modalJuegos.hide();
   } else {
     let alerta = document.getElementById("alerta");
     alerta.innerHTML = resumen;
