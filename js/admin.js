@@ -62,29 +62,41 @@ function prepararFormulario(e) {
 }
 
 function crearJuego() {
-  let resumen = sumarioValidacion(nombre.value, precio.value, precioOferta.value, descripcion.value, imagen.value, trailer.value, categoria.value, desarrollador.value, almacenamiento.value, placaGrafica.value, ram.value, procesador.value);
+  let resumen = sumarioValidacion(
+    nombre.value,
+    precio.value,
+    precioOferta.value,
+    descripcion.value,
+    imagen.value,
+    trailer.value,
+    categoria.value,
+    desarrollador.value,
+    almacenamiento.value,
+    placaGrafica.value,
+    ram.value,
+    procesador.value
+  );
   if (resumen.length === 0) {
     const juegoNuevo = new Juego(
       undefined,
-      nombre,
-      precio,
-      precioOferta,
-      descripcion,
-      imagen,
-      trailer,
-      categoria,
-      desarrollador,
-      almacenamiento,
-      placaGrafica,
-      ram,
-      procesador
+      nombre.value,
+      precio.value,
+      precioOferta.value,
+      descripcion.value,
+      imagen.value,
+      trailer.value,
+      categoria.value,
+      desarrollador.value,
+      almacenamiento.value,
+      placaGrafica.value,
+      ram.value,
+      procesador.value
     );
     //agrego al array
     listaJuegos.push(juegoNuevo);
-    console.log(listaJuegos);
     //guardo en LocalStorage
     localStorage.setItem("listaJuegos", JSON.stringify(listaJuegos));
-    limpiarFormulario()
+    limpiarFormulario();
     //cierro el modal
     modalJuegos.hide();
   } else {
