@@ -59,7 +59,7 @@ function limpiarFormulario(){
 function prepararFormulario(e){
     e.preventDefault();
     const juego = new Juego(
-        uuidv4(),
+        undefined,
         "Nombre del juego",
         59.99,
         49.99,
@@ -73,5 +73,12 @@ function prepararFormulario(e){
         "16GB",
         "Intel Core i7-10700K"
       );
-      console.log(juego)
+    crearJuego();
+    console.log(juego)
     }
+
+function crearJuego(){
+    //creo juego
+    //agrego al array
+    //guardo en LocalStorage
+}
