@@ -524,7 +524,7 @@ footer .logo {
 .btn-redes {
   background-color: rgb(147, 47, 162);
   border-color: rgb(147, 47, 162);
-  margin: 5px;
+  margin: 3px;
 }
 
 .btb:hover {
@@ -541,9 +541,6 @@ footer .logo {
   margin-right: 20px;
 }
 
-.p-footer{
-  margin-bottom: 20px;
-}
 
 /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
