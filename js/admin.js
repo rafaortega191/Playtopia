@@ -162,3 +162,39 @@ function crearJuego() {
     alerta.className = "alert alert-danger mt-3";
   }
 }
+
+window.borrarJuego = (codigo) => {
+  Swal.fire({
+    title: "Se eliminará el juego",
+    text: "¿Estás seguro?",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#932fa2",
+    cancelButtonColor: "#c967cb",
+    confirmButtonText: "Borrar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    console.log(result);
+    if (result.isConfirmed) {
+      //borrar el juego
+      let posicionjuego = listaJuegos.findIndex(
+        (juego) => juego.codigo === codigo
+      );
+      listaJuegos.splice(posicionjuego, 1);
+      //actualizar el localstorage
+      mandaralLocalstorage();
+      //borrar la fila de la tabla
+      let tbody = document.querySelector("#tablaJuegos");
+      tbody.removeChild(tbody.children[posicionjuego]);
+      //todo: actualizar el numero de  las filas de la tabla
+      Swal.fire({
+        text: "Juego eliminado",
+        icon: "success",
+      });
+    }
+  });
+};
+
+function mandaralLocalstorage() {
+  localStorage.setItem("listaJuegos", JSON.stringify(listaJuegos));
+}
