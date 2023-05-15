@@ -1,5 +1,4 @@
 const parametroCodigo = new URLSearchParams(window.location.search);
-console.log(parametroCodigo.get("codigo"));
 
 let listaJuegos = JSON.parse(localStorage.getItem("listaJuegos")) || [];
 
@@ -32,7 +31,7 @@ seccion.innerHTML = `
       </aside>
   </div>
   <article class="d-flex justify-content-center">
-  <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </article>
   <article class="mt-4">
       <h6 class="fs-5 fw-bold">Requisitos del sistema:</h6>
