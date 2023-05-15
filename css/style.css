@@ -53,19 +53,19 @@ main {
   transition: filter 0.35s ease-out;
 }
 
-.containerImagenJuegos {
+.containerJuego {
   transition: scale 0.3s ease-out;
 }
 
-.containerImagenJuegos:hover {
+.containerJuego:hover {
   scale: 1.05;
 }
 
-.containerImagenJuegos:hover img {
+.containerJuego:hover img {
   filter: brightness(30%);
 }
 
-.containerImagenJuegos:hover .infoCardJuego {
+.containerJuego:hover .infoCardJuego {
   bottom: 5px;
 }
 
