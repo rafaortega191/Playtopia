@@ -47,7 +47,16 @@ function noPonerEnOferta() {
 btnCrearJuego.addEventListener(`click`, mostrarFormularioJuego);
 formularioAdminJuego.addEventListener("submit", prepararFormulario);
 
+cargaInicial();
+
 // Aqui empiezan las funciones
+function cargaInicial() {
+  if (listaJuegos.length > 0) {
+    //dibujo una fila en la tabla
+    listaJuegos.map((pelicula, indice) => crearFila(pelicula, indice + 1));
+  }
+}
+
 function mostrarFormularioJuego() {
   limpiarFormulario();
   modalJuegos.show();
