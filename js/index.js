@@ -6,18 +6,20 @@ buscador.addEventListener("keyup", filtrar);
 function crearColumna(juego) {
   let grilla = document.querySelector("#grillaJuegos");
   grilla.innerHTML += `
-  <div class="col-6 col-md-3 col-lg-2 rounded mb-4 position-relative containerJuego overflow-hidden">
+  <div class="col-6 col-md-3 col-lg-2">
+  <div class="p-0 rounded mb-4 containerJuego overflow-hidden">
   </button>
   <img src="${juego.imagen}"
     alt="${juego.nombre}" class="imagenJuegos rounded" />
-  <div class="infoCardJuego text-light d-flex flex-column justify-content-between pe-4 ps-2">
+  <div class="infoCardJuego text-light d-flex flex-column justify-content-between w-100 px-2">
     <h5 class="fw-bold tituloJuego">${juego.nombre}</h5>
     <div class="d-flex flex-row-reverse mb-2">
       <p class="me mb-0 badge text-bg-success fs-6">$${juego.precio}</p>
     </div>
     <button class="btn mb-2 btnVerMas text-light" onclick="navegarDetallesJuego('${juego.codigo}')">Ver detalle</button>
   </div>
-</div>
+  </div>
+  </div>
     `;
 }
 

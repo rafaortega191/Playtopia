@@ -55,6 +55,7 @@ main {
 
 .containerJuego {
   transition: scale 0.3s ease-out;
+  position: relative;
 }
 
 .containerJuego:hover {
