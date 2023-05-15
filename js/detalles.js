@@ -20,7 +20,7 @@ seccion.innerHTML = `
           <h5 class="fw-bold">Descripción</h5>
           <hr class="my-1 hrDetalle">
           <p class="fw-bold">${juegoBuscado.descripcion}</p>
-          <h6 class="fw-bold pt-2">Desarrollador: ${juegoBuscado.desarrollador}</h6>
+          <p class="fw-bold pt-2">Desarrollador: ${juegoBuscado.desarrollador}</p>
       </aside>
       <aside class="col-lg-3 py-md-3 py-md-0">
           <p class="text-center fs-4 fw-bold">Precio: $${juegoBuscado.precio} ARS</p>
