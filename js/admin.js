@@ -1,8 +1,7 @@
 import Juego from "./classJuego.js";
 import { sumarioValidacion } from "./helpers.js";
-// listas de juegos y juegos en oferta
+// listas de juegos
 let listaJuegos = JSON.parse(localStorage.getItem("listaJuegos")) || [];
-let listaJuegosOferta = [];
 
 if (listaJuegos.length !== 0) {
   //quiero que sean objetos de tipo juego
@@ -12,7 +11,6 @@ if (listaJuegos.length !== 0) {
         juego.codigo,
         juego.nombre,
         juego.precio,
-        juego.precioOferta,
         juego.descripcion,
         juego.imagen,
         juego.trailer,
@@ -33,7 +31,6 @@ let modalJuegos = new bootstrap.Modal(document.getElementById(`modalJuegos`));
 let codigo = document.getElementById(`codigo`);
 let nombre = document.getElementById(`nombre`);
 let precio = document.getElementById(`precio`);
-let precioOferta = document.getElementById(`precioOferta`);
 let descripcion = document.getElementById(`descripcion`);
 let imagen = document.getElementById(`imagen`);
 let trailer = document.getElementById(`trailer`);
@@ -44,26 +41,6 @@ let placaGrafica = document.getElementById(`placa`);
 let ram = document.getElementById(`ram`);
 let procesador = document.getElementById(`procesador`);
 
-// traigo los type radio del formulario
-let siOferta = document.getElementById(`siOferta`);
-let noOferta = document.getElementById(`noOferta`);
-// eventos para si elige Si esta en oferta o No esta en oferta
-siOferta.addEventListener(`click`, ponerEnOferta);
-noOferta.addEventListener(`click`, noPonerEnOferta);
-// Funciones relacionadas a poner o no juego en oferta
-function ponerEnOferta() {
-  let divPrecioOferta = document.getElementById(`divPrecioOferta`);
-  divPrecioOferta.className = `mb-3`;
-  precioOferta = document.getElementById(`precioOferta`).value;
-  agregarJuegoEnOferta(juego);
-}
-function agregarJuegoEnOferta(juego) {
-  listaJuegosOferta.push(juego);
-}
-function noPonerEnOferta() {
-  let divPrecioOferta = document.getElementById(`divPrecioOferta`);
-  divPrecioOferta.className = `mb-3 d-none`;
-}
 
 // Aqui empiezan los eventos de botones
 btnCrearJuego.addEventListener(`click`, mostrarFormularioJuego);
@@ -76,7 +53,6 @@ function cargaInicial() {
   if (listaJuegos.length > 0) {
     //dibujo una fila en la tabla
     listaJuegos.map((juego, indice) => crearFila(juego, indice + 1));
-    console.log("si");
   }
 }
 
@@ -120,7 +96,6 @@ function crearJuego() {
   let resumen = sumarioValidacion(
     nombre.value,
     precio.value,
-    precioOferta.value,
     descripcion.value,
     imagen.value,
     trailer.value,
@@ -136,7 +111,6 @@ function crearJuego() {
       undefined,
       nombre.value,
       precio.value,
-      precioOferta.value,
       descripcion.value,
       imagen.value,
       trailer.value,

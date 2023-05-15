@@ -18,16 +18,6 @@ function validarPrecio(precio) {
     return false;
   }
 }
-function validarPrecioOferta(precioOferta) {
-  let patron = /^\d{1,5}/;
-  if (patron.test(precioOferta) && parseInt(precioOferta) < parseInt(precio)) {
-    console.log(`Dato correcto`);
-    return true;
-  } else {
-    console.log(`Dato incorrecto`);
-    return false;
-  }
-}
 
 function validarImagen(imagen) {
   let patron = /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/;
@@ -73,7 +63,6 @@ function validarAlmacenamiento(almacenamiento) {
 export function sumarioValidacion(
   nombre,
   precio,
-  precioOferta,
   descripcion,
   imagen,
   trailer,
@@ -90,11 +79,6 @@ export function sumarioValidacion(
   }
   if (!validarPrecio(precio)) {
     resumen += `El precio debe contener entre 2 y 5 números. <br>`;
-  }
-  if (precioOferta !== "") {
-    if (!validarPrecioOferta(precioOferta)) {
-      resumen += `El precio de oferta debe contener entre 2 y 5 numeros y debe ser menor al precio base.<br>`;
-    }
   }
   if (!validarCantidadCaracteres(descripcion, 5, 500)) {
     resumen += `La descripción del juego debe tener entre 5 y 500 caracteres.<br>`;
