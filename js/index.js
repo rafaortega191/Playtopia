@@ -1,10 +1,10 @@
 let listaJuegos = JSON.parse(localStorage.getItem("listaJuegos")) || [];
 let buscador = document.querySelector("input");
+let grilla = document.querySelector("#grillaJuegos");
 
 buscador.addEventListener("keyup", filtrar);
 
 function crearColumna(juego) {
-  let grilla = document.querySelector("#grillaJuegos");
   grilla.innerHTML += `
   <div class="col-6 col-md-3 col-lg-2">
   <div class="p-0 rounded mb-4 containerJuego overflow-hidden">
@@ -32,25 +32,24 @@ function navegarDetallesJuego(codigo) {
 }
 
 function filtrar() {
+  grilla.innerHTML = ""
   let busqueda = buscador.value.toLowerCase();
   let resultados = 0;
-  let juego = document.querySelectorAll(".containerJuego");
-  let sinResultados = document.getElementById('mensajeError');
+  let sinResultados = document.getElementById('errorBusqueda');
 
-  juego.forEach((juego) => {
-    let titulo = juego.querySelector(".tituloJuego").textContent.toLowerCase();
-    if (titulo.includes(busqueda)) {
-      juego.style.display = "block";
+  listaJuegos.map((juego) => {
+    let nombre = juego.nombre.toLowerCase();
+    let categoria = juego.categoria.toLowerCase();
+    if (nombre.includes(busqueda) || categoria.includes(busqueda)) {
+      crearColumna(juego)
       resultados++;
-    } else {
-      juego.style.display = "none";
     }
   });
-
-  if (resultados === 0 && sinResultados.className === "d-none") {
+  if (resultados === 0 && sinResultados.className === "text-center d-none") {
     sinResultados.className = "text-center";
+    
   } else if (resultados > 0 && sinResultados.className === "text-center") {
-    sinResultados.className ="d-none";
+    sinResultados.className ="text-center d-none";
   }
 }
 
