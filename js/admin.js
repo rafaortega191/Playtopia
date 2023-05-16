@@ -40,7 +40,7 @@ let almacenamiento = document.getElementById(`almacenamiento`);
 let placaGrafica = document.getElementById(`placa`);
 let ram = document.getElementById(`ram`);
 let procesador = document.getElementById(`procesador`);
-
+let crearJuegoNuevo = true;
 
 // Aqui empiezan los eventos de botones
 btnCrearJuego.addEventListener(`click`, mostrarFormularioJuego);
@@ -87,9 +87,14 @@ function limpiarFormulario() {
   formularioAdminJuego.reset();
 }
 
+//funcion para definir si el juego es nuevo o sera editado.
 function prepararFormulario(e) {
   e.preventDefault();
-  crearJuego();
+  if(crearJuegoNuevo){
+    crearJuego();
+  }else{
+    editarJuego();
+  }
 }
 
 function crearJuego() {
@@ -171,4 +176,55 @@ window.borrarJuego = (codigo) => {
 
 function mandaralLocalstorage() {
   localStorage.setItem("listaJuegos", JSON.stringify(listaJuegos));
+}
+
+window.prepararJuego = (codigoJuego)=>{
+  //1- buscar el objeto que quiero mostrar en el form
+    let juegoBuscado = listaJuegos.find((juego)=> juego.codigo === codigoJuego);
+    console.log(juegoBuscado);
+  //2- mostrar el formulario con los datos
+  modalJuegos.show();
+  codigo.value = juegoBuscado.codigo;
+  nombre.value = juegoBuscado.nombre;
+  descripcion.value = juegoBuscado.descripcion;
+  imagen.value = juegoBuscado.imagen;
+  trailer.value = juegoBuscado.trailer;
+  categoria.value = juegoBuscado.categoria;
+  desarrollador.value = juegoBuscado.desarrollador;
+  almacenamiento.value = juegoBuscado.almacenamiento;
+  placaGrafica.value = juegoBuscado.placaGrafica;
+  ram.value = juegoBuscado.ram;
+  procesador.value = juegoBuscado.procesador;
+  
+  //3- cambiar el estado de la variable crearPeliculaNueva a false
+  crearJuegoNuevo= false;
+}
+
+function editarJuego(){
+  console.log('aqui quiero editar')
+  //1- en que posicion esta almancenada la peli que quiero editar
+  let posicionjuego = listaJuegos.findIndex((juego)=> juego.codigo === codigo.value);
+  console.log(posicionjuego);
+  //todo: chequear que todos los datos del formulario sean validos
+  //2- editar los datos de la pelicula seleccionada
+listaJuegos[posicionjuego].nombre = nombre.value;
+listaJuegos[posicionjuego].descripcion = descripcion.value;
+listaJuegos[posicionjuego].imagen = imagen.value;
+listaJuegos[posicionjuego].trailer = trailer.value;
+listaJuegos[posicionjuego].categoria = categoria.value;
+listaJuegos[posicionjuego].desarrollador = desarrollador.value;
+listaJuegos[posicionjuego].almacenamiento = almacenamiento.value;
+listaJuegos[posicionjuego].placaGrafica = placaGrafica.value;
+listaJuegos[posicionjuego].ram = ram.value;
+listaJuegos[posicionjuego].procesador = procesador.value;
+  //3 - actualizar el localstorage
+  mandaralLocalstorage();
+  //4- actualizar la fila de la tabla
+  let tbody = document.querySelector("#tablaJuegos");
+  console.log(tbody.children[posicionjuego].children[1]);
+  tbody.children[posicionjuego].children[1].innerHTML = nombre.value;
+  tbody.children[posicionjuego].children[2].innerHTML = descripcion.value;
+  tbody.children[posicionjuego].children[3].innerHTML = imagen.value;
+  tbody.children[posicionjuego].children[4].innerHTML = categoria.value;
+  modalJuegos.hide();
 }
