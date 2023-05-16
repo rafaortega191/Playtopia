@@ -185,6 +185,7 @@ window.prepararJuego = (codigoJuego)=>{
   modalJuegos.show();
   codigo.value = juegoBuscado.codigo;
   nombre.value = juegoBuscado.nombre;
+  precio.value = juegoBuscado.precio;
   descripcion.value = juegoBuscado.descripcion;
   imagen.value = juegoBuscado.imagen;
   trailer.value = juegoBuscado.trailer;
@@ -204,6 +205,7 @@ function editarJuego(){
   let posicionjuego = listaJuegos.findIndex((juego)=> juego.codigo === codigo.value);
   //aca se editan los datos del juego
 listaJuegos[posicionjuego].nombre = nombre.value;
+listaJuegos[posicionjuego].precio = precio.value;
 listaJuegos[posicionjuego].descripcion = descripcion.value;
 listaJuegos[posicionjuego].imagen = imagen.value;
 listaJuegos[posicionjuego].trailer = trailer.value;
