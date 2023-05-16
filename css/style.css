@@ -493,8 +493,18 @@ input:-webkit-autofill:active {
 .formulario_swicth a:hover {
   cursor: pointer;
   text-decoration: underline;
-
 }
+
+.swal2-icon.swal2-warning {
+  border-color: #222022;
+  color: #932fa2;
+}
+
+.swal2 {
+  backdrop-filter: blur(15px); 
+}
+
+
 
 /* Clases para el footer */
 footer {
