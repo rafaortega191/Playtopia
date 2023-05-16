@@ -1,123 +1,304 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Orbitron:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Bruno+Ace+SC&family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Libre+Franklin:wght@200&family=Orbitron:wght@400;500&family=Ruda:wght@500&display=swap');
+
 /* Fuente general */
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  main {
-    flex-grow: 1;
-    font-family: 'Libre Franklin', sans-serif;
-  }
-  #fuenteLogo{
-    font-family: 'Urbanist', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    color: white
-  }
-  /*Background-color del main en modo oscuro*/
-  main{
-    background-color: #808080;
-  }
-  /*Colores Navbar y footer light*/
- nav.navbar{
-    background-color: #932fa2; 
-  }
-.dropdown-menu{
-    background-color: #932fa2; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.dropdown-item:hover{
+
+main {
+  flex-grow: 1;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+#fuenteLogo {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: white
+}
+
+.tituloUrbanist {
+  font-family: 'Urbanist', sans-serif;
+}
+
+#carouselIndex img {
+  height: 400px;
+  min-height: 400px;
+  object-fit: cover;
+}
+
+#bannerTheLastOfUs {
+  object-position: 70% 10%;
+}
+
+#bannerSpiderMan {
+  object-position: 80% 0%;
+}
+
+.containerJuegosOferta {
+  transition: scale 0.3s ease-out;
+}
+
+.containerJuegosOferta:hover {
+  scale: 1.03;
+}
+
+.imagenJuegos {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: filter 0.35s ease-out;
+}
+
+.containerJuego {
+  transition: scale 0.3s ease-out;
+  position: relative;
+}
+
+.containerJuego:hover {
+  scale: 1.05;
+}
+
+.containerJuego:hover img {
+  filter: brightness(30%);
+}
+
+.containerJuego:hover .infoCardJuego {
+  bottom: 5px;
+}
+
+.infoCardJuego {
+  position: absolute;
+  z-index: 1;
+  bottom: -300px;
+  transition: bottom 0.25s ease-out;
+}
+
+.btnVerMas {
+  background-color: #932fa2;
+}
+
+.btnVerMas:hover {
+  background-color: #631291;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+/*Colores Navbar y footer light*/
+nav.navbar {
+  background-color: #932fa2;
+}
+
+.dropdown-menu {
+  background-color: #932fa2;
+}
+
+.dropdown-item:hover {
   background-color: #c967cb;
 }
+
 /*Estilos de navbar*/
-nav ul li a{
-    color: #ffffff;
-    font-family: 'Urbanist', sans-serif;
+nav ul li a {
+  color: #ffffff;
+  font-family: 'Urbanist', sans-serif;
 }
-.navbar-toggler-icon{
+
+.navbar-toggler-icon {
   color: #ffffff;
 }
-.dropdown-toggle::after{
+
+.dropdown-toggle::after {
   margin-left: 0;
 }
-  /*Colores Navbar y footer dark */
- footer{
-   background-color: #631291;
-   color:  #ffffff;
- }
+
+/*Colores Navbar y footer dark */
+footer {
+  background-color: #631291;
+  color: #ffffff;
+}
+
+/*Estilos para botones en pagina administrador*/
+#btnFormulario {
+  background-color: #631291;
+}
+
+#btnFormulario:hover {
+  background-color: rgb(147, 47, 162);
+}
+
+#btnCrearJuego {
+  background-color: #631291;
+  border-radius: 30px;
+}
+
+#btnCrearJuego:hover {
+  background-color: rgb(147, 47, 162);
+}
+
+.btnEditar {
+  background-color: rgb(250, 250, 120);
+  border-radius: 30px;
+}
+
+.btnEditar:hover {
+  background-color: rgb(242, 242, 60);
+}
+
+.btnEliminar {
+  background-color: rgb(250, 111, 111);
+  border-radius: 30px;
+}
+
+.btnEliminar:hover {
+  background-color: rgb(250, 87, 87);
+}
+
+/*Estilos para tabla administrador*/
+#seccionTabla {
+  background-color: #e0c9ee;
+}
+
+table thead {
+  background: #932fa2;
+  color: #fff;
+  font-size: 15px;
+}
+
+.tamanioCelda {
+  max-width: 10rem;
+}
+
+table tbody tr:nth-child(odd) {
+  background: #fac7fa;
+  font-family: 'Libre Franklin', sans-serif
+}
+
+table tbody tr:nth-child(even) {
+  background: #fca6fd;
+  font-family: 'Libre Franklin', sans-serif
+}
+
+/*Estilos para formulario*/
+.modal-content {
+  background: hsla(292, 55%, 41%, 1);
+
+  background: linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+
+  background: -moz-linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+
+  background: -webkit-linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#932FA2", endColorstr="#631291", GradientType=1);
+}
+
+/* Seccion Recomendados Index */
+.badgePrecio {
+  width: 100px;
+}
+
+#imagenRecomendados {
+  object-fit: cover;
+}
+
+.cardRecomendados:hover {
+  transform: scale(1.02);
+}
+
 /*Estilos para pagina detalle*/
-#tituloDetalle{
+#tituloDetalle {
   color: #631291;
   text-shadow: #ffffff;
 }
-.hrDetalle{
+
+.hrDetalle {
   height: 4px;
   width: 100px;
   background-color: #631291;
   border-color: #932fa2;
 }
-.hrDetalleRequisitos{
+
+.hrDetalleRequisitos {
   height: 4px;
   width: 200px;
   background-color: #631291;
   border-color: #932fa2;
 }
-#imgDetalleJuego{
+
+.rounded-pill {
+  background-color: #b74ac8;
+}
+
+iframe {
   width: 100%;
   height: 400px;
   object-fit: cover;
 }
-.rounded-pill{
+
+#listaRequisitos {
+  list-style: none;
+}
+
+.itemRequisito {
   background-color: #b74ac8;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  height: 100%;
 }
-iframe{
-  width:100%; 
-  height:400px;
-  object-fit: cover;
+
+.componenteRequisitos {
+  color: #fffd;
+  margin-left: 0.5rem;
 }
-#listaRequisitos{
-  list-style:none;
-}
-.itemRequisito{
-  background-color: #b74ac8;
-}
-.btnDetalle{
+
+.btnDetalle {
   width: 250px;
 }
-.btnComprar{
+
+.btnComprar {
   height: 50px;
   background-color: #631291;
-  color: white  !important;
+  color: white !important;
   font-size: 25px;
   font-weight: 500;
-  border-color: #631291 ;
+  border-color: #631291;
   border: 2px solid;
   position: relative;
 }
-.btnComprar:hover{
+
+.btnComprar:hover {
   background-color: #631291;
   color: rgba(255, 255, 255, 1) !important;
   box-shadow: 0 4px 16px #500f76;
   transition: all 0.2s ease;
 }
-.btnCarrito{
+
+.btnCarrito {
   background-color: #932fa2;
   color: #ffffff !important;
   font-size: 20px;
   font-weight: 500;
   font-weight: 500;
-  border-color: #932fa2 ;
+  border-color: #932fa2;
   border: 2px solid;
   position: relative;
 }
-.btnCarrito:hover{
+
+.btnCarrito:hover {
   background-color: #932fa2;
   color: rgba(255, 255, 255, 1) !important;
   box-shadow: 0 4px 16px #932fa2;
   transition: all 0.2s ease;
 }
-.btnDeseos{
+
+.btnDeseos {
   background-color: #b74ac8;
   color: #ffffff !important;
   font-size: 18px;
@@ -126,50 +307,305 @@ iframe{
   border: 2px solid;
   position: relative;
 }
-.btnDeseos:hover{
+
+.btnDeseos:hover {
   background-color: #b74ac8;
   color: rgba(255, 255, 255, 1) !important;
   box-shadow: 0 4px 16px #b74ac8;
   transition: all 0.2s ease;
 }
- /* Media Query para disposiitovs pequeños y medianos*/
+
+.acercadenosotros {
+  padding: 20px 20px 20px 20px;
+  justify-content: space-around;
+}
+
+.card-img-top-adn {
+  height: 600px;
+  object-fit: cover;
+}
+
+/*Login*
+/*Fondo Login*/
+#fondoLogin {
+  background-image: url(../img/fondoLogin.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+.clase_body {
+  font-family: 'Libre Franklin', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #000;
+  display: grid;
+  place-items: center;
+}
+
+
+.contenedor_login {
+  position: relative;
+  isolation: isolate;
+  width: 30rem;
+  padding-top: 75px;
+  background: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
+}
+
+.contenedor_login::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1)
+}
+
+.titulo_login {
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+}
+
+.formulario_login {
+  margin: 2.5rem;
+  background-color: transparent;
+}
+
+.formulario_grupo {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  margin-inline: auto;
+}
+
+.formulario_icono {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #932fa2;
+}
+
+.formulario_ingresar {
+  position: relative;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding-block: 1rem;
+  background: transparent;
+  color: #ffffff;
+  width: 100%;
+  height: 50px;
+}
+
+.formulario_renglon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color:
+    rgb(255, 255, 255);
+  width: 100%;
+  height: 1px;
+}
+
+.formulario_renglon::before {
+  content: '';
+  position: absolute;
+  background-color: #932fa2;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s;
+}
+
+.formulario_ingresar:focus+.formulario_renglon::before,
+.formulario_ingresar:valid+.formulario_renglon::before {
+  transform: scaleX(1);
+}
+
+.formulario_boton {
+  display: block;
+  font-size: 20px;
+  margin: 1.2rem 4.5rem 1.2rem 4.5rem;
+  background-color: #631291;
+  color: #fff;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+  transition: .5s, color .10s;
+  -webkit-transition: .5s, color .10s;
+  -moz-transition: .5s, color .10s;
+}
+
+.formulario_boton:hover {
+  background-color: #932fa2;
+  cursor: pointer;
+  transform: scale3d(1.5, 1.5, 0.3);
+  -webkit-transform: scale3d(1.2, 1.2, 0.3);
+}
+
+.formulario_switch {
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.formulario_switch a {
+  cursor: pointer;
+  text-decoration: line;
+  color: #ffffff;
+}
+
+.formulario_swicth a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+
+}
+
+/* Clases para el footer */
+footer {
+  background-color: rgb(147, 47, 162);
+  color: #fff;
+  padding: 10px 0;
+
+  bottom: 0;
+  width: 100%;
+}
+
+footer .logo {
+  width: 70px;
+  height: 70px;
+}
+
+.textologo {
+  font-family: "Urbanist", sans-serif;
+  padding-top: 17px;
+  padding-left: 5px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.izquierda {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.centro {
+  flex: flex;
+}
+
+.a-footer {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.derecha {
+  flex: flex;
+  text-align: center;
+  margin: 10px;
+}
+
+.btn-redes {
+  background-color: rgb(147, 47, 162);
+  border-color: rgb(147, 47, 162);
+  margin: 3px;
+}
+
+.btb:hover {
+  background-color: gray;
+  border-color: gray;
+}
+
+.hr-footer {
+  margin-top: -10px;
+}
+
+.social-icons{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+/* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
-@media all and (max-width: 576px){
-  #fuenteLogo{
+@media all and (max-width: 576px) {
+  #imagenRecomendados {
+    display: none;
+  }
+
+  #fuenteLogo {
     font-size: 20px;
     font-weight: 500;
   }
-  #logo{
+
+  #logo {
     width: 30px;
   }
-  .navbar-nav{
+
+  .navbar-nav {
     font-size: 15px;
   }
-  .navbar-nav .i{
+
+  .navbar-nav .i {
     font-size: 15px;
   }
-  .dropdown-menu{
+
+  .dropdown-menu {
     font-size: 13px;
-  .btnComprar{
+  }
+
+  .btnComprar {
     height: 50px;
     background-color: #631291;
-    color: white  !important;
+    color: white !important;
     font-size: 18px;
     font-weight: 500;
-    border-color: #631291 ;
+    border-color: #631291;
     border: 2px solid;
     position: relative;
   }
-  .btnCarrito{
+
+  .btnCarrito {
     background-color: #932fa2;
     color: #ffffff !important;
     font-size: 16px;
     font-weight: 500;
-    border-color: #932fa2 ;
+    border-color: #932fa2;
     border: 2px solid;
     position: relative;
   }
-  .btnDeseos{
+
+  .btnDeseos {
     background-color: #b74ac8;
     color: #ffffff !important;
     font-size: 14px;
@@ -178,9 +614,173 @@ iframe{
     border: 2px solid;
     position: relative;
   }
-}
-/*Medianos*/
-@media all and (min-width: 577px) and (max-width: 991px){
 
+  /*Login*/
+  #fondoLogin {
+    background-position: center;
+  }
+
+  .contenedor_login {
+    position: relative;
+    isolation: isolate;
+    width: 300px;
+    padding-top: 75px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
+  }
+
+  .titulo_login {
+    font-size: 2rem;
+  }
+
+  .formulario_boton {
+    display: block;
+    font-size: 15px;
+    margin: 1rem auto 1.5rem;
+    padding: 1rem 1.5rem;
+    background-color: #631291;
+    color: #fff;
+    border-radius: 3rem;
+    cursor: pointer;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+  }
+
+  .formulario_boton:hover {
+    background-color: #932fa2;
+    cursor: pointer;
+    transform: scale3d(1.5, 1.5, 0.3);
+    -webkit-transform: scale3d(1.2, 1.2, 0.3);
+  }
+
+  .formulario_grupo {
+    font-size: 1rem;
+  }
+
+  .centro-footer {
+    flex: flex;
+  }
 }
+
+@media all and (max-width: 480px) {
+  footer .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .textologo {
+    padding-top: 25px;
+    padding-left: 25px;
+    font-size: 20px;
+    display: none;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .izquierda {
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+
+  .centro {
+    margin-bottom: 10px;
+    
+  }
+
+  .derecha {
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  .hr-footer {
+    margin-top: 3px;
+  }
+  
 }
+
+/*Medianos*/
+@media all and (min-width: 577px) and (max-width: 991px) {
+  .contenedor_login {
+    position: relative;
+    isolation: isolate;
+    width: 500px;
+    padding-top: 70px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
+  }
+
+  .formulario_icono {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #932fa2;
+  }
+
+  .formulario_ingresar {
+    position: relative;
+    font-size: 1.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding-block: 1rem;
+    background: transparent;
+    color: #ffffff;
+    width: 100%;
+    height: 50px;
+  }
+
+  .formulario_boton {
+    display: block;
+    font-size: 25px;
+    margin: 2rem auto 1.5rem;
+    padding: 1rem 1.5rem;
+    background-color: #631291;
+    color: #fff;
+    border-radius: 3rem;
+    cursor: pointer;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+  }
+
+  .formulario_boton:hover {
+    background-color: #932fa2;
+    cursor: pointer;
+    transform: scale3d(1.5, 1.5, 0.3);
+    -webkit-transform: scale3d(1.1, 1.1, 0.3);
+  }
+
+  .formulario_switch {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+/*Grandes*/
+@media all and (min-width: 991px) {
+  #bannerHogwartsLegacy {
+    object-position: 0 66%;
+  }
