@@ -527,22 +527,19 @@ input:-webkit-autofill:active {
 footer {
   background-color: rgb(147, 47, 162);
   color: #fff;
-  padding: 10px 0;
-
-  bottom: 0;
   width: 100%;
 }
 
 footer .logo {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
 }
 
 .textologo {
   font-family: "Urbanist", sans-serif;
-  padding-top: 17px;
+  padding-top: 10px;
   padding-left: 5px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -566,7 +563,7 @@ footer .logo {
 .a-footer {
   color: #fff;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .derecha {
@@ -587,7 +584,7 @@ footer .logo {
 }
 
 .hr-footer {
-  margin-top: -10px;
+  margin-top: 1px;
 }
 
 .social-icons {
@@ -734,8 +731,8 @@ footer .logo {
 
 @media all and (max-width: 480px) {
   footer .logo {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
 
   .textologo {
