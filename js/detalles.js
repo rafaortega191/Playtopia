@@ -57,6 +57,7 @@ seccion.innerHTML = `
 // Funcion para agregar reseñas del juego
 let formularioComentario = document.getElementById(`formularioComentario`);
 let contenedorParaComentarios = document.getElementById(`contenedorParaComentarios`);
+let alertComentarios = document.getElementById(`alertComentarios`)
 
 formularioComentario.addEventListener(`submit`, agregarComentario);
 
@@ -64,8 +65,9 @@ function agregarComentario(e){
   e.preventDefault();
   let nombreUsuario = document.getElementById(`nombreUsuario`).value
   let comentarioUsuario = document.getElementById(`comentarioUsuario`).value
- 
-  let comentario = document.createElement(`li`);
+  let resumen = validarComentarios(nombreUsuario, comentarioUsuario)
+  if(resumen.length === 0){
+    let comentario = document.createElement(`li`);
   comentario.className=`list-group-item d-flex align-items-center mb-4`
   comentario.innerHTML = `
   <i class="bi bi-person-circle fs-3 me-3" id="iconoUsuarioComentario"></i>
@@ -74,9 +76,34 @@ function agregarComentario(e){
     <p class="fs-6 lead m-0">${comentarioUsuario}</p>
   </div>
  `
+ alertComentarios.className= `alert alert-danger mt-3 d-none`
  contenedorParaComentarios.appendChild(comentario)
  limpiarFormComentarios()
+  }
+  else{
+    alertComentarios.innerHTML = resumen;
+    alertComentarios.className= `alert alert-danger mt-3`
+  }
 }
 function limpiarFormComentarios(){
   formularioComentario.reset()
+}
+
+function validarCantidadCaracteres(texto, min, max) {
+  if (texto.length >= min && texto.length <= max) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function validarComentarios(nombre, comentario){
+  let resumen = ``
+  if(!validarCantidadCaracteres(nombre, 2, 50)){
+      resumen += `El nombre debe tener entre 2 y 50 caracteres.<br>`
+  }
+  if(!validarCantidadCaracteres(comentario, 1, 500)){
+    resumen += `Tu comentario no puede tener mas de 500 caracteres.`
+  }
+  return resumen
 }
