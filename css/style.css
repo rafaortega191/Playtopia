@@ -53,19 +53,20 @@ main {
   transition: filter 0.35s ease-out;
 }
 
-.containerImagenJuegos {
+.containerJuego {
   transition: scale 0.3s ease-out;
+  position: relative;
 }
 
-.containerImagenJuegos:hover {
+.containerJuego:hover {
   scale: 1.05;
 }
 
-.containerImagenJuegos:hover img {
+.containerJuego:hover img {
   filter: brightness(30%);
 }
 
-.containerImagenJuegos:hover .infoCardJuego {
+.containerJuego:hover .infoCardJuego {
   bottom: 5px;
 }
 
@@ -74,6 +75,14 @@ main {
   z-index: 1;
   bottom: -300px;
   transition: bottom 0.25s ease-out;
+}
+
+.btnVerMas {
+  background-color: #932fa2;
+}
+
+.btnVerMas:hover {
+  background-color: #631291;
 }
 
 a:link,
@@ -222,12 +231,6 @@ table tbody tr:nth-child(even) {
   border-color: #932fa2;
 }
 
-#imgDetalleJuego {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
 .rounded-pill {
   background-color: #b74ac8;
 }
@@ -244,6 +247,15 @@ iframe {
 
 .itemRequisito {
   background-color: #b74ac8;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+.componenteRequisitos {
+  color: #fffd;
+  margin-left: 0.5rem;
 }
 
 .btnDetalle {
@@ -345,7 +357,6 @@ input {
   position: relative;
   isolation: isolate;
   width: 30rem;
-  padding-top: 75px;
   background: transparent;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 20px;
@@ -366,16 +377,15 @@ input {
 }
 
 .titulo_login {
-  position: absolute;
-  top: 10px;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 3rem;
+  padding-top: 1.5rem;
+  font-size: 3.2rem;
 }
 
 .formulario_login {
-  margin: 2.5rem;
+  padding: 0.5rem 2rem 1rem 2rem;
   background-color: transparent;
 }
 
@@ -384,6 +394,17 @@ input {
   display: flex;
   align-items: baseline;
   margin-inline: auto;
+
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: white;
+  transition: background-color 2147483647s;
+  caret-color: white;
 }
 
 .formulario_icono {
@@ -399,8 +420,13 @@ input {
   padding-block: 1rem;
   background: transparent;
   color: #ffffff;
-  width: 100%;
   height: 50px;
+}
+
+#usuarioInput::placeholder,
+#contraseniaInput::placeholder {
+  font-size: 22px;
+  color: #ffffffbb;
 }
 
 .formulario_renglon {
@@ -429,13 +455,29 @@ input {
   transform: scaleX(1);
 }
 
-.formulario_boton {
-  display: block;
-  font-size: 20px;
-  margin: 1.2rem 4.5rem 1.2rem 4.5rem;
-  background-color: #631291;
+#alert_login {
+  display: flex;
+  justify-content: left;
+  padding: 0px;
+  margin: 10px 0px 0px 2px;
   color: #fff;
-  border-radius: 1.5rem;
+  font-size: 1rem;
+}
+
+.contenedor_boton_login {
+  display: flex;
+  justify-content: center;
+
+  margin: 1rem 1rem 1.5rem 1rem;
+}
+
+.formulario_boton {
+  text-align: center;
+  font-size: 20px;
+  padding: 0.75rem;
+  background-color: #932fa2;
+  color: #fff;
+  border-radius: 1rem;
   cursor: pointer;
   -webkit-transition: background-color 1s ease-out;
   -moz-transition: background-color 1s ease-out;
@@ -447,7 +489,7 @@ input {
 }
 
 .formulario_boton:hover {
-  background-color: #932fa2;
+  background-color: #631291;
   cursor: pointer;
   transform: scale3d(1.5, 1.5, 0.3);
   -webkit-transform: scale3d(1.2, 1.2, 0.3);
@@ -468,29 +510,36 @@ input {
 .formulario_swicth a:hover {
   cursor: pointer;
   text-decoration: underline;
-
 }
+
+.swal2-icon.swal2-warning {
+  border-color: #222022;
+  color: #932fa2;
+}
+
+.swal2 {
+  backdrop-filter: blur(15px);
+}
+
+
 
 /* Clases para el footer */
 footer {
   background-color: rgb(147, 47, 162);
   color: #fff;
-  padding: 10px 0;
-
-  bottom: 0;
   width: 100%;
 }
 
 footer .logo {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
 }
 
 .textologo {
   font-family: "Urbanist", sans-serif;
-  padding-top: 17px;
+  padding-top: 10px;
   padding-left: 5px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -514,7 +563,7 @@ footer .logo {
 .a-footer {
   color: #fff;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .derecha {
@@ -523,9 +572,10 @@ footer .logo {
   margin: 10px;
 }
 
-.btn {
+.btn-redes {
   background-color: rgb(147, 47, 162);
   border-color: rgb(147, 47, 162);
+  margin: 3px;
 }
 
 .btb:hover {
@@ -534,14 +584,32 @@ footer .logo {
 }
 
 .hr-footer {
-  margin-top: -10px;
+  margin-top: 1px;
 }
 
-.social-icons{
+.social-icons {
   margin-left: 20px;
   margin-right: 20px;
 }
 
+/*Estilos para seccion de comentarios*/
+#btnDejarComentario{
+  background-color:rgb(147, 47, 162);
+  color: #fff;
+  font-weight: bolder;
+}
+#btnDejarComentario:hover{
+  background-color:rgb(180, 71, 196);
+  color: #fff;
+}
+#iconoUsuarioComentario{
+  color: rgb(180, 71, 196);
+}
+#contenedorDejarComentario{
+  border-radius: 10px;
+  border-color: #932fa2;
+  border-width: 3px;
+}
 /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px) {
@@ -609,8 +677,8 @@ footer .logo {
   .contenedor_login {
     position: relative;
     isolation: isolate;
-    width: 300px;
-    padding-top: 75px;
+    margin: 10px;
+    width: auto;
     background: transparent;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
@@ -620,17 +688,41 @@ footer .logo {
   }
 
   .titulo_login {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1.5rem;
     font-size: 2rem;
   }
 
-  .formulario_boton {
-    display: block;
-    font-size: 15px;
-    margin: 1rem auto 1.5rem;
-    padding: 1rem 1.5rem;
-    background-color: #631291;
+  #usuarioInput::placeholder,
+  #contraseniaInput::placeholder {
+    font-size: 17.5px;
+    color: #ffffffbb;
+  }
+
+  #alert_login {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 4px 0px 0px 0px;
     color: #fff;
-    border-radius: 3rem;
+    font-size: 1rem;
+  }
+
+  .contenedor_boton_login {
+    display: flex;
+    justify-content: center;
+    margin: 0.75rem 1rem 1rem 1rem;
+  }
+
+  .formulario_boton {
+    text-align: center;
+    font-size: 17.5px;
+    padding: 0.75rem;
+    background-color: #932fa2;
+    color: #fff;
+    border-radius: 1rem;
     cursor: pointer;
     -webkit-transition: background-color 1s ease-out;
     -moz-transition: background-color 1s ease-out;
@@ -642,15 +734,12 @@ footer .logo {
   }
 
   .formulario_boton:hover {
-    background-color: #932fa2;
+    background-color: #631291;
     cursor: pointer;
     transform: scale3d(1.5, 1.5, 0.3);
     -webkit-transform: scale3d(1.2, 1.2, 0.3);
   }
 
-  .formulario_grupo {
-    font-size: 1rem;
-  }
 
   .centro-footer {
     flex: flex;
@@ -659,8 +748,8 @@ footer .logo {
 
 @media all and (max-width: 480px) {
   footer .logo {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
 
   .textologo {
@@ -683,7 +772,7 @@ footer .logo {
 
   .centro {
     margin-bottom: 10px;
-    
+
   }
 
   .derecha {
@@ -698,7 +787,7 @@ footer .logo {
   .hr-footer {
     margin-top: 3px;
   }
-  
+
 }
 
 /*Medianos*/
@@ -706,8 +795,8 @@ footer .logo {
   .contenedor_login {
     position: relative;
     isolation: isolate;
-    width: 500px;
-    padding-top: 70px;
+    margin: 10px;
+    width: auto;
     background: transparent;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
@@ -716,9 +805,17 @@ footer .logo {
     box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
   }
 
+  .titulo_login {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1.5rem;
+    font-size: 3rem;
+  }
+
   .formulario_icono {
     font-size: 2rem;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     color: #932fa2;
   }
 
@@ -734,14 +831,28 @@ footer .logo {
     height: 50px;
   }
 
-  .formulario_boton {
-    display: block;
-    font-size: 25px;
-    margin: 2rem auto 1.5rem;
-    padding: 1rem 1.5rem;
-    background-color: #631291;
+  #alert_login {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 6px 0px 0px 0px;
     color: #fff;
-    border-radius: 3rem;
+    font-size: 1.2rem;
+  }
+
+  .contenedor_boton_login {
+    display: flex;
+    justify-content: center;
+    margin: 0.75rem 1rem 1rem 1rem;
+  }
+
+  .formulario_boton {
+    text-align: center;
+    font-size: 20px;
+    padding: 0.85rem;
+    background-color: #932fa2;
+    color: #fff;
+    border-radius: 1rem;
     cursor: pointer;
     -webkit-transition: background-color 1s ease-out;
     -moz-transition: background-color 1s ease-out;
@@ -753,19 +864,19 @@ footer .logo {
   }
 
   .formulario_boton:hover {
-    background-color: #932fa2;
+    background-color: #631291;
     cursor: pointer;
     transform: scale3d(1.5, 1.5, 0.3);
-    -webkit-transform: scale3d(1.1, 1.1, 0.3);
+    -webkit-transform: scale3d(1.2, 1.2, 0.3);
   }
 
   .formulario_switch {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: center;
     color: #ffffff;
   }
 
-  
+
 }
 
 /*Grandes*/
