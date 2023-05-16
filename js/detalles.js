@@ -1,5 +1,4 @@
 const parametroCodigo = new URLSearchParams(window.location.search);
-console.log(parametroCodigo.get("codigo"));
 
 let listaJuegos = JSON.parse(localStorage.getItem("listaJuegos")) || [];
 
@@ -17,10 +16,11 @@ seccion.innerHTML = `
       <aside class="col-md-6 col-lg-3 mb-2 mb-md-0">
           <img src="${juegoBuscado.imagen}"  class="img-fluid rounded-2" alt="${juegoBuscado.nombre}">
       </aside>
-      <aside class="col-md-6 col-lg-6" id="asideDescripcion">
+      <aside class="col-md-6 col-lg-6">
           <h5 class="fw-bold">Descripción</h5>
           <hr class="my-1 hrDetalle">
           <p class="fw-bold">${juegoBuscado.descripcion}</p>
+          <p class="fw-bold pt-2">Desarrollador: ${juegoBuscado.desarrollador}</p>
       </aside>
       <aside class="col-lg-3 py-md-3 py-md-0">
           <p class="text-center fs-4 fw-bold">Precio: $${juegoBuscado.precio} ARS</p>
@@ -32,7 +32,7 @@ seccion.innerHTML = `
       </aside>
   </div>
   <article class="d-flex justify-content-center">
-  <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </article>
   <article class="mt-4">
       <h6 class="fs-5 fw-bold">Requisitos del sistema:</h6>
