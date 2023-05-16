@@ -80,6 +80,7 @@ function crearFila(juego, indice) {
 }
 
 function mostrarFormularioJuego() {
+  crearJuegoNuevo= true;
   limpiarFormulario();
   modalJuegos.show();
 }
@@ -153,7 +154,6 @@ window.borrarJuego = (codigo) => {
     confirmButtonText: "Borrar",
     cancelButtonText: "Cancelar",
   }).then((result) => {
-    console.log(result);
     if (result.isConfirmed) {
       //borrar el juego
       let posicionjuego = listaJuegos.findIndex(
@@ -179,10 +179,9 @@ function mandaralLocalstorage() {
 }
 
 window.prepararJuego = (codigoJuego)=>{
-  //1- buscar el objeto que quiero mostrar en el form
+  //buscar el objeto que quiero mostrar en el form
     let juegoBuscado = listaJuegos.find((juego)=> juego.codigo === codigoJuego);
-    console.log(juegoBuscado);
-  //2- mostrar el formulario con los datos
+  //mostrar el formulario con los datos
   modalJuegos.show();
   codigo.value = juegoBuscado.codigo;
   nombre.value = juegoBuscado.nombre;
@@ -196,17 +195,14 @@ window.prepararJuego = (codigoJuego)=>{
   ram.value = juegoBuscado.ram;
   procesador.value = juegoBuscado.procesador;
   
-  //3- cambiar el estado de la variable crearPeliculaNueva a false
+  //cambiar el estado de la variable crearjuegoNueva a false
   crearJuegoNuevo= false;
 }
 
 function editarJuego(){
-  console.log('aqui quiero editar')
-  //1- en que posicion esta almancenada la peli que quiero editar
+  //en que posicion esta almancenado el juego que quiero editar
   let posicionjuego = listaJuegos.findIndex((juego)=> juego.codigo === codigo.value);
-  console.log(posicionjuego);
-  //todo: chequear que todos los datos del formulario sean validos
-  //2- editar los datos de la pelicula seleccionada
+  //aca se editan los datos del juego
 listaJuegos[posicionjuego].nombre = nombre.value;
 listaJuegos[posicionjuego].descripcion = descripcion.value;
 listaJuegos[posicionjuego].imagen = imagen.value;
@@ -217,11 +213,10 @@ listaJuegos[posicionjuego].almacenamiento = almacenamiento.value;
 listaJuegos[posicionjuego].placaGrafica = placaGrafica.value;
 listaJuegos[posicionjuego].ram = ram.value;
 listaJuegos[posicionjuego].procesador = procesador.value;
-  //3 - actualizar el localstorage
+  //actualizar el localstorage
   mandaralLocalstorage();
-  //4- actualizar la fila de la tabla
+  //actualizar la fila de la tabla
   let tbody = document.querySelector("#tablaJuegos");
-  console.log(tbody.children[posicionjuego].children[1]);
   tbody.children[posicionjuego].children[1].innerHTML = nombre.value;
   tbody.children[posicionjuego].children[2].innerHTML = descripcion.value;
   tbody.children[posicionjuego].children[3].innerHTML = imagen.value;
