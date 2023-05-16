@@ -117,7 +117,10 @@ nav ul li a {
 .dropdown-toggle::after {
   margin-left: 0;
 }
-
+#dropdownMenuUsuario{
+  overflow: hidden;
+  left: -70px;
+ }
 /*Colores Navbar y footer dark */
 footer {
   background-color: #631291;
@@ -784,3 +787,4 @@ footer .logo {
   #bannerHogwartsLegacy {
     object-position: 0 66%;
   }
+}
