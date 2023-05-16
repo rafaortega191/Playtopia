@@ -21,11 +21,11 @@ function validarFormulario() {
 
   if (usuario === "soyadmin" && contrasenia === "123456") {
       localStorage.setItem("usuario", JSON.stringify(usuario));
-      localStorage.setItem("contraseña", contrasenia);
-      window.location.href('index.html');
+      localStorage.setItem("contraseña", JSON.stringify(contrasenia));
+      window.location.href('pages/admin.html');
   } else {
       localStorage.setItem("usuario", JSON.stringify(usuario));
-      localStorage.setItem("contraseña", contrasenia);
-      window.location.href('/index.html');
+      localStorage.setItem("contraseña", JSON.stringify(contrasenia));
+      window.location.href('index.html');
   }
 }
