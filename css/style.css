@@ -565,6 +565,9 @@ footer .logo {
   background-color:rgb(180, 71, 196);
   color: #fff;
 }
+#iconoUsuarioComentario{
+  color: rgb(180, 71, 196);
+}
 #contenedorDejarComentario{
   border-radius: 10px;
   border-color: #932fa2;
