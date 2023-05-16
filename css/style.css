@@ -395,6 +395,16 @@ input {
   display: flex;
   align-items: baseline;
   margin-inline: auto;
+  
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: white;
+  transition: background-color 2147483647s;
+  caret-color: white;
 }
 
 .formulario_icono {
@@ -414,6 +424,9 @@ input {
   height: 50px;
 }
 
+.formulario_ingresar::placeholder{
+  color: #ffffffc0;
+}
 .formulario_renglon {
   position: absolute;
   left: 0;
