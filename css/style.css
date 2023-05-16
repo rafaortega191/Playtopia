@@ -778,13 +778,9 @@ footer .logo {
     text-align: center;
     color: #ffffff;
   }
-
-  
 }
-
 /*Grandes*/
 @media all and (min-width: 991px) {
   #bannerHogwartsLegacy {
     object-position: 0 66%;
   }
-}
