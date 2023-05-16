@@ -3,8 +3,9 @@ function validarFormulario() {
   let contrasenia = document.getElementById("contraseniaInput").value;
   let alertLogin = document.getElementById('alert_login');
 
-  let usuarioValidacion = /^[a-zA-Z0-9]{2,50}$/;
-  let contraseniaValidacion = /^.{6,20}$/;
+  let usuarioValidacion = /^[a-zA-Z0-9]{3,50}$/;
+  let contraseniaValidacion = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,20}$/;
+
 
   if (!usuarioValidacion.test(usuario)) {
     alertLogin.classList.remove("d-none");
