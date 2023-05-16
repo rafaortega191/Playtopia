@@ -53,3 +53,30 @@ seccion.innerHTML = `
       </ul>
   </article>
 `;
+
+// Funcion para agregar reseñas del juego
+let formularioComentario = document.getElementById(`formularioComentario`);
+let contenedorParaComentarios = document.getElementById(`contenedorParaComentarios`);
+
+formularioComentario.addEventListener(`submit`, agregarComentario);
+
+function agregarComentario(e){
+  e.preventDefault();
+  let nombreUsuario = document.getElementById(`nombreUsuario`).value
+  let comentarioUsuario = document.getElementById(`comentarioUsuario`).value
+ 
+  let comentario = document.createElement(`li`);
+  comentario.className=`list-group-item d-flex align-items-center mb-4`
+  comentario.innerHTML = `
+  <i class="bi bi-person-circle fs-3 me-3"></i>
+  <div>
+    <p class="fs-6 fw-bold m-0">${nombreUsuario}</p>
+    <p class="fs-6 lead m-0">${comentarioUsuario}</p>
+  </div>
+ `
+ contenedorParaComentarios.appendChild(comentario)
+ limpiarFormComentarios()
+}
+function limpiarFormComentarios(){
+  formularioComentario.reset()
+}

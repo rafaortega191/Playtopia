@@ -109,28 +109,29 @@
       <section class="container mt-5">
         <hr>
         <h4 class="my-3 fs-5 fw-bolder">Reseñas de usuarios</h4>
-        <div class="card" id="contenedorDejarComentario">
+        <div class="card mb-4" id="contenedorDejarComentario">
           <p class="ms-2 mt-2 mb-1"><em>Dejá tu reseña aquí</em></p>
           <form class="ps-3 pe-3 pb-3 pt-0" id="formularioComentario">
             <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
+              <label for="nombreUsuario" class="form-label">Nombre</label>
               <input 
               type="text" 
               class="form-control" 
-              id="nombre">
+              id="nombreUsuario">
             </div>
             <div class="mb-3">
-              <label for="comentario" class="form-label">Comentario</label>
+              <label for="comentarioUsuario" class="form-label">Comentario</label>
               <textarea 
               class="form-control" 
-              id="comentario"></textarea>
+              id="comentarioUsuario"></textarea>
             </div>
             <div class="w-100 d-flex justify-content-end mt-3">
-              <button class="btn btnDejarComentario" type="submit">Agregar reseña</button>
+              <button class="btn" id="btnDejarComentario" type="submit">Agregar reseña</button>
             </div>
           </form>
         </div>   
-        <ul class="list-group list-group-flush" id="contenedorParaComentarios"></ul>
+        <ul class="list-group list-group-flush" id="contenedorParaComentarios">
+        </ul>
         <hr>
       </section>
     </main>

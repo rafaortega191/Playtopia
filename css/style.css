@@ -556,12 +556,12 @@ footer .logo {
 }
 
 /*Estilos para seccion de comentarios*/
-.btnDejarComentario{
+#btnDejarComentario{
   background-color:rgb(147, 47, 162);
   color: #fff;
   font-weight: bolder;
 }
-.btnDejarComentario:hover{
+#btnDejarComentario:hover{
   background-color:rgb(180, 71, 196);
   color: #fff;
 }
