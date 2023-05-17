@@ -19,7 +19,6 @@ function validarFormulario(e) {
   if (!usuarioValidacion.test(usuario)) {
     alertLogin.innerText = "Solo se permiten letras, numeros y guiónes bajos en el usuario";
     alertLogin.className = "alert d-block text-warning fw-bolder";
-    console.log("a")
     return;
   }
 
