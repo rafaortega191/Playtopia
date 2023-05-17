@@ -8,8 +8,8 @@ function validarFormulario(e) {
   let contrasenia = document.getElementById("contraseniaInput").value;
   let alertLogin = document.getElementById('alertLogin');
 
-  let usuarioValidacion = /^[a-zA-Z0-9_]{3,20}/;
-  let contraseniaValidacion = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,20}$/;
+  let usuarioValidacion = /^[a-zA-Z0-9_]{6,20}/;
+  let contraseniaValidacion = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,25}$/;
 
   if (!usuarioValidacion.test(usuario)) {
     alertLogin.innerText = "No se permiten espacios en el usuario";
