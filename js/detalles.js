@@ -28,6 +28,15 @@ seccion.innerHTML = `
             <a href="./error404.html"> <button type="button" class="btn btnComprar btnDetalle">Comprar ahora</button></a>
             <a href="./error404.html"> <button type="button" class="btn btnCarrito btnDetalle my-3"><i class="fs-5 bi bi-bag-plus-fill"></i>  Agregar al carrito</button></a>
             <a href="./error404.html">  <button type="button" class="btn btnDeseos btnDetalle"><i class="fs-5 bi bi-bag-heart-fill"></i>  Agregar a lista de deseos</button></a>
+            <div class='rating my-3 text-secondary'>
+            <div>
+              <h5>Calificá este juego</h5>
+              <i class="bi bi-star-fill estrella"></i>
+              <i class="bi bi-star-fill estrella"></i>
+              <i class="bi bi-star-fill estrella"></i>
+              <i class="bi bi-star-fill estrella"></i>
+              <i class="bi bi-star-fill estrella"></i>
+            </div>  
           </div>
       </aside>
   </div>
@@ -107,3 +116,16 @@ function validarComentarios(nombre, comentario){
   }
   return resumen
 }
+// funcion para calificacion
+
+const estrellas = document.querySelectorAll('.estrella');
+estrellas.forEach(function(estrella,i) {
+  estrella.addEventListener('click', function(){
+    for (let j=0; j<= i; j++) {
+      estrellas[j].classList.add('checked');
+    }
+    for (let j=i+1; j < estrellas.length; j++) {
+      estrellas[j].classList.remove('checked');
+    }
+  })
+})

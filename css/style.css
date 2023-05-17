@@ -332,6 +332,20 @@ iframe {
   object-fit: cover;
 }
 
+.estrella {
+  font-size: 30px;
+}
+.estrella:hover,
+.estrella.checked {
+color: rgb(212, 175, 55);
+}
+
+
+.rating{
+  display: flex;
+  justify-content: center;
+ }
+
 /*Login*
 /*Fondo Login*/
 #fondoLogin {
