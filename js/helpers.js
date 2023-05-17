@@ -1,20 +1,16 @@
 // Funciones para validar el formulario
 function validarCantidadCaracteres(texto, min, max) {
   if (texto.length >= min && texto.length <= max) {
-    console.log("dato correcto");
     return true;
   } else {
-    console.log("dato erroneo");
     return false;
   }
 }
 function validarPrecio(precio) {
   let patron = /^\d{1,5}/;
   if (patron.test(precio)) {
-    console.log(`Dato correcto`);
     return true;
   } else {
-    console.log(`Dato incorrecto`);
     return false;
   }
 }
@@ -22,10 +18,8 @@ function validarPrecio(precio) {
 function validarImagen(imagen) {
   let patron = /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)$/;
   if (patron.test(imagen)) {
-    console.log(`Funciona`);
     return true;
   } else {
-    console.log(`Falló`);
     return false;
   }
 }
@@ -33,29 +27,23 @@ function validarTrailer(trailer) {
   let patron =
     /http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?[\w\?‌​=]*)?/;
   if (patron.test(trailer)) {
-    console.log(`Link correcto`);
     return true;
   } else {
-    console.log(`Link erróneo`);
     return false;
   }
 }
 function validarCategoria(categoria) {
   if (categoria == "") {
-    console.log(`No eligio ninguna categoria`);
     return false;
   } else {
-    console.log(`Eligió una categoría`);
     return true;
   }
 }
 function validarAlmacenamiento(almacenamiento) {
   let patron = /^\d{1,3}( )?(MB|GB|TB)$/;
   if (patron.test(almacenamiento)) {
-    console.log(`Completado correctamente`);
     return true;
   } else {
-    console.log(`No fue completado correctamente`);
     return false;
   }
 }
