@@ -245,6 +245,7 @@ function editarJuego() {
     modalJuegos.hide();
     alerta.innerHTML = "";
     alerta.className = "d-none";
+    Swal.fire("Juego modificado", "el juego seleccionado fue modificado exitosamente", "success")
   } else {
     alerta.innerHTML = resumen;
     alerta.className = "alert alert-danger mt-3";
