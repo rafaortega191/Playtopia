@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Orbitron:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Bruno+Ace+SC&family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Libre+Franklin:wght@200&family=Orbitron:wght@400;500&family=Ruda:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Orbitron:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Bruno+Ace+SC&family=Hind+Madurai:wght@400;700&family=Inconsolata&family=Libre+Franklin:wght@200&family=Orbitron:wght@400;500&family=Ruda:wght@500&display=swap");
 
 /* Fuente general */
 body {
@@ -10,18 +10,18 @@ body {
 
 main {
   flex-grow: 1;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 #fuenteLogo {
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
   font-size: 30px;
   font-weight: 600;
-  color: white
+  color: white;
 }
 
 .tituloUrbanist {
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 
 #carouselIndex img {
@@ -46,13 +46,6 @@ main {
   scale: 1.03;
 }
 
-.imagenJuegos {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  transition: filter 0.35s ease-out;
-}
-
 .containerJuego {
   transition: scale 0.3s ease-out;
   position: relative;
@@ -68,6 +61,13 @@ main {
 
 .containerJuego:hover .infoCardJuego {
   bottom: 5px;
+}
+
+.containerJuegosOferta img {
+  object-fit: cover;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
 }
 
 .infoCardJuego {
@@ -107,7 +107,7 @@ nav.navbar {
 /*Estilos de navbar*/
 nav ul li a {
   color: #ffffff;
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
 }
 
 .navbar-toggler-icon {
@@ -177,23 +177,35 @@ table thead {
 
 table tbody tr:nth-child(odd) {
   background: #fac7fa;
-  font-family: 'Libre Franklin', sans-serif
+  font-family: "Libre Franklin", sans-serif;
 }
 
 table tbody tr:nth-child(even) {
   background: #fca6fd;
-  font-family: 'Libre Franklin', sans-serif
+  font-family: "Libre Franklin", sans-serif;
 }
 
 /*Estilos para formulario*/
 .modal-content {
   background: hsla(292, 55%, 41%, 1);
 
-  background: linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+  background: linear-gradient(
+    45deg,
+    hsla(292, 55%, 41%, 1) 49%,
+    hsla(278, 78%, 32%, 1) 91%
+  );
 
-  background: -moz-linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(292, 55%, 41%, 1) 49%,
+    hsla(278, 78%, 32%, 1) 91%
+  );
 
-  background: -webkit-linear-gradient(45deg, hsla(292, 55%, 41%, 1) 49%, hsla(278, 78%, 32%, 1) 91%);
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(292, 55%, 41%, 1) 49%,
+    hsla(278, 78%, 32%, 1) 91%
+  );
 
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#932FA2", endColorstr="#631291", GradientType=1);
 }
@@ -340,7 +352,7 @@ input {
 }
 
 .clase_body {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -351,7 +363,6 @@ input {
   display: grid;
   place-items: center;
 }
-
 
 .contenedor_login {
   position: relative;
@@ -366,14 +377,14 @@ input {
 }
 
 .contenedor_login::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   width: 100%;
   height: 60px;
-  box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1)
+  box-shadow: 0 1px 1rem rgba(0, 0, 0, 0.1);
 }
 
 .titulo_login {
@@ -394,9 +405,7 @@ input {
   display: flex;
   align-items: baseline;
   margin-inline: auto;
-
 }
-
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -433,14 +442,13 @@ input:-webkit-autofill:active {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color:
-    rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: 1px;
 }
 
 .formulario_renglon::before {
-  content: '';
+  content: "";
   position: absolute;
   background-color: #932fa2;
   width: 100%;
@@ -450,8 +458,8 @@ input:-webkit-autofill:active {
   transition: transform 0.7s;
 }
 
-.formulario_ingresar:focus+.formulario_renglon::before,
-.formulario_ingresar:valid+.formulario_renglon::before {
+.formulario_ingresar:focus + .formulario_renglon::before,
+.formulario_ingresar:valid + .formulario_renglon::before {
   transform: scaleX(1);
 }
 
@@ -483,9 +491,9 @@ input:-webkit-autofill:active {
   -moz-transition: background-color 1s ease-out;
   -o-transition: background-color 1s ease-out;
   transition: background-color 1s ease-out;
-  transition: .5s, color .10s;
-  -webkit-transition: .5s, color .10s;
-  -moz-transition: .5s, color .10s;
+  transition: 0.5s, color 0.1s;
+  -webkit-transition: 0.5s, color 0.1s;
+  -moz-transition: 0.5s, color 0.1s;
 }
 
 .formulario_boton:hover {
@@ -520,8 +528,6 @@ input:-webkit-autofill:active {
 .swal2 {
   backdrop-filter: blur(15px);
 }
-
-
 
 /* Clases para el footer */
 footer {
@@ -593,19 +599,19 @@ footer .logo {
 }
 
 /*Estilos para seccion de comentarios*/
-#btnDejarComentario{
-  background-color:rgb(147, 47, 162);
+#btnDejarComentario {
+  background-color: rgb(147, 47, 162);
   color: #fff;
   font-weight: bolder;
 }
-#btnDejarComentario:hover{
-  background-color:rgb(180, 71, 196);
+#btnDejarComentario:hover {
+  background-color: rgb(180, 71, 196);
   color: #fff;
 }
-#iconoUsuarioComentario{
+#iconoUsuarioComentario {
   color: rgb(180, 71, 196);
 }
-#contenedorDejarComentario{
+#contenedorDejarComentario {
   border-radius: 10px;
   border-color: #932fa2;
   border-width: 3px;
@@ -728,9 +734,9 @@ footer .logo {
     -moz-transition: background-color 1s ease-out;
     -o-transition: background-color 1s ease-out;
     transition: background-color 1s ease-out;
-    transition: .5s, color .10s;
-    -webkit-transition: .5s, color .10s;
-    -moz-transition: .5s, color .10s;
+    transition: 0.5s, color 0.1s;
+    -webkit-transition: 0.5s, color 0.1s;
+    -moz-transition: 0.5s, color 0.1s;
   }
 
   .formulario_boton:hover {
@@ -739,7 +745,6 @@ footer .logo {
     transform: scale3d(1.5, 1.5, 0.3);
     -webkit-transform: scale3d(1.2, 1.2, 0.3);
   }
-
 
   .centro-footer {
     flex: flex;
@@ -772,7 +777,6 @@ footer .logo {
 
   .centro {
     margin-bottom: 10px;
-
   }
 
   .derecha {
@@ -787,7 +791,6 @@ footer .logo {
   .hr-footer {
     margin-top: 3px;
   }
-
 }
 
 /*Medianos*/
@@ -858,9 +861,9 @@ footer .logo {
     -moz-transition: background-color 1s ease-out;
     -o-transition: background-color 1s ease-out;
     transition: background-color 1s ease-out;
-    transition: .5s, color .10s;
-    -webkit-transition: .5s, color .10s;
-    -moz-transition: .5s, color .10s;
+    transition: 0.5s, color 0.1s;
+    -webkit-transition: 0.5s, color 0.1s;
+    -moz-transition: 0.5s, color 0.1s;
   }
 
   .formulario_boton:hover {
@@ -875,8 +878,6 @@ footer .logo {
     text-align: center;
     color: #ffffff;
   }
-
-
 }
 
 /*Grandes*/
