@@ -38,7 +38,8 @@
             <input
               type="text"
               placeholder="Nombre de usuario"
-              maxlength="50"
+              minlength="6"
+              maxlength="20"
               required
               id="usuarioInput"
               class="formulario_ingresar"
@@ -51,14 +52,16 @@
               type="password"
               placeholder="Contraseña"
               minlength="6"
-              maxlength="20"
+              maxlength="25"
               required
               id="contraseniaInput"
               class="formulario_ingresar"
             />
             <span class="formulario_renglon"></span>
           </div>
-          <div class="alert d-none text-warning fw-bolder" role="alert" id="alert_login">Email o contraseña incorrectos</div>
+          <div class="alert d-none text-warning fw-bolder" role="alert" id="alertLogin">
+            Email o contraseña incorrectos
+          </div>
           <div class="contenedor_boton_login">
             <button class="formulario_boton" role="button">Iniciar sesión</button>
           </div>

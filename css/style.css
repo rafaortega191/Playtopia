@@ -465,7 +465,7 @@ input:-webkit-autofill:active {
   transform: scaleX(1);
 }
 
-#alert_login {
+#alertLogin {
   display: flex;
   justify-content: left;
   padding: 0px;
@@ -734,7 +734,7 @@ footer .logo {
     color: #ffffffbb;
   }
 
-  #alert_login {
+  #alertLogin {
     display: flex;
     justify-content: center;
     padding: 0px;
@@ -861,7 +861,7 @@ footer .logo {
     height: 50px;
   }
 
-  #alert_login {
+  #alertLogin {
     display: flex;
     justify-content: center;
     padding: 0px;
