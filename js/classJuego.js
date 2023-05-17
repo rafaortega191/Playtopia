@@ -2,7 +2,6 @@ export default class Juego {
     #codigo;
     #nombre;
     #precio;
-    #precioOferta;
     #descripcion;
     #imagen;
     #trailer;
@@ -13,11 +12,10 @@ export default class Juego {
     #ram;
     #procesador;
   
-    constructor(codigo = uuidv4(), nombre, precio, precioOferta = 0, descripcion, imagen, trailer, categoria, desarrollador, almacenamiento, placaGrafica, ram, procesador) {
+    constructor(codigo = uuidv4(), nombre, precio, descripcion, imagen, trailer, categoria, desarrollador, almacenamiento, placaGrafica, ram, procesador) {
       this.#codigo = codigo;
       this.#nombre = nombre;
       this.#precio = precio;
-      this.#precioOferta = precioOferta;
       this.#descripcion = descripcion;
       this.#imagen = imagen;
       this.#trailer = trailer;
@@ -51,14 +49,6 @@ export default class Juego {
   
     set precio(precio) {
       this.#precio = precio;
-    }
-  
-    get precioOferta() {
-      return this.#precioOferta;
-    }
-  
-    set precioOferta(precioOferta) {
-      this.#precioOferta = precioOferta;
     }
   
     get descripcion() {
@@ -135,7 +125,6 @@ export default class Juego {
             codigo: this.codigo,
             nombre: this.nombre,
             precio: this.precio,
-            precioOferta: this.precioOferta,
             descripcion: this.descripcion,
             imagen: this.imagen,
             trailer: this.trailer,

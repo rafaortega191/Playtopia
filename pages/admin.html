@@ -24,6 +24,7 @@
     />
     <!-- Link hoja de estilo-->
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="/img/LogoBlanco.png" />
     <title>Playtopia | Administrador</title>
   </head>
   <body data-bs-theme="light">
@@ -111,7 +112,7 @@
                 >
                 <i class="bi bi-person-circle fs-5"></i>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" id="dropdownMenuUsuario">
                   <li>
                     <a class="dropdown-item text-light" href="../pages/login.html"
                       >Cerrar sesión</a
@@ -155,48 +156,6 @@
               </tr>
             </thead>
             <tbody id="tablaJuegos">
-              <tr>
-                <td scope="col">0</td>
-                <td>Dark Souls</td>
-                <td class="tamanioCelda text-truncate">
-                  El juego tiene lugar en el reino de Lordran, donde los
-                  jugadores asumen el papel de un personaje no muerto maldito
-                  que comienza una peregrinación para descubrir su destino
-                </td>
-                <td class="tamanioCelda text-truncate">
-                  https://darksouls.fandom.com/es/wiki/Dark_Souls?file=Dark_Souls_Portada.jpg
-                </td>
-                <td>Aventura</td>
-                <td class="text-center">
-                  <button class="btn btnEditar">
-                    <i class="bi bi-pencil fs-5"></i>
-                  </button>
-                  <button class="btn btnEliminar">
-                    <i class="bi bi-trash fs-5"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td scope="col">1</td>
-                <td>Dark Souls</td>
-                <td class="tamanioCelda text-truncate">
-                  El juego tiene lugar en el reino de Lordran, donde los
-                  jugadores asumen el papel de un personaje no muerto maldito
-                  que comienza una peregrinación para descubrir su destino
-                </td>
-                <td class="tamanioCelda text-truncate">
-                  https://darksouls.fandom.com/es/wiki/Dark_Souls?file=Dark_Souls_Portada.jpg
-                </td>
-                <td>Aventura</td>
-                <td class="text-center">
-                  <button class="btn btnEditar">
-                    <i class="bi bi-pencil fs-5"></i>
-                  </button>
-                  <button class="btn btnEliminar">
-                    <i class="bi bi-trash fs-5"></i>
-                  </button>
-                </td>
-              </tr>
             </tbody>
           </table>
         </article>
@@ -479,5 +438,8 @@
     <script src="../js/app.js"></script>
     <!--Link a admin.js-->
     <script src="../js/admin.js" type="module"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
+"></script>
   </body>
 </html>
