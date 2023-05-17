@@ -8,8 +8,8 @@ function validarFormulario(e) {
   let contrasenia = document.getElementById("contraseniaInput").value;
   let alertLogin = document.getElementById('alertLogin');
 
-  let usuarioValidacion = /^[a-zA-Z0-9!@#$%^&*_-?.<>]{3,50}$/;
-  let contraseniaValidacion = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*_-?.<>]){6,20}$/;
+  let usuarioValidacion = /^[a-zA-Z0-9_]{3,20}/;
+  let contraseniaValidacion = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,20}$/;
 
   if (!usuarioValidacion.test(usuario)) {
     alertLogin.innerText = "No se permiten espacios en el usuario";
@@ -23,11 +23,12 @@ function validarFormulario(e) {
     return;
   }  
   
-  if (usuario === "soyadmin" && contrasenia === "Soyadmin123") {
+  if (usuario === "soyadmin" && contrasenia === "Soyadmin123!") {
       localStorage.setItem("usuario", JSON.stringify(usuario));
       localStorage.setItem("contraseña", JSON.stringify(contrasenia));
       window.location.href = './admin.html';
   } else {
+    alertLogin.innerText = "Email o contraseña incorrectos";
     alertLogin.className = "alert d-block text-warning fw-bolder";
     return;
   }
