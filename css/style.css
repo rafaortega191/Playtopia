@@ -38,6 +38,13 @@ main {
   object-position: 80% 0%;
 }
 
+.imagenJuegos {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: filter 0.35s ease-out;
+}
+
 .containerJuegosOferta {
   transition: scale 0.3s ease-out;
 }
