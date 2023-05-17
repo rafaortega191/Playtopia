@@ -4,19 +4,45 @@ formulario.addEventListener("submit", validarFormulario);
 
 function validarFormulario(e) {
   e.preventDefault();
-  var usuario = document.getElementById("usuarioInput").value;
-  var contrasenia = document.getElementById("contraseniaInput").value;
+  let usuario = document.getElementById("usuarioInput").value;
+  let contrasenia = document.getElementById("contraseniaInput").value;
   let alertLogin = document.getElementById('alert_login');
 
-  let usuarioValidacion = /^[a-zA-Z0-9]{3,50}$/;
-  let contraseniaValidacion = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,20}$/;
+  let usuarioValidacion = /^[a-zA-Z0-9!@#$%^&*_-?.<>\|]{3,50}$/;
+  let contraseniaValidacion = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*_-?.<>\|]).{6,20}$/;
 
+  if (!usuarioValidacion.test(usuario)) {
+    alertLogin.innerText = "No se permiten espacios en el usuario";
+    alertLogin.className = "alert d-block text-warning fw-bolder";
+    return;
+  }
+
+  if (!contraseniaValidacion.test(contrasenia)) {
+    let mensajeRequisitos = "La contraseña no cumple con los siguientes requisitos:";
+    if (!/(?=.*[a-z])/.test(contrasenia)) {
+      mensajeRequisitos += "\n- Debe tener al menos una letra minúscula.";
+    }
+    if (!/(?=.*[A-Z])/.test(contrasenia)) {
+      mensajeRequisitos += "\n- Debe tener al menos una letra mayúscula.";
+    }
+    if (!/(?=.*\d)/.test(contrasenia)) {
+      mensajeRequisitos += "\n- Debe tener al menos un número.";
+    }
+    if (!/(?=.*[!@#$%^&*_-?.<>\|])/.test(contrasenia)) {
+      mensajeRequisitos += "\n- Debe tener al menos un carácter.";
+    }
+    alertLogin.innerText = mensajeRequisitos;
+    alertLogin.className = "alert d-block text-warning fw-bolder";
+    return;
+  }
+  
+  
   if (!usuarioValidacion.test(usuario) || !contraseniaValidacion.test(contrasenia)) {
     alertLogin.className = "alert d-block text-warning fw-bolder";
     return;
   }
 
-  if (usuario === "soyadmin" && contrasenia === "123456") {
+  if (usuario === "soyadmin" && contrasenia === "Soyadmin123") {
       localStorage.setItem("usuario", JSON.stringify(usuario));
       localStorage.setItem("contraseña", JSON.stringify(contrasenia));
       window.location.href = './admin.html';
