@@ -43,24 +43,41 @@
           </button>
           <!--Logo-->
           <span class="">
-            <a class="navbar-brand d-flex align-items-center" id="fuenteLogo" href="/index.html">
-              <img src="../img/LogoBlanco.png" width="40px" id="logo" class="" alt="Logo de playtopia" />
+            <a
+              class="navbar-brand d-flex align-items-center"
+              id="fuenteLogo"
+              href="../index.html"
+            >
+              <img
+                src="../img/LogoBlanco.png"
+                width="40px"
+                id="logo"
+                class=""
+                alt="Logo de playtopia"
+              />
               <span class="d-none d-lg-inline ms-lg-2">Playtopia</span></a
             >
           </span>
           <!--Lista de navbar-->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto d-flex align-items-start align-items-lg-center gap-lg-2">
+            <ul
+              class="navbar-nav ms-auto d-flex align-items-start align-items-lg-center gap-lg-2"
+            >
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="admin.html">Administrador</a>
+                <a class="nav-link" id="adminLinkNav" href="./admin.html">Administrador</a>
               </li>
               <!--Desplegable para modo claro/modo oscuro-->
               <li class="nav-item dropdown">
                 <a
-                 class="nav-link dropdown-toggle logoTema"
+                  class="nav-link dropdown-toggle logoTema"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -70,40 +87,49 @@
                 <ul class="dropdown-menu">
                   <li>
                     <button class="dropdown-item text-light" id="btnTemaClaro">
-                      <i class="bi bi-brightness-high-fill fs-6 me-2"></i>Tema claro
-                    </button>
+                      <i class="bi bi-brightness-high-fill fs-6 me-2"></i>Tema
+                      claro</button
+                    >
                   </li>
-                  <li>
-                    <button class="dropdown-item text-light" id="btnTemaOscuro">
-                      <i class="bi bi-moon-fill fs-6 me-2"></i>Tema oscuro
-                    </button>
-                  </li>
+                  <button class="dropdown-item text-light" id="btnTemaOscuro"
+                      ><i class="bi bi-moon-fill fs-6 me-2"></i>Tema oscuro</button
+                    >
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="error404.html"><i class="bi bi-cart-fill fs-5"></i></a>
+                <a class="nav-link" href="./error404.html"
+                  ><i class="bi bi-cart-fill fs-5"></i
+                ></a>
               </li>
+
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle "
+                  class="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                <i class="bi bi-person-circle fs-5"></i>
+                  <i class="bi bi-person-circle fs-5"></i>
                 </a>
                 <ul class="dropdown-menu" id="dropdownMenuUsuario">
                   <li>
-                    <a class="dropdown-item text-light" href="../pages/login.html"
+                    <a class="dropdown-item text-light" id="loginNav" href="./login.html"
                       >Iniciar sesión</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item text-light" href="../pages/error404.html"
+                    <a
+                      class="dropdown-item text-light" id="registroNav"
+                      href="./error404.html"
                       >Registrarme</a
                     >
                   </li>
+                  <button class="dropdown-item text-light" id="logoutNav" onclick="cerrarSesion()"
+                      >Cerrar sesión</button
+                    >
+                </ul>
+              </li>
             </ul>
           </div>
         </div>

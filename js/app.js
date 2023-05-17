@@ -28,11 +28,15 @@ function cambiarTema(colorTema) {
   localStorage.setItem("tema", JSON.stringify(colorTema));
   //cabiar el icono del dropdown segun el tema
   let logoDropdown = document.querySelector(".logoTema");
-  if (colorTema === "dark") {
+  if (colorTema === "dark" && window.location.href === window.location.origin + "/pages/admin.html") {
     tablaBgColor.className = "seccionTablaDark";
+  }
+  if (colorTema === "light" && window.location.href === window.location.origin + "/pages/admin.html") {
+    tablaBgColor.className = "seccionTablaLight";
+  }
+  if (colorTema === "dark") {
     logoDropdown.innerHTML = `<i class="bi bi-moon-fill  fs-5 me-2"></i>`;
   } else {
-    tablaBgColor.className = "seccionTablaLight";
     logoDropdown.innerHTML = `<i class="bi bi-brightness-high-fill fs-5 me-2">`;
   }
 }
