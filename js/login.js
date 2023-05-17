@@ -3,18 +3,23 @@ let estaLogueado = sessionStorage.getItem("estaLogueado") || false;
 
 formulario.addEventListener("submit", validarFormulario);
 
+if(estaLogueado) {
+  window.location.href = window.location.origin;
+}
+
 function validarFormulario(e) {
   e.preventDefault();
   let usuario = document.getElementById("usuarioInput").value;
   let contrasenia = document.getElementById("contraseniaInput").value;
   let alertLogin = document.getElementById("alertLogin");
 
-  let usuarioValidacion = /^[a-zA-Z0-9_]{6,20}/;
+  let usuarioValidacion = /^[a-zA-Z0-9_]{6,20}$/;
   let contraseniaValidacion = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,25}$/;
 
   if (!usuarioValidacion.test(usuario)) {
-    alertLogin.innerText = "No se permiten espacios en el usuario";
+    alertLogin.innerText = "Solo se permiten letras, numeros y guiónes bajos en el usuario";
     alertLogin.className = "alert d-block text-warning fw-bolder";
+    console.log("a")
     return;
   }
 
@@ -35,3 +40,9 @@ function validarFormulario(e) {
     return;
   }
 }
+
+function verificarUser() {
+  
+}
+
+verificarUser()
