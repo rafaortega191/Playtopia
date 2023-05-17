@@ -33,3 +33,10 @@ function cambiarTema(colorTema) {
     logoDropdown.innerHTML = `<i class="bi bi-brightness-high-fill fs-5 me-2">`;
   }
 }
+
+function verificarUser() {
+  let estaLogueado = sessionStorage.getItem("estaLogueado");
+  if(estaLogueado) {
+    
+  }
+}
