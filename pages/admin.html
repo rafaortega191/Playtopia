@@ -68,14 +68,14 @@
             >
               <li class="nav-item">
                 <a
-                  class="nav-link active"
+                  class="nav-link "
                   aria-current="page"
                   href="../index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="adminLinkNav" href="./admin.html">Administrador</a>
+                <a class="nav-link active" id="adminLinkNav" href="./admin.html">Administrador</a>
               </li>
               <!--Desplegable para modo claro/modo oscuro-->
               <li class="nav-item dropdown">
@@ -128,7 +128,7 @@
                       >Registrarme</a
                     >
                   </li>
-                  <button class="dropdown-item text-light" id="logoutNav"
+                  <button class="dropdown-item text-light" id="logoutNav" onclick="cerrarSesion()"
                       >Cerrar sesión</button
                     >
                 </ul>

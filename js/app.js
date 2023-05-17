@@ -55,6 +55,6 @@ function verificarUser() {
 }
 
 function cerrarSesion(){
-  sessionStorage.setItem("estaLogueado", false);
-
+  sessionStorage.removeItem("estaLogueado", false);
+  window.location.href = window.location.origin
 }
