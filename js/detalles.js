@@ -6,7 +6,7 @@ const juegoBuscado = listaJuegos.find((juego) => juego.codigo === parametroCodig
 
 const url = new URL(juegoBuscado.trailer);
 const searchParams = new URLSearchParams(url.search);
-const videoId = searchParams.get("v");
+const videoId = searchParams.get("v") || url.pathname.substring(1);
 
 let seccion = document.getElementById("seccionDetalle");
 seccion.innerHTML = `
