@@ -315,11 +315,6 @@ iframe {
   transition: all 0.2s ease;
 }
 
-.acercadenosotros {
-  padding: 20px 20px 20px 20px;
-  justify-content: space-around;
-}
-
 .card-img-top-adn {
   height: 600px;
   object-fit: cover;
@@ -590,6 +585,31 @@ footer .logo {
 .social-icons {
   margin-left: 20px;
   margin-right: 20px;
+}
+
+/*Estilos para seccion de acerca de nosotros*/
+
+.acercadenosotros {
+  padding: 20px 20px 20px 20px;
+  justify-content: space-around;
+}
+
+.btn-acercadenosotros{
+  background-color: #932fa2;
+  border-color: #932fa2;
+  
+}
+.btn-acercadenosotros:hover {
+  background-color: #8b2a98;
+  border-color: #8b2a98;
+}
+
+.borde-card-adn{
+  border-top-width: 5px;
+  border-top-color: #6c757d;
+  border-top-style:solid;
+  border-radius: 0;
+  text-align: center;
 }
 
 /*Estilos para seccion de comentarios*/
