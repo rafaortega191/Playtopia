@@ -29,6 +29,7 @@
   </head>
   <body data-bs-theme="light">
     <header>
+      <!-- Navbar-->
       <nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container">
           <!--Boton hamburguesa-->
@@ -66,12 +67,15 @@
               class="navbar-nav ms-auto d-flex align-items-start align-items-lg-center gap-lg-2"
             >
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html"
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="../index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./admin.html">Administrador</a>
+                <a class="nav-link active" id="adminLinkNav" href="./admin.html">Administrador</a>
               </li>
               <!--Desplegable para modo claro/modo oscuro-->
               <li class="nav-item dropdown">
@@ -90,11 +94,9 @@
                       claro</button
                     >
                   </li>
-                  <li>
-                    <button class="dropdown-item text-light" id="btnTemaOscuro"
+                  <button class="dropdown-item text-light" id="btnTemaOscuro"
                       ><i class="bi bi-moon-fill fs-6 me-2"></i>Tema oscuro</button
                     >
-                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -102,22 +104,35 @@
                   ><i class="bi bi-cart-fill fs-5"></i
                 ></a>
               </li>
+
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle "
+                  class="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                <i class="bi bi-person-circle fs-5"></i>
+                  <i class="bi bi-person-circle fs-5"></i>
                 </a>
                 <ul class="dropdown-menu" id="dropdownMenuUsuario">
                   <li>
-                    <a class="dropdown-item text-light" href="../pages/login.html"
-                      >Cerrar sesión</a
+                    <a class="dropdown-item text-light" id="loginNav" href="./login.html"
+                      >Iniciar sesión</a
                     >
                   </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-light" id="registroNav"
+                      href="./error404.html"
+                      >Registrarme</a
+                    >
+                  </li>
+                  <button class="dropdown-item text-light" id="logoutNav" onclick="cerrarSesion()"
+                      >Cerrar sesión</button
+                    >
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
