@@ -41,6 +41,7 @@ let placaGrafica = document.getElementById(`placa`);
 let ram = document.getElementById(`ram`);
 let procesador = document.getElementById(`procesador`);
 let crearJuegoNuevo = true;
+let alerta = document.getElementById("alerta");
 
 // Aqui empiezan los eventos de botones
 btnCrearJuego.addEventListener(`click`, mostrarFormularioJuego);
@@ -80,10 +81,13 @@ function crearFila(juego, indice) {
 }
 
 function mostrarFormularioJuego() {
-  crearJuegoNuevo= true;
+  alerta.innerHTML = "";
+  alerta.className = "d-none";
+  crearJuegoNuevo = true;
   limpiarFormulario();
   modalJuegos.show();
 }
+
 function limpiarFormulario() {
   formularioAdminJuego.reset();
 }
@@ -91,9 +95,9 @@ function limpiarFormulario() {
 //funcion para definir si el juego es nuevo o sera editado.
 function prepararFormulario(e) {
   e.preventDefault();
-  if(crearJuegoNuevo){
+  if (crearJuegoNuevo) {
     crearJuego();
-  }else{
+  } else {
     editarJuego();
   }
 }
@@ -136,8 +140,9 @@ function crearJuego() {
     crearFila(juegoNuevo, listaJuegos.length);
     //cierro el modal
     modalJuegos.hide();
+    alerta.innerHTML = "";
+    alerta.className = "d-none";
   } else {
-    let alerta = document.getElementById("alerta");
     alerta.innerHTML = resumen;
     alerta.className = "alert alert-danger mt-3";
   }
@@ -156,9 +161,7 @@ window.borrarJuego = (codigo) => {
   }).then((result) => {
     if (result.isConfirmed) {
       //borrar el juego
-      let posicionjuego = listaJuegos.findIndex(
-        (juego) => juego.codigo === codigo
-      );
+      let posicionjuego = listaJuegos.findIndex((juego) => juego.codigo === codigo);
       listaJuegos.splice(posicionjuego, 1);
       //actualizar el localstorage
       mandaralLocalstorage();
@@ -178,9 +181,11 @@ function mandaralLocalstorage() {
   localStorage.setItem("listaJuegos", JSON.stringify(listaJuegos));
 }
 
-window.prepararJuego = (codigoJuego)=>{
+window.prepararJuego = (codigoJuego) => {
+  alerta.innerHTML = "";
+  alerta.className = "d-none";
   //buscar el objeto que quiero mostrar en el form
-    let juegoBuscado = listaJuegos.find((juego)=> juego.codigo === codigoJuego);
+  let juegoBuscado = listaJuegos.find((juego) => juego.codigo === codigoJuego);
   //mostrar el formulario con los datos
   modalJuegos.show();
   codigo.value = juegoBuscado.codigo;
@@ -195,33 +200,53 @@ window.prepararJuego = (codigoJuego)=>{
   placaGrafica.value = juegoBuscado.placaGrafica;
   ram.value = juegoBuscado.ram;
   procesador.value = juegoBuscado.procesador;
-  
-  //cambiar el estado de la variable crearjuegoNueva a false
-  crearJuegoNuevo= false;
-}
 
-function editarJuego(){
+  //cambiar el estado de la variable crearjuegoNueva a false
+  crearJuegoNuevo = false;
+};
+
+function editarJuego() {
   //en que posicion esta almancenado el juego que quiero editar
-  let posicionjuego = listaJuegos.findIndex((juego)=> juego.codigo === codigo.value);
-  //aca se editan los datos del juego
-listaJuegos[posicionjuego].nombre = nombre.value;
-listaJuegos[posicionjuego].precio = precio.value;
-listaJuegos[posicionjuego].descripcion = descripcion.value;
-listaJuegos[posicionjuego].imagen = imagen.value;
-listaJuegos[posicionjuego].trailer = trailer.value;
-listaJuegos[posicionjuego].categoria = categoria.value;
-listaJuegos[posicionjuego].desarrollador = desarrollador.value;
-listaJuegos[posicionjuego].almacenamiento = almacenamiento.value;
-listaJuegos[posicionjuego].placaGrafica = placaGrafica.value;
-listaJuegos[posicionjuego].ram = ram.value;
-listaJuegos[posicionjuego].procesador = procesador.value;
-  //actualizar el localstorage
-  mandaralLocalstorage();
-  //actualizar la fila de la tabla
-  let tbody = document.querySelector("#tablaJuegos");
-  tbody.children[posicionjuego].children[1].innerHTML = nombre.value;
-  tbody.children[posicionjuego].children[2].innerHTML = descripcion.value;
-  tbody.children[posicionjuego].children[3].innerHTML = imagen.value;
-  tbody.children[posicionjuego].children[4].innerHTML = categoria.value;
-  modalJuegos.hide();
+  let posicionjuego = listaJuegos.findIndex((juego) => juego.codigo === codigo.value);
+  let resumen = sumarioValidacion(
+    nombre.value,
+    precio.value,
+    descripcion.value,
+    imagen.value,
+    trailer.value,
+    categoria.value,
+    desarrollador.value,
+    almacenamiento.value,
+    placaGrafica.value,
+    ram.value,
+    procesador.value
+  );
+  //aca se editan los datos del juego si los datos son validos
+  if (resumen.length === 0) {
+    listaJuegos[posicionjuego].nombre = nombre.value;
+    listaJuegos[posicionjuego].precio = precio.value;
+    listaJuegos[posicionjuego].descripcion = descripcion.value;
+    listaJuegos[posicionjuego].imagen = imagen.value;
+    listaJuegos[posicionjuego].trailer = trailer.value;
+    listaJuegos[posicionjuego].categoria = categoria.value;
+    listaJuegos[posicionjuego].desarrollador = desarrollador.value;
+    listaJuegos[posicionjuego].almacenamiento = almacenamiento.value;
+    listaJuegos[posicionjuego].placaGrafica = placaGrafica.value;
+    listaJuegos[posicionjuego].ram = ram.value;
+    listaJuegos[posicionjuego].procesador = procesador.value;
+    //actualizar el localstorage
+    mandaralLocalstorage();
+    //actualizar la fila de la tabla
+    let tbody = document.querySelector("#tablaJuegos");
+    tbody.children[posicionjuego].children[1].innerHTML = nombre.value;
+    tbody.children[posicionjuego].children[2].innerHTML = descripcion.value;
+    tbody.children[posicionjuego].children[3].innerHTML = imagen.value;
+    tbody.children[posicionjuego].children[4].innerHTML = categoria.value;
+    modalJuegos.hide();
+    alerta.innerHTML = "";
+    alerta.className = "d-none";
+  } else {
+    alerta.innerHTML = resumen;
+    alerta.className = "alert alert-danger mt-3";
+  }
 }
