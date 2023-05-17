@@ -24,10 +24,12 @@
     />
     <!-- Link hoja de estilo-->
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="/img/LogoBlanco.png" />
     <title>Playtopia | Administrador</title>
   </head>
   <body data-bs-theme="light">
     <header>
+      <!-- Navbar-->
       <nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container">
           <!--Boton hamburguesa-->
@@ -65,12 +67,15 @@
               class="navbar-nav ms-auto d-flex align-items-start align-items-lg-center gap-lg-2"
             >
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html"
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="../index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./admin.html">Administrador</a>
+                <a class="nav-link active" id="adminLinkNav" href="./admin.html">Administrador</a>
               </li>
               <!--Desplegable para modo claro/modo oscuro-->
               <li class="nav-item dropdown">
@@ -89,11 +94,9 @@
                       claro</button
                     >
                   </li>
-                  <li>
-                    <button class="dropdown-item text-light" id="btnTemaOscuro"
+                  <button class="dropdown-item text-light" id="btnTemaOscuro"
                       ><i class="bi bi-moon-fill fs-6 me-2"></i>Tema oscuro</button
                     >
-                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -101,28 +104,41 @@
                   ><i class="bi bi-cart-fill fs-5"></i
                 ></a>
               </li>
+
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle "
+                  class="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                <i class="bi bi-person-circle fs-5"></i>
+                  <i class="bi bi-person-circle fs-5"></i>
                 </a>
                 <ul class="dropdown-menu" id="dropdownMenuUsuario">
                   <li>
-                    <a class="dropdown-item text-light" href="../pages/login.html"
-                      >Cerrar sesión</a
+                    <a class="dropdown-item text-light" id="loginNav" href="./login.html"
+                      >Iniciar sesión</a
                     >
                   </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-light" id="registroNav"
+                      href="./error404.html"
+                      >Registrarme</a
+                    >
+                  </li>
+                  <button class="dropdown-item text-light" id="logoutNav" onclick="cerrarSesion()"
+                      >Cerrar sesión</button
+                    >
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main class="container my-5 bg-white">
+    <main class="container my-5">
       <h1 class="display-5 tituloUrbanist text-center">
         Página del administrador
       </h1>
@@ -138,7 +154,7 @@
         </button>
       </section>
       <hr />
-      <section class="mt-4" id="seccionTabla">
+      <section class="mt-4 seccionTablaLight" id="seccionTabla">
         <h4 class="fs-5 text-center pt-3 pb-1">
           <b>Lista de juegos disponibles</b>
         </h4>
@@ -370,7 +386,7 @@
               ></div>
               <!--Botón enviar-->
               <button class="btn text-white" type="submit" id="btnFormulario">
-                Agregar
+                Enviar
               </button>
             </form>
           </div>
@@ -381,14 +397,14 @@
       <div class="contenedor">
         <div class="izquierda">
           <img src="../img/LogoBlanco.png" alt="Logo" class="logo" />
-          <a href="../index.html" class="textologo a-footer">Playtopia</a>
+          <a href="../index.html" class="textologo text-white">Playtopia</a>
         </div>
-        <div class="centro">
+        <div class="centro mt-3">
           <div>
             <ul>
               <li><a href="../index.html" class="a-footer">Inicio</a></li>
-              <li><a href="./acercadenosotros.html" class="a-footer">Acerca de nosotros</a></li>
               <li><a href="./error404.html" class="a-footer">Contacto</a></li>
+              <li><a href="./acercadenosotros.html" class="a-footer">Acerca de nosotros</a></li>
             </ul>
           </div>
         </div>

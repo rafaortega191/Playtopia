@@ -19,10 +19,13 @@
       crossorigin="anonymous"
     />
     <!-- Link Bootstrap Iconos-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <!-- Link hoja de estilo-->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="shortcut icon" href="/img/LogoBlanco.png" />
     <title>Playtopia</title>
   </head>
   <body data-bs-theme="light">
@@ -44,8 +47,14 @@
           </button>
           <!--Logo-->
           <span class="">
-            <a class="navbar-brand d-flex align-items-center" id="fuenteLogo" href="/index.html">
-              <img src="../img/LogoBlanco.png" width="40px" id="logo" class="" alt="Logo de playtopia" />
+            <a class="navbar-brand d-flex align-items-center" id="fuenteLogo" href="../index.html">
+              <img
+                src="../img/LogoBlanco.png"
+                width="40px"
+                id="logo"
+                class=""
+                alt="Logo de playtopia"
+              />
               <span class="d-none d-lg-inline ms-lg-2">Playtopia</span></a
             >
           </span>
@@ -53,15 +62,15 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto d-flex align-items-start align-items-lg-center gap-lg-2">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/admin.html">Administrador</a>
+                <a class="nav-link" id="adminLinkNav" href="./admin.html">Administrador</a>
               </li>
               <!--Desplegable para modo claro/modo oscuro-->
               <li class="nav-item dropdown">
                 <a
-                 class="nav-link dropdown-toggle logoTema"
+                  class="nav-link dropdown-toggle logoTema"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -74,52 +83,62 @@
                       <i class="bi bi-brightness-high-fill fs-6 me-2"></i>Tema claro
                     </button>
                   </li>
-                  <li>
-                    <button class="dropdown-item text-light" id="btnTemaOscuro">
-                      <i class="bi bi-moon-fill fs-6 me-2"></i>Tema oscuro
-                    </button>
-                  </li>
+                  <button class="dropdown-item text-light" id="btnTemaOscuro">
+                    <i class="bi bi-moon-fill fs-6 me-2"></i>Tema oscuro
+                  </button>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/error404.html"><i class="bi bi-cart-fill fs-5"></i></a>
+                <a class="nav-link" href="./error404.html"><i class="bi bi-cart-fill fs-5"></i></a>
               </li>
+
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle "
+                  class="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                <i class="bi bi-person-circle fs-5"></i>
+                  <i class="bi bi-person-circle fs-5"></i>
                 </a>
                 <ul class="dropdown-menu" id="dropdownMenuUsuario">
                   <li>
-                    <a class="dropdown-item text-light" href="../pages/login.html"
+                    <a class="dropdown-item text-light" id="loginNav" href="./login.html"
                       >Iniciar sesión</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item text-light" href="../pages/error404.html"
+                    <a class="dropdown-item text-light" id="registroNav" href="./error404.html"
                       >Registrarme</a
                     >
                   </li>
+                  <button class="dropdown-item text-light" id="logoutNav" onclick="cerrarSesion()">
+                    Cerrar sesión
+                  </button>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
     <main class="container-fluid">
-      <h1 class="text-center text-white mt-2 mb-2 border-bottom border-white border-3">Nuestro Equipo</h1>
+      <h1 class="text-center text-secondary mt-3 mb-3 border-bottom border-secondary border-2">
+        Nuestro Equipo
+      </h1>
       <section class="row acercadenosotros">
         <!-- CARD 1 -->
-        <aside class="col-md-4 mb-3">
-          <article class="card border border-dark">
-            <img src="../img/fotos/gero.jpg" class="card-img-top-adn" alt="integrante 2" />
-            <div class="card-body">
+        <aside class="col-md-6 col-lg-4 mb-3">
+          <article class="card border border-secondary border-5 h-100">
+            <img src="../img/fotos/gero.jpg" class="card-img-top-adn" alt="Geronimo Cossio" />
+            <div class="card-body borde-card-adn d-flex flex-column justify-content-center">
               <h4 class="card-title">Geronimo Cossio</h4>
-              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalintegrante1">
+              <button
+                class="btn btn-acercadenosotros text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#modalintegrante1"
+              >
                 Acerca de mi
               </button>
             </div>
@@ -135,24 +154,34 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Desarrollo</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Acerca de mi</h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="modal-body">
-                  Soy Gero, tengo 18 años. Me gusta andar en bici, escuchar musica de cualquier tipo y la tecnología en
-                  general. Estoy estudiando programación full stack en Rolling Code y en Egg Coperation.
+                <div class="modal-body text-white">
+                  Soy Gero, tengo 18 años. Me gusta andar en bici, escuchar musica de cualquier tipo
+                  y la tecnología en general. Estoy estudiando programación full stack en Rolling
+                  Code y en Egg Coperation.
                 </div>
               </div>
             </div>
           </section>
         </aside>
         <!-- CARD 2 -->
-        <aside class="col-md-4 mb-3">
-          <article class="card border border-dark">
-            <img src="../img/fotos/lourdes.jpg" class="card-img-top-adn" alt="integrante 2" />
-            <div class="card-body">
+        <aside class="col-md-6 col-lg-4 mb-3">
+          <article class="card border border-secondary border-5 h-100">
+            <img src="../img/fotos/lourdes.jpg" class="card-img-top-adn" alt="Lourdes Garcia" />
+            <div class="card-body borde-card-adn d-flex flex-column justify-content-center">
               <h4 class="card-title">Lourdes Garcia</h4>
-              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalintegrante2">
+              <button
+                class="btn btn-acercadenosotros text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#modalintegrante2"
+              >
                 Acerca de mi
               </button>
             </div>
@@ -168,25 +197,35 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Desarrollo</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Acerca de mi</h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="modal-body">
-                  Soy Lourdes García, tengo 25 años pero para algunos ya soy "la vieja de filosofía". Junto a dos amigos
-                  hago un programa en Twitch dedicado a la divulgación de filosofía. Por otro lado, me gustaría seguir
-                  formándome y aprendiendo más sobre programación.
+                <div class="modal-body text-white">
+                  Soy Lourdes García, tengo 25 años pero para algunos ya soy "la vieja de
+                  filosofía". Junto a dos amigos hago un programa en Twitch dedicado a la
+                  divulgación de filosofía. Por otro lado, me gustaría seguir formándome y
+                  aprendiendo más sobre programación.
                 </div>
               </div>
             </div>
           </section>
         </aside>
         <!-- CARD 3 -->
-        <aside class="col-md-4 mb-3">
-          <article class="card border border-dark">
-            <img src="../img/fotos/nico.jpg" class="card-img-top-adn" alt="integrante 2" />
-            <div class="card-body">
+        <aside class="col-md-6 col-lg-4 mb-3">
+          <article class="card border border-secondary border-5 h-100">
+            <img src="../img/fotos/nico.jpg" class="card-img-top-adn" alt="Nicolas Powell" />
+            <div class="card-body borde-card-adn d-flex flex-column justify-content-center">
               <h4 class="card-title">Nicolas Powell</h4>
-              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalintegrante3">
+              <button
+                class="btn btn-acercadenosotros text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#modalintegrante3"
+              >
                 Acerca de mi
               </button>
             </div>
@@ -202,25 +241,34 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Desarrollo</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Acerca de mi</h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="modal-body">
-                  Soy Nicolas Powell, tengo 20 años. Actualmente estoy cursando Ingeniería en Informática en la UNT y
-                  aprendiendo desarrollo FullStack en Rolling Code School. Me encantan los juegos, la música y
-                  resolver problemas
+                <div class="modal-body text-white">
+                  Soy Nicolas Powell, tengo 20 años. Actualmente estoy cursando Ingeniería en
+                  Informática en la UNT y aprendiendo desarrollo FullStack en Rolling Code School.
+                  Me encantan los juegos, la música y resolver problemas
                 </div>
               </div>
             </div>
           </section>
         </aside>
         <!-- CARD 4 -->
-        <aside class="col-md-4 mb-3">
-          <article class="card border border-dark">
-            <img src="../img/fotos/marisa.jpg" class="card-img-top-adn" alt="integrante 2" />
-            <div class="card-body">
+        <aside class="col-md-6 col-lg-4 mb-3">
+          <article class="card border border-secondary border-5 h-100">
+            <img src="../img/fotos/marisa.jpg" class="card-img-top-adn" alt="Marisa Indiana Garat" />
+            <div class="card-body borde-card-adn d-flex flex-column justify-content-center">
               <h4 class="card-title">Marisa Indiana Garat</h4>
-              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalintegrante4">
+              <button
+                class="btn btn-acercadenosotros text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#modalintegrante4"
+              >
                 Acerca de mi
               </button>
             </div>
@@ -236,25 +284,35 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Desarrollo</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Acerca de mi</h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="modal-body">
-                  Soy Marisa Indiana Garat, tengo 29 años. Estoy terminando la Licenciatura en Trabajo Social en la UNT,
-                  y aprendiendo programación fullstack en Rolling Code Schooll. Trabajo en acompañamiento a las
-                  trayectorias en el Colegio San Francisco. Amo al club Atlético Tucumán, y a mi perro Leo.
+                <div class="modal-body text-white">
+                  Soy Marisa Indiana Garat, tengo 29 años. Estoy terminando la Licenciatura en
+                  Trabajo Social en la UNT, y aprendiendo programación fullstack en Rolling Code
+                  Schooll. Trabajo en acompañamiento a las trayectorias en el Colegio San Francisco.
+                  Amo al club Atlético Tucumán, y a mi perro Leo.
                 </div>
               </div>
             </div>
           </section>
         </aside>
         <!-- CARD 5 -->
-        <aside class="col-md-4 mb-3">
-          <article class="card border border-dark">
-            <img src="../img/fotos/rafa.png" class="card-img-top-adn" alt="integrante 1" />
-            <div class="card-body">
+        <aside class="col-md-6 col-lg-4 mb-3">
+          <article class="card border border-secondary border-5 h-100">
+            <img src="../img/fotos/rafa.png" class="card-img-top-adn" alt="Ortega Nicolas Rafael" />
+            <div class="card-body borde-card-adn d-flex flex-column justify-content-center">
               <h4 class="card-title">Ortega Nicolas Rafael</h4>
-              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalintegrante5">
+              <button
+                class="btn btn-acercadenosotros text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#modalintegrante5"
+              >
                 Acerca de mi
               </button>
             </div>
@@ -270,24 +328,33 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabe5">Desarrollo</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5 text-white" id="exampleModalLabe5">Acerca de mi</h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="modal-body">
-                  Soy Nicolas Rafael Ortega, tengo 24 años, estudio programacion y disfruto mucho de los videojuegos y
-                  la música.
+                <div class="modal-body text-white">
+                  Soy Nicolas Rafael Ortega, tengo 24 años, estudio programacion y disfruto mucho de
+                  los videojuegos y la música.
                 </div>
               </div>
             </div>
           </section>
         </aside>
         <!-- CARD 6 -->
-        <aside class="col-md-4 mb-3">
-          <article class="card border border-dark">
-            <img src="../img/fotos/leonel.jpg" class="card-img-top-adn" alt="integrante 2" />
-            <div class="card-body">
+        <aside class="col-md-6 col-lg-4 mb-3">
+          <article class="card border border-secondary border-5 h-100">
+            <img src="../img/fotos/leonel.jpg" class="card-img-top-adn" alt="Leonel Ezequiel Choque" />
+            <div class="card-body borde-card-adn d-flex flex-column justify-content-center">
               <h4 class="card-title">Leonel Ezequiel Choque</h4>
-              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalintegrante6">
+              <button
+                class="btn btn-acercadenosotros text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#modalintegrante6"
+              >
                 Acerca de mi
               </button>
             </div>
@@ -303,13 +370,19 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Desarrollo</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Acerca de mi</h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div class="modal-body">
-                  Hola soy Leonel Ezequiel Choque , tengo 23 años ,soy de Perico – Jujuy. Actualmente estoy estudiando
-                  una Tecnicatura en Desarrollo Integral de Videojuegos y ademas aprendiendo programación fullstack en
-                  Rolling Code Schooll. Me gusta la musica , el diseño y la programacion.
+                <div class="modal-body text-white">
+                  Hola soy Leonel Ezequiel Choque , tengo 23 años ,soy de Perico – Jujuy.
+                  Actualmente estoy estudiando una Tecnicatura en Desarrollo Integral de Videojuegos
+                  y ademas aprendiendo programación fullstack en Rolling Code Schooll. Me gusta la
+                  musica , el diseño y la programacion.
                 </div>
               </div>
             </div>
@@ -321,29 +394,26 @@
       <div class="contenedor">
         <div class="izquierda">
           <img src="../img/LogoBlanco.png" alt="Logo" class="logo" />
-          <p class="textologo">PLAYTOPIA</p>
+          <a href="../index.html" class="textologo text-white">Playtopia</a>
         </div>
-        <div class="centro">
+        <div class="centro mt-3">
           <div>
-            <h2>Navegacion</h2>
             <ul>
-              <li><a href="../index.html" class="a">Inicio</a></li>
-              <li>
-                <a href="acercadenosotros.html" class="a">Acerca de nosotros</a>
-              </li>
-              <li><a href="#" class="a">Contacto</a></li>
+              <li><a href="../index.html" class="a-footer">Inicio</a></li>
+              <li><a href="error404.html" class="a-footer">Contacto</a></li>
+              <li><a href="acercadenosotros.html" class="a-footer">Acerca de nosotros</a></li>
             </ul>
           </div>
         </div>
         <div class="derecha">
-          <div class="">
-            <h2>Nuestras redes sociales</h2>
+          <div>
+            <h4 class="centro-footer">Nuestras redes sociales</h4>
             <div class="social-icons">
-              <a href="#" class="btn btn-primary">
+              <a href="error404.html" class="btn-redes text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="45"
-                  height="45"
+                  width="25"
+                  height="25"
                   fill="currentColor"
                   class="bi bi-facebook"
                   viewBox="0 0 16 16"
@@ -353,11 +423,11 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="btn btn-danger">
+              <a href="error404.html" class="btn-redes text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="45"
-                  height="45"
+                  width="25"
+                  height="25"
                   fill="currentColor"
                   class="bi bi-instagram"
                   viewBox="0 0 16 16"
@@ -367,11 +437,11 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="btn btn-info text-white">
+              <a href="error404.html" class="btn-redes text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="45"
-                  height="45"
+                  width="25"
+                  height="25"
                   fill="currentColor"
                   class="bi bi-twitter"
                   viewBox="0 0 16 16"
@@ -381,11 +451,11 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="btn btn-success">
+              <a href="error404.html" class="btn-redes text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="45"
-                  height="45"
+                  width="25"
+                  height="25"
                   fill="currentColor"
                   class="bi bi-whatsapp"
                   viewBox="0 0 16 16"
@@ -399,11 +469,12 @@
           </div>
         </div>
       </div>
-      <h5 class="borde"></h5>
+      <hr class="ms-5 me-5 hr-footer" />
       <div class="container text-center">
-        <h3>&copy; 2023 Playtopia Corporation. Todos los derechos reservados. Todas las marcas registradas.</h3>
-        <h3>pertenecen a sus respectivos duenos en EE.UU. y otros paises</h3>
-        <h3>Todos los precios incluyen IVA( donde se aplicable)</h3>
+        <p>
+          &copy; 2023 Playtopia Corporation. Todos los derechos reservados. Todas las marcas
+          registradas.
+        </p>
       </div>
     </footer>
     <!-- Link Bootstrap-->

@@ -24,10 +24,6 @@ function crearColumna(juego) {
 }
 
 function navegarDetallesJuego(codigo) {
-  console.log(codigo);
-  console.log(window.location);
-  // Nombre de dominio
-  console.log(window.location.origin + "/pages/detalles.html?codigo=" + codigo);
   window.location.href = window.location.origin + "/pages/detalles.html?codigo=" + codigo;
 }
 
