@@ -69,7 +69,7 @@ function crearFila(juego, indice) {
     </td>
     <td>${juego.categoria}</td>
     <td class="text-center">
-      <button class="btn btnEditar" onclick="prepararJuego('${juego.codigo}')">
+      <button class="btn btnEditar mb-2 mb-lg-0" onclick="prepararJuego('${juego.codigo}')">
         <i class="bi bi-pencil fs-5 text-dark"></i>
       </button>
       <button class="btn btnEliminar" onclick="borrarJuego('${juego.codigo}')">
