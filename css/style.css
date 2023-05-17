@@ -137,7 +137,7 @@ footer {
 }
 
 #btnFormulario:hover {
-  background-color: rgb(147, 47, 162);
+  background-color: rgb(80, 26, 89);
 }
 
 #btnCrearJuego {
@@ -168,8 +168,11 @@ footer {
 }
 
 /*Estilos para tabla administrador*/
-#seccionTabla {
+.seccionTablaLight {
   background-color: #e0c9ee;
+}
+.seccionTablaDark {
+  background-color: #521e72;
 }
 
 table thead {
@@ -182,14 +185,24 @@ table thead {
   max-width: 10rem;
 }
 
-table tbody tr:nth-child(odd) {
+.seccionTablaLight table tbody tr:nth-child(odd) {
   background: #fac7fa;
   font-family: "Libre Franklin", sans-serif;
 }
 
-table tbody tr:nth-child(even) {
+.seccionTablaLight table tbody tr:nth-child(even) {
   background: #fca6fd;
   font-family: "Libre Franklin", sans-serif;
+}
+
+.seccionTablaDark table tbody tr:nth-child(odd) {
+  background-color: #4a184a;
+  font-family: 'Libre Franklin', sans-serif
+}
+
+.seccionTablaDark table tbody tr:nth-child(even) {
+  background-color: #882189;
+  font-family: 'Libre Franklin', sans-serif
 }
 
 /*Estilos para formulario*/

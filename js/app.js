@@ -22,14 +22,17 @@ botonTemaOscuro.addEventListener("click", () => cambiarTema("dark"));
 botonTemaClaro.addEventListener("click", () => cambiarTema("light"));
 
 function cambiarTema(colorTema) {
+  let tablaBgColor = document.querySelector("#seccionTabla");
   document.querySelector("body").setAttribute("data-bs-theme", colorTema);
   //guardar en localstorage
   localStorage.setItem("tema", JSON.stringify(colorTema));
   //cabiar el icono del dropdown segun el tema
   let logoDropdown = document.querySelector(".logoTema");
   if (colorTema === "dark") {
+    tablaBgColor.className = "seccionTablaDark";
     logoDropdown.innerHTML = `<i class="bi bi-moon-fill  fs-5 me-2"></i>`;
   } else {
+    tablaBgColor.className = "seccionTablaLight";
     logoDropdown.innerHTML = `<i class="bi bi-brightness-high-fill fs-5 me-2">`;
   }
 }
