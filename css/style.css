@@ -592,7 +592,24 @@ footer .logo {
   margin-right: 20px;
 }
 
-
+/*Estilos para seccion de comentarios*/
+#btnDejarComentario{
+  background-color:rgb(147, 47, 162);
+  color: #fff;
+  font-weight: bolder;
+}
+#btnDejarComentario:hover{
+  background-color:rgb(180, 71, 196);
+  color: #fff;
+}
+#iconoUsuarioComentario{
+  color: rgb(180, 71, 196);
+}
+#contenedorDejarComentario{
+  border-radius: 10px;
+  border-color: #932fa2;
+  border-width: 3px;
+}
 /* Media Query para disposiitovs pequeños y medianos*/
 /*Pequeños*/
 @media all and (max-width: 576px) {
